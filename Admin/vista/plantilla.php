@@ -38,14 +38,14 @@
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-blue sidebar-mini login-page">
 <div class="wrapper">
 
 <?php   include 'modulos/cabecera.php';
         include 'modulos/menu.php';
         
         if (isset($_GET["ruta"])) {
-          if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "opcion1") {
+          if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "opcion1" || $_GET["ruta"] == "login") {
             include "modulos/".$_GET["ruta"].".php";
           }else {
             include "modulos/inicio.php";
