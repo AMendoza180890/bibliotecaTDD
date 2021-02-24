@@ -7,14 +7,26 @@
             </div>
             <div class="full-reset" style="background-color:#2B3D51; padding: 10px 0; color:#fff;">
                 <figure>
-                    <img src="bibliotecaView/assets/img/logo.png" alt="Biblioteca" class="img-responsive center-box" style="width:55%;">
+                    <img src="bibliotecaView/assets/img/logo.png" alt="Biblioteca" class="img-responsive center-box" style="width:15%;">
                 </figure>
                 <p class="text-center" style="padding-top: 15px;">Sistema Bibliotecario</p>
             </div>
             <div class="full-reset nav-lateral-list-menu">
                 <ul class="list-unstyled">
-                    <li><a href="home.html"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
-                    <li>
+                    <li><a href="index.php?ruta=home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Académico</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Autismo</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Conducta</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Currículo Tesoros 2018</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Curso Dra. VanTol Iowa</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; En Ingles</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Estimulacion Temprana</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Fisioterapia</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Historias Sociales</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Iglesias</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Lenguaje</a></li>
+                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Plan Individualizado de Educación</a></li>
+                    <!-- <li>
                         <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Administración <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
                         <ul class="list-unstyled">
                             <li><a href="institution.html"><i class="zmdi zmdi-balance zmdi-hc-fw"></i>&nbsp;&nbsp; Datos institución</a></li>
@@ -31,31 +43,8 @@
                             <li><a href="student.html"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo estudiante</a></li>
                             <li><a href="personal.html"><i class="zmdi zmdi-male-female zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo personal administrativo</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-assignment-o zmdi-hc-fw"></i>&nbsp;&nbsp; Libros y catálogo <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="book.html"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Nuevo libro</a></li>
-                            <li><a href="catalog.html"><i class="zmdi zmdi-bookmark-outline zmdi-hc-fw"></i>&nbsp;&nbsp; Catálogo</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div class="dropdown-menu-button"><i class="zmdi zmdi-alarm zmdi-hc-fw"></i>&nbsp;&nbsp; Préstamos y reservaciones <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
-                        <ul class="list-unstyled">
-                            <li><a href="loan.html"><i class="zmdi zmdi-calendar zmdi-hc-fw"></i>&nbsp;&nbsp; Todos los préstamos</a></li>
-                            <li>
-                                <a href="loanpending.html"><i class="zmdi zmdi-time-restore zmdi-hc-fw"></i>&nbsp;&nbsp; Devoluciones pendientes <span class="label label-danger pull-right label-mhover">7</span></a>
-                            </li>
-                            <li>
-                                <a href="loanreservation.html"><i class="zmdi zmdi-timer zmdi-hc-fw"></i>&nbsp;&nbsp; Reservaciones <span class="label label-danger pull-right label-mhover">7</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="report.html"><i class="zmdi zmdi-trending-up zmdi-hc-fw"></i>&nbsp;&nbsp; Reportes y estadísticas</a></li>
-                    <li><a href="advancesettings.html"><i class="zmdi zmdi-wrench zmdi-hc-fw"></i>&nbsp;&nbsp; Configuraciones avanzadas</a></li>
+                    </li> -->
                 </ul>
             </div>
         </div>
     </div>
-
-<?php include 'bibliotecaView/view/menuSuperior.php'?>

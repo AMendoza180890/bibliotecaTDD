@@ -1,3 +1,4 @@
+<html lang="es">
 <?php include 'bibliotecaView/view/encabezado.php';?>
 <body class="full-cover-background" style="background-image:url(bibliotecaView/assets/img/font-login.jpg);">
     <div class="form-container">
