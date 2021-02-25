@@ -63,7 +63,7 @@
             </li>
 
             <li>
-                <a href="#">
+                <a href="index.php?ruta=catusuarios">
                     <i class="fa fa-home"></i>
                     <span>Usuarios</span>
                 </a>

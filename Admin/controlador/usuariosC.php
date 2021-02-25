@@ -30,5 +30,30 @@ class usuariosC {
             echo "Error - ". $ex;
         }
     }
+
+    public function listadeUsuarios(){
+        try {
+            $listaUsuario = usuariosM::listadeUsuariosM();
+            if($listaUsuario != 0){
+                foreach ($listaUsuario as $key => $value) {
+                    echo '<tr>
+                    <td>'.$key.'</td>
+                    <td>'.$value["usuario"].'</td>
+                    <td>'.$value["clave"].'</td>
+                    <td><img src="vista/img/usuario/defecto.png" class="user-image" width="40px" alt="User Image"></td>
+                    <td>'.$value["catRolesDescripcion"].'</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
+                            <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                        </div>
+                    </td>
+                </tr>';
+                }
+            }
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
 }
 ?>
