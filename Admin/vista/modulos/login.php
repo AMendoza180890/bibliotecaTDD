@@ -24,7 +24,7 @@
       </div>
 
       <?php
-        $ingreso = new usuariosC();
+        $ingreso = new usuariosC;
         $ingreso -> ingresoUsuariosC();
       ?>
     </form>

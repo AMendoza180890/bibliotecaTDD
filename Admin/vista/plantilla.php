@@ -53,7 +53,6 @@
         }else{
             include "modulos/inicio.php";
         }
-        echo 'console.log("'.$_GET["ruta"].'")';
   ?>
 
   <!-- /.content-wrapper -->
