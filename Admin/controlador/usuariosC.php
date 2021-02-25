@@ -11,11 +11,17 @@ class usuariosC {
 
                     $inicioSesion = usuariosM::ingresoSesionUsuario($datosC);
 
-                    if ($inicioSesion["usuario"] == $_POST["usuarioIngreso"] && $inicioSesion["clave"] == $_POST["passWord"]) {
+                    if ($inicioSesion["usuario"] == $_POST["usuarioIngreso"] && $inicioSesion["clave"] == $_POST["passWord"] && $inicioSesion["rolid"] == 1) {
+                        $_SESSION["ingreso"] = true;
+                        $_SESSION["id"] = $inicioSesion["id"];
+                        $_SESSION["usuario"] = $inicioSesion["usuario"];
+                        $_SESSION["clave"] = $inicioSesion["clave"];
+                        $_SESSION["foto"] = $inicioSesion["foto"];
+                        $_SESSION["rol"] = $inicioSesion["catRolesDescripcion"];
+
                         echo '<script>window.location = "index.php?ruta=inicio";</script>';
 
                     }else{
-                        echo '<script>console.log("'.$inicioSesion.'");</script>';
                         echo 'Error con el usuario o clave';
                     }
                 }

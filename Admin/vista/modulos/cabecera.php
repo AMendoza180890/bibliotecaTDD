@@ -28,7 +28,7 @@
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-danger btn-flat">Salir</a>
+                  <a href="index.php?ruta=salir" class="btn btn-danger btn-flat">Salir</a>
                 </div>
               </li>
             </ul>
