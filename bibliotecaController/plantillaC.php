@@ -5,5 +5,4 @@ class plantillaC{
         include 'bibliotecaView/view/plantilla.php';
     }
 }
-
 ?>
