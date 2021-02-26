@@ -10,17 +10,19 @@ class usuariosC {
                     $datosC = array("user" => $_POST["usuarioIngreso"], "pass" => $_POST["passWord"]);
 
                     $inicioSesion = usuariosM::ingresoSesionUsuario($datosC);
-
-                    if ($inicioSesion["usuario"] == $_POST["usuarioIngreso"] && $inicioSesion["clave"] == $_POST["passWord"] && $inicioSesion["rolid"] == 1) {
-                        $_SESSION["ingreso"] = true;
-                        $_SESSION["id"] = $inicioSesion["id"];
-                        $_SESSION["usuario"] = $inicioSesion["usuario"];
-                        $_SESSION["clave"] = $inicioSesion["clave"];
-                        $_SESSION["foto"] = $inicioSesion["foto"];
-                        $_SESSION["rol"] = $inicioSesion["catRolesDescripcion"];
-
-                        echo '<script>window.location = "index.php?ruta=inicio";</script>';
-                    }else{
+                    
+                    if ($inicioSesion) {
+                        if ($inicioSesion["usuario"] == $_POST["usuarioIngreso"] && $inicioSesion["clave"] == $_POST["passWord"] && $inicioSesion["rolid"] == 1) {
+                            $_SESSION["ingreso"] = true;
+                            $_SESSION["id"] = $inicioSesion["id"];
+                            $_SESSION["usuario"] = $inicioSesion["usuario"];
+                            $_SESSION["clave"] = $inicioSesion["clave"];
+                            $_SESSION["foto"] = $inicioSesion["foto"];
+                            $_SESSION["rol"] = $inicioSesion["catRolesDescripcion"];
+    
+                            echo '<script>window.location = "index.php?ruta=inicio";</script>';
+                        }
+                    } else {
                         echo 'Error con el usuario o clave';
                     }
                 }
@@ -36,11 +38,15 @@ class usuariosC {
             if($listaUsuario != 0){
                 foreach ($listaUsuario as $key => $value) {
                     echo '<tr>
-                    <td>'.$key.'</td>
+                    <td>'.($key +1).'</td>
                     <td>'.$value["usuario"].'</td>
-                    <td>'.$value["clave"].'</td>
-                    <td><img src="vista/img/usuario/defecto.png" class="user-image" width="40px" alt="User Image"></td>
-                    <td>'.$value["catRolesDescripcion"].'</td>
+                    <td>'.$value["clave"].'</td>';
+                    if (is_null($value["foto"]) || $value["foto"] == "") {
+                        echo '<td><img src="vista/img/usuario/defecto.png" class="user-image" width="40px" alt="User Image"></td>';
+                    }else{
+                        echo '<td><img src="'.$value["foto"].'" class="user-image" width="40px" alt="User Image"></td>';
+                    }
+                    echo '<td>'.$value["catRolesDescripcion"].'</td>
                     <td>
                         <div class="btn-group">
                             <button class="btn btn-success"><i class="fa fa-pencil"></i></button>

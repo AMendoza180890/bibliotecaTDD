@@ -13,7 +13,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-            <button class="btn btn-primary">Crear Usuarios</button>
+            <button class="btn btn-primary" data-toggle="modal" data-targget="#crearUsuario">Crear Usuarios</button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
@@ -33,7 +33,6 @@
                         $mostrarUsuarios -> listadeUsuarios();
                     ?>
                 </tbody>
-
             </table>
         </div>
         <!-- /.box-body -->
