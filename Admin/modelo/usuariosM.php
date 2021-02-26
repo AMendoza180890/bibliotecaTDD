@@ -33,6 +33,25 @@ class usuariosM extends conexionBD{
             echo 'error - '.$ex;
         }
     }
+
+    static public function registrarUsuariosM($datosNuevoUsuario){
+        try {
+            $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, foto, rolid) VALUES (:usuario,:clave,:foto,:rolid)");
+            
+            $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
+            $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
+            $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
+            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_STR);
+
+            if($pdo -> execute()){
+                return true;
+            }else{
+                return false;
+            }            
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
 }
 
 ?>

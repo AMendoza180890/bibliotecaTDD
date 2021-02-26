@@ -60,5 +60,27 @@ class usuariosC {
             echo 'Error - '.$ex;
         }
     }
+
+    public function registrarUsuariosC(){
+        try {
+                if(isset($_POST["usuarioNuevo"])){
+                    // codigo de validacion de imagen
+                    $rutaImagenProcesada = tratamientoImagen::tratamientoTipoImagen("fotoNuevo");
+    
+                    $datosNuevoUsuario = array("usuario"=>$_POST["usuarioNuevo"],"clave"=>$_POST["claveNuevo"],"rol"=>$_POST["rolNuevo"],"foto"=>$rutaImagenProcesada);
+                    
+                    $crearNuevoUsuario = usuariosM::registrarUsuariosM($datosNuevoUsuario);
+
+                    echo '<script>'.$rutaImagenProcesada.'</script>';
+                    if ($crearNuevoUsuario) {
+                            echo '<script>window.location="index.php?ruta=catusuarios"</script>';
+                    }else{
+                            echo 'Error - Existe un error en los campos, porfavor corregir';
+                    }
+                }
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
 }
 ?>
