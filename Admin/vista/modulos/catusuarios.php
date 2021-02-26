@@ -13,7 +13,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-            <button class="btn btn-primary" data-toggle="modal" data-targget="#crearUsuario">Crear Usuarios</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#crearUsuario">Crear Usuarios</button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped">
@@ -43,3 +43,4 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+<?php include 'crearUsuario.php';?>
