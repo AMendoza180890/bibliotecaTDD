@@ -24,9 +24,7 @@ class usuariosM extends conexionBD{
     static public function listadeUsuariosM(){
         try {
             $pdo = conexionBD::conexion()->prepare("SELECT usuarios.id, usuarios.usuario, usuarios.clave, usuarios.foto, usuarios.rolid, catroles.catRolesDescripcion  FROM usuarios INNER JOIN catroles ON usuarios.rolid = catroles.rolid");
-
             $pdo -> execute();
-
             return $pdo->fetchAll();
 
         } catch (exception $ex) {
@@ -37,12 +35,10 @@ class usuariosM extends conexionBD{
     static public function registrarUsuariosM($datosNuevoUsuario){
         try {
             $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, foto, rolid) VALUES (:usuario,:clave,:foto,:rolid)");
-            
             $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
             $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
             $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
             $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_INT);
-
             if($pdo -> execute()){
                 return true;
             }else{
