@@ -41,7 +41,7 @@ class usuariosM extends conexionBD{
             $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
             $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
             $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
-            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_STR);
+            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_INT);
 
             if($pdo -> execute()){
                 return true;

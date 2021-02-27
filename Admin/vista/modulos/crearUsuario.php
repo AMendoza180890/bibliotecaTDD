@@ -30,7 +30,7 @@
 
                         <div class="form-group">
                             <h2>Foto:</h2>
-                            <input type="file" name="fotoNuevo">
+                            <input type="file" name="fotoNuevo" id="fotoNuevo">
                             <p class="help-block">peso maximo permitido 200 Mb</p>
                         </div>
                     </div>
