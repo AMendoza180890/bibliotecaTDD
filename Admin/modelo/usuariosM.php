@@ -36,6 +36,7 @@ class usuariosM extends conexionBD{
         try {
 
             $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, foto, rolid) VALUES (:usuario,:clave,:foto,:rolid)");
+            
             $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
             $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
             $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
@@ -74,7 +75,7 @@ class usuariosM extends conexionBD{
     static public function DesactivarRegistroUsuarioM($datosDesactivarUsuario){
         try {
             $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET rolid = 3 WHERE id = :id");
-            $pdo -> bindParam("id", $datosDesactivarUsuario["id"], PDO::PARAM_INT);
+            $pdo -> bindParam("id", $datosDesactivarUsuario["codusuario"], PDO::PARAM_INT);
             if ($pdo->execute()) {
                 return true;
             }else{

@@ -81,7 +81,7 @@ class usuariosC {
 
     public function editarRegistroUsuarioC(){
         try {
-            
+           
         } catch (Exception $ex) {
             echo 'Error -'.$ex;
         }
@@ -89,7 +89,20 @@ class usuariosC {
 
     public function DesactivarRegistroUsuarioC(){
         try {
-            
+            if ($_GET["codValor"] !== null){
+
+                $codigoUsuario = $_GET["codValor"];
+
+                echo '<script>console.log("entra en funcion desactivar '.$codigoUsuario.' ")</script>';
+
+                //$desactivarRespuesta = usuariosM::DesactivarRegistroUsuarioM($codigoUsuario);
+                
+                // if ($desactivarRespuesta == true) {
+                //     echo '<script>window.location=index.php?ruta=catusuario</script>';
+                // }else{
+                //     echo 'Hubo un error, favor reportarlo al administrador del sistema';
+                // }
+            }
         } catch (Exception $ex) {
             echo 'Error - '.$ex;
         }

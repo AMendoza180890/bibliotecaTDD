@@ -3,6 +3,8 @@ $(".TablaUsuario").on("click", ".EditRegistroUsuario", function() {
 })
 
 $(".TablaUsuario").on("click", ".DesactivarRegistroUsuario", function() {
-    let codigoUsuario = $(this).attr("codValor");
+    let codValor = $(this).attr("codValor");
+
+    window.location = "index.php?ruta=catusuarios&codValor="+codValor;
 
 })

@@ -41,4 +41,4 @@
   </div>
   <!-- /.content-wrapper -->
 <?php include 'crearUsuario.php';?>
-<?php include 'editUsuario.php';?>
+<!-- <?php include 'editUsuario.php';?> -->

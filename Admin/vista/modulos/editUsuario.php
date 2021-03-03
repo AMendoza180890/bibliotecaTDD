@@ -12,15 +12,15 @@
                     <div class="box-body">
                         <div class="form-group">
                             <h2>Usuario</h2>
-                            <input type="text" class="form-control input-lg" name="usuarioNuevo" id="usuarioNuevo" required>
+                            <input type="text" class="form-control input-lg" name="usuarioEdit" id="usuarioEdit" required>
                         </div>
                         <div class="form-group">
                             <h2>Clave</h2>
-                            <input type="password" class="form-control input-lg" name="claveNuevo" id="claveNuevo" required>
+                            <input type="password" class="form-control input-lg" name="claveEdit" id="claveEdit" required>
                         </div>
                         <div class="form-group">
                             <h2>Rol</h2>
-                            <select name="rolNuevo" id="rolNuevo" class="form-control input-lg">
+                            <select name="rolEdit" id="rolEdit" class="form-control input-lg">
                                 <?php
                                 // $listadeRoles = new rolesUsuarioC;
                                 // $listadeRoles->mostrarRolesUsuarioC();
@@ -33,7 +33,7 @@
 
                         <div class="form-group">
                             <h2>Foto:</h2>
-                            <input type="file" name="fotoNuevo" id="fotoNuevo">
+                            <input type="file" name="fotoEdit" id="fotoEdit">
                             <p class="help-block">peso maximo permitido 200 Mb</p>
                         </div>
                     </div>

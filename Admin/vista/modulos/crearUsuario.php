@@ -12,15 +12,15 @@
                     <div class="box-body">
                         <div class="form-group">
                             <h2>Usuario</h2>
-                            <input type="text" class="form-control input-lg" name="usuarioEdit" id="usuarioNuevo" required>
+                            <input type="text" class="form-control input-lg" name="usuarioNuevo" id="usuarioNuevo" required>
                         </div>
                         <div class="form-group">
                             <h2>Clave</h2>
-                            <input type="password" class="form-control input-lg" name="claveEdit" id="claveNuevo" required>
+                            <input type="password" class="form-control input-lg" name="claveNuevo" id="claveNuevo" required>
                         </div>
                         <div class="form-group">
                             <h2>Rol</h2>
-                            <select name="rolEdit" id="rolNuevo" class="form-control input-lg">
+                            <select name="rolNuevo" id="rolNuevo" class="form-control input-lg">
                                 <?php
                                 $listadeRoles = new rolesUsuarioC;
                                 $listadeRoles->mostrarRolesUsuarioC();
