@@ -49,8 +49,8 @@ class usuariosC {
                     echo '<td>'.$value["catRolesDescripcion"].'</td>
                     <td>
                         <div class="btn-group">
-                            <button class="btn btn-success"><i class="fa fa-pencil"></i></button>
-                            <button class="btn btn-danger"><i class="fa fa-times"></i></button>
+                            <button class="btn btn-success EditRegistroUsuario" codValor='.$value["id"]. '><i data-toggle="modal" data-target="#editarUsuario" class="fa fa-pencil"></i></button>
+                            <button class="btn btn-danger DesactivarRegistroUsuario" codValor=' . $value["id"] . '><i class="fa fa-times"></i></button>
                         </div>
                     </td>
                 </tr>';
@@ -65,19 +65,31 @@ class usuariosC {
         try {
                 if(isset($_POST["usuarioNuevo"])){
                     // codigo de validacion de imagen
-                    $rutaImagenProcesada = tratamientoImagen::tratamientoTipoImagen("fotoNuevo");
-    
-                    $datosNuevoUsuario = array("usuario"=>$_POST["usuarioNuevo"],"clave"=>$_POST["claveNuevo"],"rol"=>$_POST["rolNuevo"],"foto"=>$rutaImagenProcesada);
-                    
+                    $rutaImagenProcesada = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoNuevo"]["tmp_name"], $_FILES["fotoNuevo"]);
+                    $datosNuevoUsuario = array("usuario"=>$_POST["usuarioNuevo"],"clave"=>$_POST["claveNuevo"],"rol"=>$_POST["rolNuevo"],"foto"=>$rutaImagenProcesada);                  
                     $crearNuevoUsuario = usuariosM::registrarUsuariosM($datosNuevoUsuario);
-
-                    echo '<script>'.$rutaImagenProcesada.'</script>';
-                    if ($crearNuevoUsuario) {
+                    if ($crearNuevoUsuario == true) {
                             echo '<script>window.location="index.php?ruta=catusuarios"</script>';
                     }else{
-                            echo 'Error - Existe un error en los campos, porfavor corregir';
+                            echo 'Error - Ocurrio un error al hora de insertar';
                     }
                 }
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
+    public function editarRegistroUsuarioC(){
+        try {
+            
+        } catch (Exception $ex) {
+            echo 'Error -'.$ex;
+        }
+    }
+
+    public function DesactivarRegistroUsuarioC(){
+        try {
+            
         } catch (Exception $ex) {
             echo 'Error - '.$ex;
         }

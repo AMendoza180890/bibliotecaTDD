@@ -24,9 +24,7 @@ class usuariosM extends conexionBD{
     static public function listadeUsuariosM(){
         try {
             $pdo = conexionBD::conexion()->prepare("SELECT usuarios.id, usuarios.usuario, usuarios.clave, usuarios.foto, usuarios.rolid, catroles.catRolesDescripcion  FROM usuarios INNER JOIN catroles ON usuarios.rolid = catroles.rolid");
-
             $pdo -> execute();
-
             return $pdo->fetchAll();
 
         } catch (exception $ex) {
@@ -36,12 +34,12 @@ class usuariosM extends conexionBD{
 
     static public function registrarUsuariosM($datosNuevoUsuario){
         try {
+
             $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, foto, rolid) VALUES (:usuario,:clave,:foto,:rolid)");
-            
             $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
             $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
             $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
-            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_STR);
+            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_INT);
 
             if($pdo -> execute()){
                 return true;
@@ -53,44 +51,43 @@ class usuariosM extends conexionBD{
         }
     }
 
-    static public function actualizarUsuariosM($datosNuevoUsuario){
+    static public function editarRegistroUsuarioM($datosEditarUsuario){
         try {
-            $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET (usuario, clave, foto, rolid) (,:clave,:foto,:rolid)");
-            
-            $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
-            $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
-            $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
-            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_STR);
+            $pdo = conexionBD::conexion()->prepare("UPDATE `usuarios` SET usuario=:usuario, clave=:clave, foto=:foto, rolid=:rolid WHERE id = :id");
+            $pdo->bindParam("id",$datosEditarUsuario["id"],PDO::PARAM_STR);
+            $pdo->bindParam("usuario", $datosEditarUsuario["usuario"], PDO::PARAM_STR);
+            $pdo->bindParam("clave", $datosEditarUsuario["clave"], PDO::PARAM_STR);
+            $pdo->bindParam("foto", $datosEditarUsuario["foto"], PDO::PARAM_STR);
+            $pdo->bindParam("rolid", $datosEditarUsuario["rolid"], PDO::PARAM_INT);
 
-            if($pdo -> execute()){
+            if ($pdo->execute()) {
                 return true;
             }else{
                 return false;
-            }            
+            }
+
         } catch (Exception $ex) {
             echo 'Error - '.$ex;
         }
     }
 
-    static public function desactivarUsuariosM($datosNuevoUsuario){
+    static public function DesactivarRegistroUsuarioM($datosDesactivarUsuario){
         try {
-            $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, foto, rolid) VALUES (:usuario,:clave,:foto,:rolid)");
-            
-            $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
-            $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
-            $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
-            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_STR);
-
-            if($pdo -> execute()){
+            $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET rolid = 3 WHERE id = :id");
+            $pdo -> bindParam("id", $datosDesactivarUsuario["id"], PDO::PARAM_INT);
+            if ($pdo->execute()) {
                 return true;
             }else{
                 return false;
-            }            
+            }
         } catch (Exception $ex) {
             echo 'Error - '.$ex;
         }
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f734811564d19de55ba9962dd79e8b079b5fcfca
 }
 
 ?>

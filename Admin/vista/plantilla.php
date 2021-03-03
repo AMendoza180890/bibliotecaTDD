@@ -29,7 +29,7 @@ session_start();
   <!-- Daterange picker -->
   <link rel="stylesheet" href="vista/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+  <!-- <link rel="stylesheet" href="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"> -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,8 +83,8 @@ session_start();
 <!-- Sparkline -->
 <script src="vista/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
-<script src="vista/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="vista/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- <script src="vista/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script> -->
+<!-- <script src="vista/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
 <!-- jQuery Knob Chart -->
 <script src="vista/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -93,7 +93,7 @@ session_start();
 <!-- datepicker -->
 <script src="vista/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- <script src="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script> -->
 <!-- Slimscroll -->
 <script src="vista/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -104,8 +104,8 @@ session_start();
 <script src="vista/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="vista/dist/js/demo.js"></script>
-<!-- Script personalizados para la aplicacion -->
+<!-- De aqui van los eventos de jquery personalizados-->
+<!-- Evento de obtejer informacion y desactivar Usuarios-->
 <script src="vista/js/usuario.js"></script>
-
 </body>
 </html>
