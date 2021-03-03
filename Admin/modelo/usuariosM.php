@@ -52,6 +52,45 @@ class usuariosM extends conexionBD{
             echo 'Error - '.$ex;
         }
     }
+
+    static public function actualizarUsuariosM($datosNuevoUsuario){
+        try {
+            $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET (usuario, clave, foto, rolid) (,:clave,:foto,:rolid)");
+            
+            $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
+            $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
+            $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
+            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_STR);
+
+            if($pdo -> execute()){
+                return true;
+            }else{
+                return false;
+            }            
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
+    static public function desactivarUsuariosM($datosNuevoUsuario){
+        try {
+            $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, foto, rolid) VALUES (:usuario,:clave,:foto,:rolid)");
+            
+            $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
+            $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
+            $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
+            $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_STR);
+
+            if($pdo -> execute()){
+                return true;
+            }else{
+                return false;
+            }            
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
 }
 
 ?>

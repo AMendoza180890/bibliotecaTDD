@@ -104,5 +104,8 @@ session_start();
 <script src="vista/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="vista/dist/js/demo.js"></script>
+<!-- Script personalizados para la aplicacion -->
+<script src="vista/js/usuario.js"></script>
+
 </body>
 </html>
