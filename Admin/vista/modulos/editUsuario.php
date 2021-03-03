@@ -1,4 +1,4 @@
-<div class="modal fade" role="dialog" id="crearUsuario">
+<div class="modal fade" role="dialog" id="editarUsuario">
     <div class="modal-dialog">
         <div class="modal-content">
             <form role="form" method="post" enctype="multipart/form-data">
@@ -6,24 +6,27 @@
                     <button type="button" class="close" data-dismiss="modal">
                         <li class="fa fa-time"></li>
                     </button>
-                    <h3>Crear Usuario</h3>
+                    <h3>Editar Usuarios</h3>
                 </div>
                 <div class="modal-body">
                     <div class="box-body">
                         <div class="form-group">
                             <h2>Usuario</h2>
-                            <input type="text" class="form-control input-lg" name="usuarioEdit" id="usuarioNuevo" required>
+                            <input type="text" class="form-control input-lg" name="usuarioNuevo" id="usuarioNuevo" required>
                         </div>
                         <div class="form-group">
                             <h2>Clave</h2>
-                            <input type="password" class="form-control input-lg" name="claveEdit" id="claveNuevo" required>
+                            <input type="password" class="form-control input-lg" name="claveNuevo" id="claveNuevo" required>
                         </div>
                         <div class="form-group">
                             <h2>Rol</h2>
-                            <select name="rolEdit" id="rolNuevo" class="form-control input-lg">
+                            <select name="rolNuevo" id="rolNuevo" class="form-control input-lg">
                                 <?php
-                                $listadeRoles = new rolesUsuarioC;
-                                $listadeRoles->mostrarRolesUsuarioC();
+                                // $listadeRoles = new rolesUsuarioC;
+                                // $listadeRoles->mostrarRolesUsuarioC();
+                                echo '<option value="1" ' . ($value["rolid"] == 1 ? "selected" : "") . '">Administrador</option>';
+                                echo '<option value="2" ' . ($value["rolid"] == 2 ? "selected" : "") . '">Invitado</option>';
+                                echo '<option value="3" ' . ($value["rolid"] == 3 ? "selected" : "") . '">Desactivado</option>';
                                 ?>
                             </select>
                         </div>
@@ -40,8 +43,8 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                    $crearUsuario = new usuariosC();
-                    $crearUsuario -> registrarUsuariosC();
+                $crearUsuario = new usuariosC();
+                $crearUsuario->registrarUsuariosC();
                 ?>
             </form>
         </div>

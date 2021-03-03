@@ -6,17 +6,15 @@
        Gestor de Usuarios
       </h1>
     </section>
-
     <!-- Main content -->
     <section class="content">
-
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
             <button class="btn btn-primary" data-toggle="modal" data-target="#crearUsuario">Crear Usuarios</button>
         </div>
         <div class="box-body">
-            <table class="table table-bordered table-hover table-striped">
+            <table class="table table-bordered table-hover table-striped TablaUsuario">
                 <thead>
                     <tr>
                         <th>Nº</th>
@@ -38,9 +36,9 @@
         <!-- /.box-body -->
       </div>
       <!-- /.box -->
-
     </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 <?php include 'crearUsuario.php';?>
+<?php include 'editUsuario.php';?>

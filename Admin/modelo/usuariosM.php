@@ -34,16 +34,52 @@ class usuariosM extends conexionBD{
 
     static public function registrarUsuariosM($datosNuevoUsuario){
         try {
+
             $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, foto, rolid) VALUES (:usuario,:clave,:foto,:rolid)");
             $pdo -> bindParam("usuario",$datosNuevoUsuario["usuario"],PDO::PARAM_STR);
             $pdo -> bindParam("clave",$datosNuevoUsuario["clave"],PDO::PARAM_STR);
             $pdo -> bindParam("foto",$datosNuevoUsuario["foto"],PDO::PARAM_STR);
             $pdo -> bindParam("rolid",$datosNuevoUsuario["rol"],PDO::PARAM_INT);
+
             if($pdo -> execute()){
                 return true;
             }else{
                 return false;
             }            
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
+    static public function editarRegistroUsuarioM($datosEditarUsuario){
+        try {
+            $pdo = conexionBD::conexion()->prepare("UPDATE `usuarios` SET usuario=:usuario, clave=:clave, foto=:foto, rolid=:rolid WHERE id = :id");
+            $pdo->bindParam("id",$datosEditarUsuario["id"],PDO::PARAM_STR);
+            $pdo->bindParam("usuario", $datosEditarUsuario["usuario"], PDO::PARAM_STR);
+            $pdo->bindParam("clave", $datosEditarUsuario["clave"], PDO::PARAM_STR);
+            $pdo->bindParam("foto", $datosEditarUsuario["foto"], PDO::PARAM_STR);
+            $pdo->bindParam("rolid", $datosEditarUsuario["rolid"], PDO::PARAM_INT);
+
+            if ($pdo->execute()) {
+                return true;
+            }else{
+                return false;
+            }
+
+        } catch (Exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
+    static public function DesactivarRegistroUsuarioM($datosDesactivarUsuario){
+        try {
+            $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET rolid = 3 WHERE id = :id");
+            $pdo -> bindParam("id", $datosDesactivarUsuario["id"], PDO::PARAM_INT);
+            if ($pdo->execute()) {
+                return true;
+            }else{
+                return false;
+            }
         } catch (Exception $ex) {
             echo 'Error - '.$ex;
         }
