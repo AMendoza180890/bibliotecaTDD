@@ -84,10 +84,5 @@ class usuariosM extends conexionBD{
             echo 'Error - '.$ex;
         }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> f734811564d19de55ba9962dd79e8b079b5fcfca
 }
-
 ?>
