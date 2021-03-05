@@ -72,10 +72,10 @@ class usuariosM extends conexionBD{
         }
     }
 
-    static public function DesactivarRegistroUsuarioM($datosDesactivarUsuario){
+    static public function DesactivarRegistroUsuarioM($codigoUsuario){
         try {
             $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET rolid = 3 WHERE id = :id");
-            $pdo -> bindParam("id", $datosDesactivarUsuario["codusuario"], PDO::PARAM_INT);
+            $pdo -> bindParam("id", $codigoUsuario, PDO::PARAM_INT);
             if ($pdo->execute()) {
                 return true;
             }else{

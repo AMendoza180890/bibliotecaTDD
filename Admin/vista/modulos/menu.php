@@ -4,14 +4,14 @@
 
         <ul class="sidebar-menu" data-widget="tree">
             <li>
-                <a href="index.php?ruta=inicio">
+                <a href="inicio">
                     <i class="fa fa-home"></i>
                     <span>Inicio</span>
                 </a>
             </li>
 
             <li>
-                <a href="index.php?ruta=opcion1">
+                <a href="opcion1">
                     <i class="fa fa-home"></i>
                     <span>opcion 1</span>
                 </a>
@@ -63,7 +63,7 @@
             </li>
 
             <li>
-                <a href="index.php?ruta=catusuarios">
+                <a href="catusuarios">
                     <i class="fa fa-home"></i>
                     <span>Usuarios</span>
                 </a>

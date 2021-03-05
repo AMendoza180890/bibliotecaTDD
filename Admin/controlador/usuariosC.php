@@ -20,7 +20,7 @@ class usuariosC {
                             $_SESSION["foto"] = $inicioSesion["foto"];
                             $_SESSION["rol"] = $inicioSesion["catRolesDescripcion"];
     
-                            echo '<script>window.location = "index.php?ruta=inicio";</script>';
+                            echo '<script>window.location = "inicio";</script>';
                         }
                     } else {
                         echo 'Error con el usuario o clave';
@@ -69,7 +69,7 @@ class usuariosC {
                     $datosNuevoUsuario = array("usuario"=>$_POST["usuarioNuevo"],"clave"=>$_POST["claveNuevo"],"rol"=>$_POST["rolNuevo"],"foto"=>$rutaImagenProcesada);                  
                     $crearNuevoUsuario = usuariosM::registrarUsuariosM($datosNuevoUsuario);
                     if ($crearNuevoUsuario == true) {
-                            echo '<script>window.location="index.php?ruta=catusuarios"</script>';
+                            echo '<script>window.location="catusuarios"</script>';
                     }else{
                             echo 'Error - Ocurrio un error al hora de insertar';
                     }
@@ -89,19 +89,20 @@ class usuariosC {
 
     public function DesactivarRegistroUsuarioC(){
         try {
-            if ($_GET["codValor"] !== null){
+            echo '<script>console.log(" el valor de la variable es '.$_GET["ruta=catusuarios&CodValor"].'")</script>';
+            if (isset($_GET["CodValor"])){
 
-                $codigoUsuario = $_GET["codValor"];
+                $codigoUsuario = $_GET["CodValor"];
 
                 echo '<script>console.log("entra en funcion desactivar '.$codigoUsuario.' ")</script>';
 
-                //$desactivarRespuesta = usuariosM::DesactivarRegistroUsuarioM($codigoUsuario);
+                $RespuestadesactivarUsuario = usuariosM::DesactivarRegistroUsuarioM($codigoUsuario);
                 
-                // if ($desactivarRespuesta == true) {
-                //     echo '<script>window.location=index.php?ruta=catusuario</script>';
-                // }else{
-                //     echo 'Hubo un error, favor reportarlo al administrador del sistema';
-                // }
+                 if ($RespuestadesactivarUsuario == true) {
+                     echo '<script>window.location=catusuario</script>';
+                 }else{
+                     echo 'Hubo un error, favor reportarlo al administrador del sistema';
+                 }
             }
         } catch (Exception $ex) {
             echo 'Error - '.$ex;
