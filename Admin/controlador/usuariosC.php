@@ -79,22 +79,19 @@ class usuariosC {
         }
     }
 
-    public function editarRegistroUsuarioC(){
+    public static function editarRegistroUsuarioC($valor){
         try {
-           
+            $editarUsuario = usuariosM::editarRegistroUsuarioM($valor);
         } catch (Exception $ex) {
             echo 'Error -'.$ex;
         }
     }
 
-    public function DesactivarRegistroUsuarioC(){
+    public function DesactivarUsuarioC(){
         try {
-            echo '<script>console.log(" el valor de la variable es '.$_GET["ruta=catusuarios&CodValor"].'")</script>';
             if (isset($_GET["CodValor"])){
 
                 $codigoUsuario = $_GET["CodValor"];
-
-                echo '<script>console.log("entra en funcion desactivar '.$codigoUsuario.' ")</script>';
 
                 $RespuestadesactivarUsuario = usuariosM::DesactivarRegistroUsuarioM($codigoUsuario);
                 

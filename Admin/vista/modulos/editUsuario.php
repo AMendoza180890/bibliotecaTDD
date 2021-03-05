@@ -13,6 +13,7 @@
                         <div class="form-group">
                             <h2>Usuario</h2>
                             <input type="text" class="form-control input-lg" name="usuarioEdit" id="usuarioEdit" required>
+                            <input type="hidden" name="idEdit" id="idEdit">
                         </div>
                         <div class="form-group">
                             <h2>Clave</h2>
@@ -24,9 +25,9 @@
                                 <?php
                                 // $listadeRoles = new rolesUsuarioC;
                                 // $listadeRoles->mostrarRolesUsuarioC();
-                                echo '<option value="1" ' . ($value["rolid"] == 1 ? "selected" : "") . '">Administrador</option>';
-                                echo '<option value="2" ' . ($value["rolid"] == 2 ? "selected" : "") . '">Invitado</option>';
-                                echo '<option value="3" ' . ($value["rolid"] == 3 ? "selected" : "") . '">Desactivado</option>';
+                                // echo '<option value="1" ' . ($value["rolid"] == 1 ? "selected" : "") . '">Administrador</option>';
+                                // echo '<option value="2" ' . ($value["rolid"] == 2 ? "selected" : "") . '">Invitado</option>';
+                                // echo '<option value="3" ' . ($value["rolid"] == 3 ? "selected" : "") . '">Desactivado</option>';
                                 ?>
                             </select>
                         </div>
@@ -35,16 +36,18 @@
                             <h2>Foto:</h2>
                             <input type="file" name="fotoEdit" id="fotoEdit">
                             <p class="help-block">peso maximo permitido 200 Mb</p>
+                            <img src="vista/img/usuario/defecto.png" alt="imagen" class="img-thumbail" width="100px;">
+                            <input type="hidden" name="fotoActual" id="fotoActual">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Crear</button>
+                    <button type="submit" class="btn btn-success">Guardar Cambios</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                $crearUsuario = new usuariosC();
-                $crearUsuario->registrarUsuariosC();
+                // $crearUsuario = new usuariosC();
+                // $crearUsuario->editarRegistroUsuarioC();
                 ?>
             </form>
         </div>
