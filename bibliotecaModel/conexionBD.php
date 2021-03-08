@@ -1,6 +1,6 @@
 <?php
 class conexionBD{
-    public function conexion(){
+    public static function conexion(){
         try {
             $bd = new PDO("mysql:host=localhost;dbname=bdbibliotecatdd","root","");
 

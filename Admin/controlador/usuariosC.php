@@ -100,7 +100,7 @@ class usuariosC {
                 $datosActualizados = usuariosM::actualizarRegistroUsuarioM($datosActualizarUsuario);
 
                 if($datosActualizados == true){
-                    echo '<script>window.location = catusuarios</script>';
+                    echo '<script>window.location = "catusuarios"</script>';
                 }else{
                     echo 'Hay un error no se pudo realizar actualizacion';
                 }
@@ -116,7 +116,7 @@ class usuariosC {
                 $codigoUsuario = $_GET["CodValor"];
                 $RespuestadesactivarUsuario = usuariosM::DesactivarRegistroUsuarioM($codigoUsuario);
                  if ($RespuestadesactivarUsuario == true) {
-                     echo '<script>window.location=catusuario</script>';
+                     echo '<script>window.location="catusuario"</script>';
                  }else{
                      echo 'Hubo un error, favor reportarlo al administrador del sistema';
                  }

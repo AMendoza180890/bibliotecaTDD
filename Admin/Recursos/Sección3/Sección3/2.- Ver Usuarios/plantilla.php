@@ -60,7 +60,7 @@
 
     if(isset($_GET["url"])){
 
-      if($_GET["url"] == "inicio" || $_GET["url"] == "ingreso" || $_GET["url"] == "usuarios" $_GET["url"] == "salir"){
+      if($_GET["url"] == "inicio" || $_GET["url"] == "ingreso" || $_GET["url"] == "usuarios" || $_GET["url"] == "salir"){
 
         include "modulos/".$_GET["url"].".php";
 

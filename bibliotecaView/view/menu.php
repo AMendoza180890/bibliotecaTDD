@@ -13,19 +13,19 @@
             </div>
             <div class="full-reset nav-lateral-list-menu">
                 <ul class="list-unstyled">
-                    <li><a href="index.php?ruta=home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Académico</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Autismo</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Conducta</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Currículo Tesoros 2018</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Curso Dra. VanTol Iowa</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; En Ingles</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Estimulacion Temprana</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Fisioterapia</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Historias Sociales</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Iglesias</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Lenguaje</a></li>
-                    <li><a href="index.php?ruta=book"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Plan Individualizado de Educación</a></li>
+                    <li><a href="home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="academico"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Académico</a></li>
+                    <li><a href="autismo"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Autismo</a></li>
+                    <li><a href="conducta"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Conducta</a></li>
+                    <li><a href="t2018"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Currículo Tesoros 2018</a></li>
+                    <li><a href="curso"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Curso Dra. VanTol Iowa</a></li>
+                    <li><a href="ingles"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; En Ingles</a></li>
+                    <li><a href="estimulacion"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Estimulacion Temprana</a></li>
+                    <li><a href="fisioterapia"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Fisioterapia</a></li>
+                    <li><a href="hsocial"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Historias Sociales</a></li>
+                    <li><a href="iglesias"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Iglesias</a></li>
+                    <li><a href="lenguaje"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Lenguaje</a></li>
+                    <li><a href="pieducacion"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Plan Individualizado de Educación</a></li>
                     <!-- <li>
                         <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Administración <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
                         <ul class="list-unstyled">
