@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-       Gestor de Usuarios
+       Gestor de Recursos
       </h1>
     </section>
     <!-- Main content -->
@@ -11,17 +11,18 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#crearUsuario">Crear Usuarios</button>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#crearUsuario">Agregar Recurso</button>
         </div>
         <div class="box-body">
             <table class="table table-bordered table-hover table-striped TablaUsuario">
                 <thead>
                     <tr>
                         <th>Nº</th>
-                        <th>Usuario</th>
-                        <th>Clave</th>
-                        <th>Foto</th>
-                        <th>Rol</th>
+                        <th>ruta</th>
+                        <th>titulo</th>
+                        <th>descripcion</th>
+                        <th>autor</th>
+                        <th>imagen</th>
                         <th>Editar/Desactivar</th>
                     </tr>
                 </thead>

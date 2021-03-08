@@ -11,7 +11,7 @@
             </li>
 
             <li>
-                <a href="recursos">
+                <a href="recurso">
                     <i class="fa fa-home"></i>
                     <span>Recursos</span>
                 </a>
