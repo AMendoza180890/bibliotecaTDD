@@ -51,7 +51,7 @@ session_start();
     include 'modulos/menu.php';
     
     if (isset($_GET["ruta"])) {
-      if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "catusuarios" || $_GET["ruta"] == "login" || $_GET["ruta"] == "salir") {
+      if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "catusuarios" || $_GET["ruta"] == "login" || $_GET["ruta"] == "salir" || $_GET["ruta"] == "recursos") {
         include "modulos/".$_GET["ruta"].".php";
       }else {
         include "modulos/inicio.php";

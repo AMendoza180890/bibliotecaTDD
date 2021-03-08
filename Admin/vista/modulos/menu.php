@@ -11,13 +11,13 @@
             </li>
 
             <li>
-                <a href="opcion1">
+                <a href="recursos">
                     <i class="fa fa-home"></i>
-                    <span>opcion 1</span>
+                    <span>Recursos</span>
                 </a>
             </li>
 
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class="fa fa-home"></i>
                     <span>opcion 2</span>
@@ -60,7 +60,7 @@
                     <i class="fa fa-home"></i>
                     <span>Mensajes</span>
                 </a>
-            </li>
+            </li> -->
 
             <li>
                 <a href="catusuarios">
