@@ -12,11 +12,22 @@ $(".TablaUsuario").on("click", ".EditRegistroUsuario", function() {
         url: "Ajax/usuarioA.php",
         data: datos,
         cache: false,
-        contentType: false;
-        processData: false;
+        contentType: false,
+        processData: false,
         dataType: "json",
         success: function (response) {
+            $("#idEdit").val(response["id"]);
             $("#usuarioEdit").val(response["usuario"]);
+            $("#claveEdit").val(response["clave"]);
+            $("#rolEdit").html(response["catRolesDescripcion"]);
+            $("#rolEdit").val(response["rolid"]);
+            $("#fotoActual").val(response["foto"]);
+
+            if (response["foto"] != "") {
+                $(".visor").attr("src",response["foto"]);
+            }else{
+                $(".visor").attr("src","vista/img/usuario/defecto.png")
+            }
         }
     });
 

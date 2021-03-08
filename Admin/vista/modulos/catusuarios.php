@@ -31,7 +31,6 @@
                         $mostrarUsuarios -> listadeUsuarios();
 
                         $valor = null;
-
                         $editarUsuario = usuariosC::editarRegistroUsuarioC($valor);
                     ?>
                 </tbody>

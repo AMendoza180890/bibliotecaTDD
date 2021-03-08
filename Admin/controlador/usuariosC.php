@@ -78,23 +78,43 @@ class usuariosC {
             echo 'Error - '.$ex;
         }
     }
-
+    // esta funcion es para obtener informacion del usuario usuando jquery y ajax
     public static function editarRegistroUsuarioC($valor){
-        try {
+        try {      
             $editarUsuario = usuariosM::editarRegistroUsuarioM($valor);
+            return $editarUsuario;
         } catch (Exception $ex) {
             echo 'Error -'.$ex;
+        }
+    }
+
+    public function actualizarRegistroUsuarioC(){
+        try {
+            if (isset($_POST["idEdit"])) {
+                $rutaImagen = $_POST["fotoActual"];
+                if ($_FILES["fotoEdit"]["tmp_name"] != "") {
+                    $rutaImagen = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoEdit"]["tmp_name"], $_FILES["fotoEdit"]);
+                }
+                $datosActualizarUsuario = array("id"=>$_POST["idEdit"],"usuario"=>$_POST["usuarioEdit"],"clave"=>$_POST["claveEdit"],"rol"=>$_POST["rolEdit"],"foto"=>$rutaImagen);
+
+                $datosActualizados = usuariosM::actualizarRegistroUsuarioM($datosActualizarUsuario);
+
+                if($datosActualizados == true){
+                    echo '<script>window.location = catusuarios</script>';
+                }else{
+                    echo 'Hay un error no se pudo realizar actualizacion';
+                }
+            }
+        } catch (exception $ex) {
+            echo 'Error - '.$ex;
         }
     }
 
     public function DesactivarUsuarioC(){
         try {
             if (isset($_GET["CodValor"])){
-
                 $codigoUsuario = $_GET["CodValor"];
-
                 $RespuestadesactivarUsuario = usuariosM::DesactivarRegistroUsuarioM($codigoUsuario);
-                
                  if ($RespuestadesactivarUsuario == true) {
                      echo '<script>window.location=catusuario</script>';
                  }else{

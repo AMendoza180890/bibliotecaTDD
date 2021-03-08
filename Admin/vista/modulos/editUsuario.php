@@ -17,18 +17,15 @@
                         </div>
                         <div class="form-group">
                             <h2>Clave</h2>
-                            <input type="password" class="form-control input-lg" name="claveEdit" id="claveEdit" required>
+                            <input type="text" class="form-control input-lg" name="claveEdit" id="claveEdit" required>
                         </div>
                         <div class="form-group">
                             <h2>Rol</h2>
-                            <select name="rolEdit" id="rolEdit" class="form-control input-lg">
-                                <?php
-                                // $listadeRoles = new rolesUsuarioC;
-                                // $listadeRoles->mostrarRolesUsuarioC();
-                                // echo '<option value="1" ' . ($value["rolid"] == 1 ? "selected" : "") . '">Administrador</option>';
-                                // echo '<option value="2" ' . ($value["rolid"] == 2 ? "selected" : "") . '">Invitado</option>';
-                                // echo '<option value="3" ' . ($value["rolid"] == 3 ? "selected" : "") . '">Desactivado</option>';
-                                ?>
+                            <select name="rolEdit" class="form-control input-lg">
+                                <option id="rolEdit"></option>
+                                <option value="1">Administrador</option>
+                                <option value="2">Invitado</option>
+                                <option value="3">Desactivado</option>
                             </select>
                         </div>
 
@@ -36,7 +33,7 @@
                             <h2>Foto:</h2>
                             <input type="file" name="fotoEdit" id="fotoEdit">
                             <p class="help-block">peso maximo permitido 200 Mb</p>
-                            <img src="vista/img/usuario/defecto.png" alt="imagen" class="img-thumbail" width="100px;">
+                            <img src="vista/img/usuario/defecto.png" alt="imagen" class="img-thumbnail visor" width="100px;">
                             <input type="hidden" name="fotoActual" id="fotoActual">
                         </div>
                     </div>
@@ -46,8 +43,8 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                // $crearUsuario = new usuariosC();
-                // $crearUsuario->editarRegistroUsuarioC();
+                    $actualizarUsuario  = new usuariosC();
+                    $actualizarUsuario -> actualizarRegistroUsuarioC();
                 ?>
             </form>
         </div>

@@ -12,5 +12,16 @@ class rolesUsuarioM extends conexionBD{
             echo 'Error - '.$ex;
         }
     }
+
+    // public static function setRolesUsuarioM($idUsuario){
+    //     try {
+    //         $pdo = conexionBD::conexion()->prepare("SELECT rolid FROM usuarios WHERE id = :id");
+    //         $pdo -> bindParam("id", $idUsuario,PDO::PARAM_INT);
+    //         $pdo ->execute();
+    //         return $pdo->fetch();
+    //     } catch (Exception $ex) {
+    //         echo 'Error -'.$ex;
+    //     }
+    // }
 }
 ?>
