@@ -1,52 +1,51 @@
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-       Gestor de Recursos
-      </h1>
-    </section>
-    <!-- Main content -->
-    <section class="content">
-      <!-- Default box -->
-      <div class="box">
-        <div class="box-header with-border">
-            <button class="btn btn-primary" data-toggle="modal" data-target="#crearUsuario">Agregar Recurso</button>
-        </div>
-        <div class="box-body">
-            <table class="table table-bordered table-hover table-striped TablaUsuario">
-                <thead>
-                    <tr>
-                        <th>Nº</th>
-                        <th>ruta</th>
-                        <th>titulo</th>
-                        <th>descripcion</th>
-                        <th>autor</th>
-                        <th>imagen</th>
-                        <th>Editar/Desactivar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <?php
-                        $mostrarUsuarios = new usuariosC;
-                        $mostrarUsuarios -> listadeUsuarios();
-
-                        $valor = null;
-                        $editarUsuario = usuariosC::editarRegistroUsuarioC($valor);
-                    ?> -->
-                </tbody>
-            </table>
-        </div>
-        <!-- /.box-body -->
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Gestor de Recursos
+    </h1>
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    <!-- Default box -->
+    <div class="box">
+      <div class="box-header with-border">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#registrarRecurso">Agregar Recurso</button>
       </div>
-      <!-- /.box -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-<!-- <?php include 'crearUsuario.php';?>
-<?php include 'editUsuario.php';?>
-<?php 
-  $desactivarUsuarioRol = new usuariosC;
-  $desactivarUsuarioRol -> DesactivarUsuarioC();
-?> -->
+      <div class="box-body">
+        <table class="table table-bordered table-hover table-striped TablaUsuario">
+          <thead>
+            <tr>
+              <th>Nº</th>
+              <th>ruta</th>
+              <th>titulo</th>
+              <th>descripcion</th>
+              <th>autor</th>
+              <th>Editar/Desactivar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+                  $mostrarRecurso = new recursoC;
+                  $mostrarRecurso ->mostrarRecursosRegistrados();
+
+                  // $valor = null;
+                  // $editarUsuario = usuariosC::editarRegistroUsuarioC($valor);
+            ?> 
+          </tbody>
+        </table>
+      </div>
+      <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<?php include 'registrarRecurso.php'; ?>
+<?php include 'editarRecurso.php'; ?>
+<?php
+// $desactivarUsuarioRol = new usuariosC;
+// $desactivarUsuarioRol->DesactivarUsuarioC();
+?> 
