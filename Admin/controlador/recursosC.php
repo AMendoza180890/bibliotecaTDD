@@ -64,6 +64,32 @@ class recursoC{
 
     public function actualizarRecurso(){
         try {
+            if (isset($_POST["idEdit"])) {
+                if ($_FILES["recursoEdit"]["tmp_name"] != "") {
+                    $rutaRecurso = tratamientoRecurso::subirRecurso($_FILES["recursoEdit"]["tmp_name"], $_FILES["recursoEdit"]["name"]);
+                    $nombreRecurso = basename($_FILES["recursoEdit"]["name"]);
+                }else{
+                    $rutaRecurso = $_POST["recursoActual"];
+                    $nombreRecurso = basename($_POST["recursoActual"]);
+                }
+
+                $datosRecursoActualizado = array("id" => $_POST["idEdit"],"nombre"=>$nombreRecurso, "titulo"=>$_POST["titulosEdit"],"detalle"=>$_POST["detallesEdit"],"autor"=>$_POST["autorEdit"], "ruta" => $rutaRecurso);
+
+                $datosActualizados = recursoM::actualizarRecursoM($datosRecursoActualizado);
+
+                if ($datosActualizados == true) {
+                    echo '<script>window.location="recurso"</script>';
+                }else{
+                    echo 'Error al actualizar recurso';
+                }
+            }
+        } catch (exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
+    public function asignarEtiquetas(){
+        try {
             
         } catch (exception $ex) {
             echo 'Error - '.$ex;

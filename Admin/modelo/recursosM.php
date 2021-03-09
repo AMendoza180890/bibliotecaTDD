@@ -42,5 +42,25 @@ class recursoM extends conexionBD{
             echo 'Error - '.$ex;
         }
     }
+
+    public static function actualizarRecursoM($datosRecursoActualizado){
+        try {
+            $pdo = conexionBD::conexion()->prepare("UPDATE catrecursos SET nombre = :nombre ,ruta=:ruta,titulo=:titulo,descripcion=:descripcion,autor=:autor WHERE id = :id");
+            $pdo -> bindParam("id",$datosRecursoActualizado["id"],PDO::PARAM_INT);
+            $pdo -> bindParam("nombre",$datosRecursoActualizado["nombre"],PDO::PARAM_STR);
+            $pdo -> bindParam("ruta",$datosRecursoActualizado["ruta"],PDO::PARAM_STR);
+            $pdo -> bindParam("titulo",$datosRecursoActualizado["titulo"],PDO::PARAM_STR);
+            $pdo -> bindParam("descripcion",$datosRecursoActualizado["detalle"],PDO::PARAM_STR);
+            $pdo -> bindParam("autor",$datosRecursoActualizado["autor"],PDO::PARAM_STR);
+
+            if ($pdo->execute()) {
+                return true;
+            }else{
+                return false;
+            }
+        } catch (exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
 }
 ?>
