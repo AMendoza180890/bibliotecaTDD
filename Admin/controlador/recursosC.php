@@ -8,13 +8,14 @@ class recursoC{
                     echo '<tr>
                         <td>' . ($key + 1) . '</td>
                         <td>' . $value["ruta"] . '</td>
+                        <td>' . $value["nombre"] . '</td>
                         <td>' . $value["titulo"] . '</td>
                         <td>'.$value["descripcion"].'</td>
                         <td>' . $value["autor"] . '</td>
                         <td>
                             <div class="btn-group">
-                                <button class="btn btn-success EditRegistroUsuario" codValor=' . $value["id"] . '><i data-toggle="modal" data-target="#editarUsuario" class="fa fa-pencil"></i></button>
-                                <button class="btn btn-danger DesactivarRegistroUsuario" codValor=' . $value["id"] . '><i class="fa fa-times"></i></button>
+                                <button class="btn btn-success EditRegistroRecurso" codValor=' . $value["id"] . '><i data-toggle="modal" data-target="#editarRecurso" class="fa fa-pencil"></i></button>
+                                <button class="btn btn-danger DesactivarRegistroUsuario" style="display:none;" codValor=' . $value["id"] . '><i class="fa fa-times"></i></button>
                             </div>
                         </td>
                     </tr>';
@@ -30,8 +31,9 @@ class recursoC{
         try {
             if (isset($_POST["titulosNuevo"])) {
                 $rutaRecurso = tratamientoRecurso::subirRecurso($_FILES["recursoNuevo"]["tmp_name"],$_FILES["recursoNuevo"]["name"]);
+                $nombreRecurso = basename($_FILES["recursoNuevo"]["name"]);
 
-                $datosRecurso = array("ruta"=>$rutaRecurso, "titulo"=>$_POST["titulosNuevo"], "detalle"=>$_POST["detallesNuevo"], "autor" =>$_POST["autorNuevo"]);
+                $datosRecurso = array("nombreArchivo"=>$nombreRecurso, "ruta"=>$rutaRecurso, "titulo"=>$_POST["titulosNuevo"], "detalle"=>$_POST["detallesNuevo"], "autor" =>$_POST["autorNuevo"]);
                 // echo '<script>console.log("'.$rutaRecurso.'")</script>';
                 //"opcion1" => $_POST["rolNuevo1"],"opcion2" => $_POST["rolNuevo2"], "opcion3" => $_POST["rolNuevo3"], "opcion4" => $_POST["rolNuevo4"], "opcion5" => $_POST["rolNuevo5"], "opcion6" => $_POST["rolNuevo6"], "opcion7" => $_POST["rolNuevo7"], "opcion8" => $_POST["rolNuevo8"], "opcion9" => $_POST["rolNuevo9"],"opcion10" => $_POST["rolNuevo10"]
 
@@ -43,6 +45,17 @@ class recursoC{
                     echo 'No se pudo registrar el recurso';
                 }
 
+            }
+        } catch (exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
+    public static function obtenerRecursoRegistradoC($codigoRecurso){
+        try {
+            if ($codigoRecurso != null) {
+                $obtenerRecurso = recursoM::obtenerRecursoRegistradoM($codigoRecurso);
+                return $obtenerRecurso;
             }
         } catch (exception $ex) {
             echo 'Error - '.$ex;

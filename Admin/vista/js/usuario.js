@@ -30,8 +30,6 @@ $(".TablaUsuario").on("click", ".EditRegistroUsuario", function() {
             }
         }
     });
-
-
 })
 
 // funcion para desactivar registro por GET

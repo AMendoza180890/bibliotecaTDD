@@ -14,15 +14,16 @@
         <button class="btn btn-primary" data-toggle="modal" data-target="#registrarRecurso">Agregar Recurso</button>
       </div>
       <div class="box-body">
-        <table class="table table-bordered table-hover table-striped TablaUsuario">
+        <table class="table table-bordered table-hover table-striped TablaRecursos">
           <thead>
             <tr>
               <th>Nº</th>
               <th>ruta</th>
+              <th>nombre</th>
               <th>titulo</th>
               <th>descripcion</th>
               <th>autor</th>
-              <th>Editar/Desactivar</th>
+              <th>Editar</th>
             </tr>
           </thead>
           <tbody>
@@ -30,8 +31,8 @@
                   $mostrarRecurso = new recursoC;
                   $mostrarRecurso ->mostrarRecursosRegistrados();
 
-                  // $valor = null;
-                  // $editarUsuario = usuariosC::editarRegistroUsuarioC($valor);
+                  $codigoRecurso = null;
+                  $obtenerRecurso = recursoC::obtenerRecursoRegistradoC($codigoRecurso);
             ?> 
           </tbody>
         </table>
