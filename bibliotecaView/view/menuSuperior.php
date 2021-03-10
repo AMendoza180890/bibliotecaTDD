@@ -3,7 +3,7 @@
                 <?php
                 if ($_SESSION["foto"] != "") {
                     echo '<figure>
-                    <img src="admin/'.$_SESSION["foto"].'" alt="user-picture" class="img-responsive img-circle center-box">
+                    <img src="Admin/'.$_SESSION["foto"].'" alt="user-picture" class="img-responsive img-circle center-box">
                  </figure>';
                 }else{
                     echo '<figure>

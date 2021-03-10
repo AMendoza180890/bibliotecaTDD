@@ -17,7 +17,7 @@ session_start();
                      include 'bibliotecaView/view/menuSuperior.php';
                      
                      if (isset($_GET["ruta"])) {
-                            if($_GET["ruta"] == "login" || $_GET["ruta"] == "academico" || $_GET["ruta"] == "home" || $_GET["ruta"] == "book" || $_GET["ruta"] == "salir"){
+                            if($_GET["ruta"] == "login" || $_GET["ruta"] == "academico" || $_GET["ruta"] == "home" || $_GET["ruta"] == "book" || $_GET["ruta"] == "salir" || $_GET["ruta"] == "autismo" || $_GET["ruta"] == "conducta" || $_GET["ruta"] == "curriculum" || $_GET["ruta"] == "curso" || $_GET["ruta"] == "estimulacion" || $_GET["ruta"] == "fisioterapia" || $_GET["ruta"] == "historia" || $_GET["ruta"] == "iglesias" || $_GET["ruta"] == "ingles" || $_GET["ruta"] == "lenguaje" || $_GET["ruta"] == "piedu" ){
                                    include 'bibliotecaView/view/'.$_GET["ruta"].".php";
                             }else
                             {
