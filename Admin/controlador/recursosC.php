@@ -35,7 +35,7 @@ class recursoC{
 
                 $datosRecurso = array("nombreArchivo"=>$nombreRecurso, "ruta"=>$rutaRecurso, "titulo"=>$_POST["titulosNuevo"], "detalle"=>$_POST["detallesNuevo"], "autor" =>$_POST["autorNuevo"]);
                 // echo '<script>console.log("'.$rutaRecurso.'")</script>';
-                //"opcion1" => $_POST["rolNuevo1"],"opcion2" => $_POST["rolNuevo2"], "opcion3" => $_POST["rolNuevo3"], "opcion4" => $_POST["rolNuevo4"], "opcion5" => $_POST["rolNuevo5"], "opcion6" => $_POST["rolNuevo6"], "opcion7" => $_POST["rolNuevo7"], "opcion8" => $_POST["rolNuevo8"], "opcion9" => $_POST["rolNuevo9"],"opcion10" => $_POST["rolNuevo10"]
+                //"opcion1" => $_POST["opcion1"],"opcion2" => $_POST["opcion2"], "opcion3" => $_POST["opcion3"], "opcion4" => $_POST["opcion4"], "opcion5" => $_POST["opcion5"], "opcion6" => $_POST["opcion6"], "opcion7" => $_POST["opcion7"], "opcion8" => $_POST["opcion8"], "opcion9" => $_POST["opcion9"],"opcion10" => $_POST["opcion10"]
 
                 $registrarRecurso = recursoM::registrarRecursoM($datosRecurso);
 
@@ -90,7 +90,60 @@ class recursoC{
 
     public function asignarEtiquetas(){
         try {
-            
+            $id = "";
+            $opcion1 = 14;
+            $opcion2 = 14;
+            $opcion3 = 14;
+            $opcion4 = 14;
+            $opcion5 = 14;
+            $opcion6 = 14;
+            $opcion7 = 14;
+            $opcion8 = 14;
+            $opcion9 = 14;
+            $opcion10 = 14;
+            $opcion11 = 13;
+
+            if(isset($_POST["idEdit"])){
+                $id = $_POST["idEdit"];
+                if(isset($_POST["opcion1"])){
+                    $opcion1 = $_POST["opcion1"];
+                }
+                if(isset($_POST["opcion2"])){
+                    $opcion2 = $_POST["opcion2"];
+                }
+                if(isset($_POST["opcion3"])){
+                    $opcion3 = $_POST["opcion3"];
+                }
+                if(isset($_POST["opcion1"])){
+                    $opcion4 = $_POST["opcion4"];
+                }
+                if(isset($_POST["opcion1"])){
+                    $opcion5 = $_POST["opcion5"];
+                }
+                if(isset($_POST["opcion1"])){
+                    $opcion6 = $_POST["opcion6"];
+                }
+                if(isset($_POST["opcion1"])){
+                    $opcion7 = $_POST["opcion7"];
+                }
+                if(isset($_POST["opcion1"])){
+                    $opcion8 = $_POST["opcion8"];
+                }
+                if(isset($_POST["opcion1"])){
+                    $opcion9 = $_POST["opcion9"];
+                }
+                if(isset($_POST["opcion10"])){
+                    $opcion10 = $_POST["opcion10"];
+                }
+                $etiquetasAsignadas = array($opcion1,$opcion2,$opcion3, $opcion4, $opcion5, $opcion6, $opcion7, $opcion8, $opcion9, $opcion10, $opcion11);
+                for ($i=0; $i < count($etiquetasAsignadas) ; $i++) {
+                    if(isset($etiquetasAsignadas[$i]) && $etiquetasAsignadas[$i] != ""){
+                        $recursoAsignadoEtiqueta = new recursoM;
+                        $recursoAsignadoEtiqueta -> asignarEtiquetas($etiquetasAsignadas[$i],$id);
+                    }
+                }
+            }
+
         } catch (exception $ex) {
             echo 'Error - '.$ex;
         }

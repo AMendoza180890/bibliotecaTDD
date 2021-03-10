@@ -151,7 +151,8 @@
                 </div>
                 <?php
                 $actualizarRecurso      =   new recursoC;
-                $actualizarRecurso->actualizarRecurso();
+                $actualizarRecurso      ->  actualizarRecurso();
+                $actualizarRecurso      ->  asignarEtiquetas(); 
                 ?>
             </form>
         </div>

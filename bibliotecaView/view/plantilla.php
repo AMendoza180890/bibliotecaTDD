@@ -17,7 +17,7 @@ session_start();
                      include 'bibliotecaView/view/menuSuperior.php';
                      
                      if (isset($_GET["ruta"])) {
-                            if($_GET["ruta"] == "login" || $_GET["ruta"] == "home" || $_GET["ruta"] == "book" || $_GET["ruta"] == "salir"){
+                            if($_GET["ruta"] == "login" || $_GET["ruta"] == "academico" || $_GET["ruta"] == "home" || $_GET["ruta"] == "book" || $_GET["ruta"] == "salir"){
                                    include 'bibliotecaView/view/'.$_GET["ruta"].".php";
                             }else
                             {

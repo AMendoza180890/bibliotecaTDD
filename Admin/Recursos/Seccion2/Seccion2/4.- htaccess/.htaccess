@@ -1,6 +1,0 @@
-
-Options All -Indexes
-
-RewriteEngine On
-
-RewriteRule ^([a-zA-Z]+)$ index.php?url=$1

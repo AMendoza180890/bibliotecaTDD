@@ -62,5 +62,17 @@ class recursoM extends conexionBD{
             echo 'Error - '.$ex;
         }
     }
+
+    public  function asignarEtiquetas($etiquetasAsignadas,$id){
+        try {
+            $pdo = conexionBD::conexion()->prepare("INSERT INTO unionetiquetascatrecurso( idRecurso, idEtiqueta) VALUES (:idRecurso, :idEtiqueta)");
+            $pdo ->bindParam("idRecurso",$id,PDO::PARAM_INT);
+            $pdo ->bindParam("idEtiqueta",$etiquetasAsignadas,PDO::PARAM_INT);
+            $pdo->execute();
+
+        } catch (exception $ex) {
+            echo 'Error -'.$ex;
+        }
+    }
 }
 ?>
