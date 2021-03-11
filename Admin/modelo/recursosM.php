@@ -74,5 +74,16 @@ class recursoM extends conexionBD{
             echo 'Error -'.$ex;
         }
     }
+
+    public static function obtenerEtiquetaRecurso($codigoRecurso){
+        try {
+            $pdo = conexionBD::conexion()->prepare("SELECT catrecursos.id, catetiquetas.id, catetiquetas.etiquetaDescripcion FROM catetiquetas INNER JOIN unionetiquetascatrecurso on catetiquetas.id = unionetiquetascatrecurso.idEtiqueta INNER JOIN catrecursos on unionetiquetascatrecurso.idRecurso = catrecursos.id where catrecursos.id = :id");
+            $pdo ->bindParam("id",$codigoRecurso,PDO::PARAM_INT);
+            $pdo ->execute();
+            return $pdo->fetchAll();
+        } catch (exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
 }
 ?>

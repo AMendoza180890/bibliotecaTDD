@@ -62,6 +62,17 @@ class recursoC{
         }
     }
 
+    public static function obtenerEtiquetaRecursoC($codigoRecurso){
+        try {
+            if ($codigoRecurso != null) {
+                $recursoEtiqueta = recursoM::obtenerEtiquetaRecurso($codigoRecurso);
+                return $recursoEtiqueta;
+            }
+        } catch (exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
+
     public function actualizarRecurso(){
         try {
             if (isset($_POST["idEdit"])) {
