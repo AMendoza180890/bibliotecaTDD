@@ -31,14 +31,10 @@ $(".TablaRecursos").on("click",".EditRegistroRecurso",function(){
         processData: false,
         dataType: "json",
         success: function (response) {
-            for (let i = 1; indexedDB < 10; i++) {
-                if (response.legth) {
-                    
-                }
-                response.forEach(Element => {
-                    $("#eleccion" + i).val(response["ruta"]);
-                    $("#eleccion" + i).html(response["ruta"]);
-                });
+            for (let i = 0; i <= Object.keys(response).length; i++) {
+                    $("#eleccion" + i).val(response[i]["id"]);
+                    $("#eleccion" + i).html(response[i]["etiquetaDescripcion"]);
+                    console.log(response[i]["etiquetaDescripcion"]);
             }
         }
     });

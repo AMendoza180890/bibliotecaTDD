@@ -146,6 +146,10 @@ class recursoC{
                 if(isset($_POST["opcion10"])){
                     $opcion10 = $_POST["opcion10"];
                 }
+
+                $eliminarAsignadoEtiqueta = new recursoM;
+                $eliminarAsignadoEtiqueta -> eliminarEtiquetas($id);
+
                 $etiquetasAsignadas = array($opcion1,$opcion2,$opcion3, $opcion4, $opcion5, $opcion6, $opcion7, $opcion8, $opcion9, $opcion10, $opcion11);
                 for ($i=0; $i < count($etiquetasAsignadas) ; $i++) {
                     if(isset($etiquetasAsignadas[$i]) && $etiquetasAsignadas[$i] != ""){
@@ -161,3 +165,4 @@ class recursoC{
     }
 }
 ?>
+

@@ -75,6 +75,16 @@ class recursoM extends conexionBD{
         }
     }
 
+    public function eliminarEtiquetas($id){
+        try {
+            $pdo = conexionBD::conexion()->prepare("DELETE FROM unionetiquetascatrecurso WHERE idRecurso = :id");
+            $pdo ->bindParam("id",$id,PDO::PARAM_INT);
+            $pdo->execute();
+        } catch (exception $ex) {
+            echo 'Error -'.$ex;
+        }
+    }
+
     public static function obtenerEtiquetaRecurso($codigoRecurso){
         try {
             $pdo = conexionBD::conexion()->prepare("SELECT catrecursos.id, catetiquetas.id, catetiquetas.etiquetaDescripcion FROM catetiquetas INNER JOIN unionetiquetascatrecurso on catetiquetas.id = unionetiquetascatrecurso.idEtiqueta INNER JOIN catrecursos on unionetiquetascatrecurso.idRecurso = catrecursos.id where catrecursos.id = :id");

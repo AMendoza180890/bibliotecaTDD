@@ -36,7 +36,7 @@
                         <div class="form-group">
                             <h2>Opcion 1</h2>
                             <select name="opcion1" id="opcion1" class="form-control input-lg" required>
-                                <option id="eleccion1"></option>
+                                <option id="eleccion0"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <h2>Opcion 2</h2>
                             <select name="opcion2" id="opcion2" class="form-control input-lg">
-                                <option id="eleccion2"></option>
+                                <option id="eleccion1"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -58,7 +58,7 @@
                         <div class="form-group">
                             <h2>Opcion 3</h2>
                             <select name="opcion3" id="opcion3" class="form-control input-lg">
-                                <option id="eleccion3"></option>
+                                <option id="eleccion2"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -69,7 +69,7 @@
                         <div class="form-group">
                             <h2>Opcion 4</h2>
                             <select name="opcion4" id="opcion4" class="form-control input-lg">
-                                <option id="eleccion4"></option>
+                                <option id="eleccion3"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -80,7 +80,7 @@
                         <div class="form-group">
                             <h2>Opcion 5</h2>
                             <select name="opcion5" id="opcion5" class="form-control input-lg">
-                                <option id="eleccion5"></option>
+                                <option id="eleccion4"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -91,7 +91,7 @@
                         <div class="form-group">
                             <h2>Opcion 6</h2>
                             <select name="opcion6" id="opcion6" class="form-control input-lg">
-                                <option id="eleccion6"></option>
+                                <option id="eleccion5"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -102,7 +102,7 @@
                         <div class="form-group">
                             <h2>Opcion 7</h2>
                             <select name="opcion7" id="opcion7" class="form-control input-lg">
-                                <option id="eleccion7"></option>
+                                <option id="eleccion6"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -113,7 +113,7 @@
                         <div class="form-group">
                             <h2>Opcion 8</h2>
                             <select name="opcion8" id="opcion8" class="form-control input-lg">
-                                <option id="eleccion8"></option>
+                                <option id="eleccion7"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -124,7 +124,7 @@
                         <div class="form-group">
                             <h2>Opcion 9</h2>
                             <select name="opcion9" id="opcion9" class="form-control input-lg">
-                                <option id="eleccion9"></option>
+                                <option id="eleccion8"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
@@ -135,7 +135,7 @@
                         <div class="form-group">
                             <h2>Opcion 10</h2>
                             <select name="opcion10" id="opcion10" class="form-control input-lg">
-                                <option id="eleccion10"></option>
+                                <option id="eleccion9"></option>
                                 <?php
                                 $listaEtiqueta = new etiquetasC;
                                 $listaEtiqueta->listaEtiquetaC();
