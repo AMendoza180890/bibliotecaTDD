@@ -23,10 +23,10 @@ if( !headers_sent() && '' == session_id() ) {
                                    include 'bibliotecaView/view/'.$_GET["ruta"].".php";
                             }else
                             {
-                                   include 'bibliotecaView/view/index.php';
+                                   include 'bibliotecaView/view/home.php';
                             }
                      }else{
-                            include 'bibliotecaView/view/index.php';
+                            include 'bibliotecaView/view/home.php';
                      }
                      //plantilla de footer
                      include 'bibliotecaView/view/pie.php';
