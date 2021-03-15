@@ -13,9 +13,9 @@
             </div>
             <div class="full-reset nav-lateral-list-menu">
                 <ul class="list-unstyled">
-                    <li><a href="home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
+                    <li><a href="home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Distintas Discapacidades</a></li>
                     <li><a href="academico"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Académico</a></li>
-                    <li><a href="autismo"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Autismo</a></li>
+                    <!-- <li><a href="autismo"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Autismo</a></li> -->
                     <li><a href="conducta"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Conducta</a></li>
                     <li><a href="curriuculum"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Currículo Tesoros 2018</a></li>
                     <li><a href="curso"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Curso Dra. VanTol Iowa</a></li>

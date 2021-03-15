@@ -21,7 +21,6 @@ class recursoC{
                     </tr>';
                 }
             }
-
         } catch (exception $ex) {
             echo 'Error - '.$ex;
         }
@@ -158,11 +157,9 @@ class recursoC{
                     }
                 }
             }
-
         } catch (exception $ex) {
             echo 'Error - '.$ex;
         }
     }
 }
 ?>
-
