@@ -18,6 +18,8 @@ class tratamientoImagen {
                     imagepng($foto,$rutaImagen);
                 }
                 return $rutaImagen;
+            }else{
+                return $rutaImagen;
             }
         } catch (Exception $ex) {
             echo 'Error - '.$ex;

@@ -1,7 +1,5 @@
 <?php
-if( !headers_sent() && '' == session_id() ) {
-  session_start();
-  }
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -47,25 +45,24 @@ if( !headers_sent() && '' == session_id() ) {
 
 <?php  
   if (isset($_SESSION["ingreso"]) && $_SESSION["ingreso"] == true) {
-    echo '<div class="wrapper">';
+      echo '<div class="wrapper">';
+      include 'modulos/cabecera.php';
+      include 'modulos/menu.php';
     
-    include 'modulos/cabecera.php';
-    include 'modulos/menu.php';
-    
-    if (isset($_GET["ruta"])) {
-      if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "catusuarios" || $_GET["ruta"] == "login" || $_GET["ruta"] == "salir" || $_GET["ruta"] == "recurso") {
-        include "modulos/".$_GET["ruta"].".php";
-      }else {
-        include "modulos/inicio.php";
+      if (isset($_GET["ruta"])) {
+          if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "catusuarios" || $_GET["ruta"] == "login" || $_GET["ruta"] == "salir" || $_GET["ruta"] == "recurso") {
+              include "modulos/".$_GET["ruta"].".php";
+          }else{
+              include "modulos/inicio.php";
+          }
+            echo '</div>';
+      }else{
+          include "modulos/login.php";
       }
-      echo '</div>';
-    }else{
-        include "modulos/login.php";
-    }
   }else{
-    include "modulos/login.php";
+      include "modulos/login.php";
 }
-  ?>
+?>
 
 <!-- ./wrapper -->
 
