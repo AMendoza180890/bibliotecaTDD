@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h2 class="all-tittles">Habilidades de la vida diaria</h2>
+        <h2 class="all-tittles">Vocacional</h2>
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <h3 class="text-center all-tittles">Todos los recursos para el area Habilidades de la vida diaria</h3>
+            <h3 class="text-center all-tittles">Todos los recursos para Vocacional</h3>
             <div class="table-responsive">
                 <table class="table table-hover text-center">
                     <thead>
@@ -18,7 +18,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        $etiqueta = 3;
+                        $etiqueta = 22;
                         $listaRecurso = new recursoBibliotecaC();
                         $listaRecurso->obtenerRecursoC($etiqueta);
                         ?>

@@ -18,7 +18,7 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                                $etiqueta =7;
+                                                $etiqueta =15;
                                                 $listaRecurso = new recursoBibliotecaC();
                                                 $listaRecurso -> obtenerRecursoC($etiqueta);
                                             ?>

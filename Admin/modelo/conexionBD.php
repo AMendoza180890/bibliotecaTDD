@@ -17,14 +17,17 @@ class conexionBD{
     //     $this->db       =   "marvin_dbwebnica";
     //     $this->user     =   "marvin_userWebNi";
     //     $this->passw    =   "Soloyo246$$";
+
+
     //     }
 
     static public function conexion(){
         try {
-            $bd = new PDO("mysql:host=localhost;dbname=bdbibliotecatdd","root","");
-            $bd -> exec("set names utf8");
-            return $bd;
+            $bd = new PDO("mysql:host=localhost;dbname=tesorosd_bdbibliotecatdd","tesorosd_library","yOLtH_qK?8gt");
 
+            $bd -> exec("set names utf8");
+
+            return $bd;
         } catch (Exception $ex) {
             echo 'error - '.$ex;
         }

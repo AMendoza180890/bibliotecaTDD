@@ -7,7 +7,7 @@
     <a href="catlectura">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-book"></i></div>
-            <div class="tile-name all-tittles">Lectura</div>
+            <div class="tile-name all-tittles">Lectoescritura</div>
             <div class="tile-num full-reset"></div>
         </article>
     </a>

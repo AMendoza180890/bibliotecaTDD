@@ -13,7 +13,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <h4 class="all-tittles">Desarrollado</h4>
                         <ul class="list-unstyled">
-                            <li><i class="zmdi zmdi-check zmdi-hc-fw"></i>&nbsp; por Equipo Tesoros de Dios.</li>
+                            <li><i class="zmdi zmdi-check zmdi-hc-fw"></i>&nbsp; por el Equipo Tesoros de Dios.</li>
                         </ul>
                     </div>
                 </div>

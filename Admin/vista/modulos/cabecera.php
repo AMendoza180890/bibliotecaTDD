@@ -1,6 +1,6 @@
 <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="inicio" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>TDD</b></span>
       <!-- logo for regular state and mobile devices -->
@@ -36,7 +36,7 @@
                   <a href="#" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
-                  <a href="index.php?ruta=salir" class="btn btn-danger btn-flat">Salir</a>
+                  <a href="salir" class="btn btn-danger btn-flat">Salir</a>
                 </div>
               </li>
             </ul>

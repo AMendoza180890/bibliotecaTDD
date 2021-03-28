@@ -1,5 +1,9 @@
 <?php
+if(!headers_sent()){
 session_start();
+}else{
+var_dump(headers_sent());
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -42,27 +46,27 @@ session_start();
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <body class="hold-transition skin-blue sidebar-mini login-page">
-
 <?php  
   if (isset($_SESSION["ingreso"]) && $_SESSION["ingreso"] == true) {
-      echo '<div class="wrapper">';
-      include 'modulos/cabecera.php';
-      include 'modulos/menu.php';
+    echo '<div class="wrapper">';
     
-      if (isset($_GET["ruta"])) {
-          if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "catusuarios" || $_GET["ruta"] == "login" || $_GET["ruta"] == "salir" || $_GET["ruta"] == "recurso") {
-              include "modulos/".$_GET["ruta"].".php";
-          }else{
-              include "modulos/inicio.php";
-          }
-            echo '</div>';
-      }else{
-          include "modulos/login.php";
+    include 'modulos/cabecera.php';
+    include 'modulos/menu.php';
+    
+    if (isset($_GET["ruta"])) {
+      if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "catusuarios" || $_GET["ruta"] == "login" || $_GET["ruta"] == "salir" || $_GET["ruta"] == "recurso") {
+        include "modulos/".$_GET["ruta"].".php";
+      }else {
+        include "modulos/inicio.php";
       }
+      echo '</div>';
+    }else{
+        include "modulos/login.php";
+    }
   }else{
-      include "modulos/login.php";
+    include "modulos/login.php";
 }
-?>
+  ?>
 
 <!-- ./wrapper -->
 

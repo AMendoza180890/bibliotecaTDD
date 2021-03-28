@@ -4,7 +4,7 @@ class tratamientoImagen {
     public static function tratamientoTipoImagen($nombreElemento,$elemento){
         try {
             $rutaImagen = "";
-            if (isset($nombreElemento) && !empty($nombreElemento)) {
+             if (isset($nombreElemento) && !empty($nombreElemento)) {
                 if ($elemento["type"] == "image/jpeg") {
                     $nombreImagen = mt_rand(10,999);
                     $rutaImagen = "vista/img/usuario/U".$nombreImagen.".jpg";
