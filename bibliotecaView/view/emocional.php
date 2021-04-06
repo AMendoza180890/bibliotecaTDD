@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <div class="page-header">
-        <h2 class="all-tittles">Recurso Lectoescritura</h2>
+        <h2 class="all-tittles">Recurso sobre Emociones</h2>
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <h3 class="text-center all-tittles">Todos los recursos de Lectoescritura</h3>
+            <h3 class="text-center all-tittles">Todos los recursos discapacidad - Emocional</h3>
             <div class="table-responsive">
                 <table class="table table-hover text-center">
                     <thead>
@@ -18,7 +18,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        $etiqueta = 1;
+                        $etiqueta = 8;
                         $listaRecurso = new recursoBibliotecaC();
                         $listaRecurso->obtenerRecursoC($etiqueta);
                         ?>

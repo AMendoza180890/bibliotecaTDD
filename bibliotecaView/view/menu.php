@@ -15,19 +15,19 @@
             <ul class="list-unstyled">
                 <li><a href="home"><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
                 <li><a href="academico"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Académico</a></li>
-                <li><a href="academico"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Apoyo Familiar</a></li>
-                <li><a href="conducta"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Conducta</a></li>
-                <li><a href="curriuculum"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Currículo Tesoros de Dios</a></li>
-                <li><a href="discapacidades"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Discapacidades</a></li>
-                <li><a href="estimulacion"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Estimulacion Temprana</a></li>
-                <li><a href="fisioterapia"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Fisioterapia</a></li>
-                <li><a href="historia"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Historias Sociales</a></li>
-                <li><a href="iglesias"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Iglesias</a></li>
-                <li><a href="lenguaje"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Logopedia</a></li>
-                <li><a href="piedu"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Plan Individualizado</a></li>
-                <li><a href="espiritual"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Recursos Espirituales</a></li>
-                <li><a href="habilidad"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Vocacional</a></li>
-                <li><a href="ingles"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Resources in English</a></li>
+                <li><a href="apoyoFamiliar"><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Apoyo Familiar</a></li>
+                <li><a href="conducta"><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Conducta</a></li>
+                <li><a href="curriculum"><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Currículo Tesoros de Dios</a></li>
+                <li><a href="discapacidades"><i class="zmdi zmdi-account-add zmdi-hc-fw"></i>&nbsp;&nbsp; Discapacidades</a></li>
+                <li><a href="estimulacion"><i class="zmdi zmdi-collection-plus zmdi-hc-fw"></i>&nbsp;&nbsp; Estimulacion Temprana</a></li>
+                <li><a href="fisioterapia"><i class="zmdi zmdi-male zmdi-hc-fw"></i>&nbsp;&nbsp; Fisioterapia</a></li>
+                <li><a href="historia"><i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Historias Sociales</a></li>
+                <li><a href="iglesias"><i class="zmdi zmdi-plus zmdi-hc-fw"></i>&nbsp;&nbsp; Iglesias</a></li>
+                <li><a href="lenguaje"><i class="zmdi zmdi-mood zmdi-hc-fw"></i>&nbsp;&nbsp; Logopedia</a></li>
+                <li><a href="piedu"><i class="zmdi zmdi-archive zmdi-hc-fw"></i>&nbsp;&nbsp; Plan Individualizado</a></li>
+                <li><a href="espiritual"><i class="zmdi zmdi-plus-circle-o zmdi-hc-fw"></i>&nbsp;&nbsp; Recursos Espirituales</a></li>
+                <li><a href="habilidad"><i class="zmdi zmdi-run zmdi-hc-fw"></i>&nbsp;&nbsp; Vocacional</a></li>
+                <li><a href="ingles"><i class="zmdi zmdi-translate zmdi-hc-fw"></i>&nbsp;&nbsp; Resources in English</a></li>
                 <!-- <li>
                         <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Administración <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
                         <ul class="list-unstyled">

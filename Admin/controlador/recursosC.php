@@ -33,6 +33,8 @@ class recursoC{
                 $nombreRecurso = basename($_FILES["recursoNuevo"]["name"]);
 
                 $datosRecurso = array("nombreArchivo"=>$nombreRecurso, "ruta"=>$rutaRecurso, "titulo"=>$_POST["titulosNuevo"], "detalle"=>$_POST["detallesNuevo"], "autor" =>$_POST["autorNuevo"]);
+                // echo '<script>console.log("'.$rutaRecurso.'")</script>';
+                //"opcion1" => $_POST["opcion1"],"opcion2" => $_POST["opcion2"], "opcion3" => $_POST["opcion3"], "opcion4" => $_POST["opcion4"], "opcion5" => $_POST["opcion5"], "opcion6" => $_POST["opcion6"], "opcion7" => $_POST["opcion7"], "opcion8" => $_POST["opcion8"], "opcion9" => $_POST["opcion9"],"opcion10" => $_POST["opcion10"]
 
                 $registrarRecurso = recursoM::registrarRecursoM($datosRecurso);
 

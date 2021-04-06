@@ -21,7 +21,7 @@ $(".TablaRecursos").on("click",".EditRegistroRecurso",function(){
             console.log(response);
         }
     });
-
+    
     $.ajax({
         method: "POST",
         url: "Ajax/EtiquetaA.php",
@@ -31,10 +31,10 @@ $(".TablaRecursos").on("click",".EditRegistroRecurso",function(){
         processData: false,
         dataType: "json",
         success: function (response) {
+            console.log(response);
             for (let i = 0; i <= Object.keys(response).length; i++) {
-                    $("#eleccion" + i).val(response[i]["id"]);
+                    $("#eleccion" + i).val(response[i]["etiquetaId"]);
                     $("#eleccion" + i).html(response[i]["etiquetaDescripcion"]);
-                    console.log(response[i]["etiquetaDescripcion"]);
             }
         }
     });

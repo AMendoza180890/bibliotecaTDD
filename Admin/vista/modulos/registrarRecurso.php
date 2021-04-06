@@ -39,8 +39,8 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                    $registrarRecurso   =   new recursoC();
-                    $registrarRecurso -> registrarRecurso();
+                $registrarRecurso   =   new recursoC();
+                $registrarRecurso->registrarRecurso();
                 ?>
             </form>
         </div>

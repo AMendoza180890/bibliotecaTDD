@@ -32,10 +32,10 @@
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-    <a href="psicomotor">
+    <a href="motor">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-assignment-o"></i></div>
-            <div class="tile-name all-tittles">Psicomotor</div>
+            <div class="tile-name all-tittles">Motor</div>
             <div class="tile-num full-reset"></div>
         </article>
     </a>
