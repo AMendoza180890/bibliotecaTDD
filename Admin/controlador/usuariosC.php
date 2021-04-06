@@ -66,6 +66,7 @@ class usuariosC {
                 if(isset($_POST["usuarioNuevo"])){
                     // codigo de validacion de imagen
                     $rutaImagenProcesada = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoNuevo"]["tmp_name"], $_FILES["fotoNuevo"]);
+                    
                     $datosNuevoUsuario = array("usuario"=>$_POST["usuarioNuevo"],"clave"=>$_POST["claveNuevo"],"rol"=>$_POST["rolNuevo"],"foto"=>$rutaImagenProcesada);                  
                     $crearNuevoUsuario = usuariosM::registrarUsuariosM($datosNuevoUsuario);
                     if ($crearNuevoUsuario == true) {
