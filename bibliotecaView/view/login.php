@@ -2,7 +2,7 @@
         <p class="text-center" style="margin-top: 17px;">
            <i class="zmdi zmdi-account-circle zmdi-hc-5x"></i>
        </p>
-       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">inicia sesión con tu cuenta</h4>
+       <h4 class="text-center all-tittles" style="margin-bottom: 30px;">Inicia Sesión</h4>
        <form action="" method="post">
             <div class="group-material-login">
               <input type="text" class="material-login-control" name="usuarioBiblioteca" required="" maxlength="70">

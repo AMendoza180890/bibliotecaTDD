@@ -7,7 +7,7 @@
         </div>
         <div class="full-reset" style="background-color:#2B3D51; padding: 10px 0; color:#fff;">
             <figure>
-                <img src="bibliotecaView/assets/img/logo.png" alt="Biblioteca" class="img-responsive center-box" style="width:15%;">
+                <img src="bibliotecaView/assets/img/logoTDD.png" alt="Biblioteca" class="img-responsive center-box" style="width:15%;">
             </figure>
             <p class="text-center" style="padding-top: 15px;">Sistema Bibliotecario</p>
         </div>
