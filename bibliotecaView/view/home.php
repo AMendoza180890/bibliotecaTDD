@@ -32,7 +32,10 @@
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-    <a href="discapacidades">
+</section>
+
+<section class="full-reset text-center" style="padding: 40px 0;">
+<a href="discapacidades">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-account-add"></i></div>
             <div class="tile-name all-tittles">Discapacidades</div>
@@ -46,8 +49,6 @@
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-</section>
-<section class="full-reset text-center" style="padding: 40px 0;">
     <a href="fisioterapia">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-male"></i></div>
@@ -62,7 +63,9 @@
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-    <a href="iglesias">
+</section>
+<section class="full-reset text-center" style="padding: 40px 0;">
+    <a href="iglesias"> 
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-plus"></i></div>
             <div class="tile-name all-tittles">Iglesias</div>
@@ -84,8 +87,9 @@
         </article>
     </a>
 </section>
+
 <section class="full-reset text-center" style="padding: 40px 0;">
-    <a href="espiritual">
+<a href="espiritual">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-plus-circle-o"></i></div>
             <div class="tile-name all-tittles">Recurso Espiritual</div>
