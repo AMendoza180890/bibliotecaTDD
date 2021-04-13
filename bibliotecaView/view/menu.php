@@ -43,6 +43,8 @@
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-run zmdi-hc-fw"></i>&nbsp;&nbsp; Vocacional</a></li>
                 <li><a href="ingles"<?php if ($_GET["ruta"]=="ingles")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-translate zmdi-hc-fw"></i>&nbsp;&nbsp; Resources in English</a></li>
+                <li><a href="buscar"<?php if ($_GET["ruta"]=="buscar")
+                                    echo " class='activo'"; ?>><i class="zmdi zmdi-search zmdi-hc-fw"></i>&nbsp;&nbsp; Buscar</a></li>
                 <!-- <li>
                         <div class="dropdown-menu-button"><i class="zmdi zmdi-case zmdi-hc-fw"></i>&nbsp;&nbsp; Administración <i class="zmdi zmdi-chevron-down pull-right zmdi-hc-fw"></i></div>
                         <ul class="list-unstyled">

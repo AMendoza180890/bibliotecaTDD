@@ -16,5 +16,8 @@
     <script src="bibliotecaView/js/bootstrap.min.js"></script>
     <script src="bibliotecaView/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="bibliotecaView/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    
 </head>
 <title>Biblioteca</title>
