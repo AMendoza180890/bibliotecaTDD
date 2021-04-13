@@ -7,7 +7,7 @@
                     <div class="col-xs-12 col-sm-6">
                         <h4 class="all-tittles">Acerca de</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quam dicta et, ipsum quo. Est saepe deserunt, adipisci eos id cum, ducimus rem, dolores enim laudantium eum repudiandae temporibus sapiente.
+                        La biblioteca virtual es una herramienta que facilita al usuario obtener información acerca de los servicios que como organización brindamos a los niños, jóvenes, y adultos con discapacidad.  Dentro de la información puede encontrar estrategias prácticas para ayudar a las personas con discapacidad a obtener un desarrollo integral.
                         </p>
                     </div>
                     <div class="col-xs-12 col-sm-6">

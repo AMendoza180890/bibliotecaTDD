@@ -32,4 +32,5 @@ session_start();
 ?>
     </div>
 </body>
+<script src="bibliotecaView/js/menu.js"></script>
 </html>

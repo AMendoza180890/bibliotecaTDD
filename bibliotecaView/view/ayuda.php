@@ -7,7 +7,7 @@
                     <h4 class="modal-title text-center all-tittles">ayuda del sistema</h4>
                 </div>
                 <div class="modal-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore dignissimos qui molestias ipsum officiis unde aliquid consequatur, accusamus delectus asperiores sunt. Quibusdam veniam ipsa accusamus error. Animi mollitia corporis iusto.
+                Si presenta alguna inquietud referente algunas de las categorías o recursos, favor acceder al correo biblioteca@tesorosdedios.org. Horario de atención: Lunes a Viernes 8am-3pm.
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="zmdi zmdi-thumb-up"></i> &nbsp; De acuerdo</button>
