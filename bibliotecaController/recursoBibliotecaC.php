@@ -10,7 +10,7 @@ class recursoBibliotecaC{
                <td>'.$value["titulo"].'</td>
                <td>'.$value["descripcion"].'</td>
                <td>'.$value["autor"].'</td>
-               <td> <a href="Admin/'.$value["ruta"].'" class="btn btn-primary">VER</a></td>
+               <td> <a href="Admin/'.$value["ruta"].'" class="btn btn-primary">Descargar</a></td>
                 </tr>';
             }
         } catch (exception $ex) {

@@ -13,7 +13,7 @@
                                                 <th class="text-center">Titulo</th>
                                                 <th class="text-center">Descripcion</th>
                                                 <th class="text-center">Autor</th>
-                                                <th class="text-center">ver</th>
+                                                <th class="text-center">Acciones</th>
                                             </tr>
                                         </thead>
                                         <tbody>
