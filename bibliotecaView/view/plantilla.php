@@ -37,26 +37,7 @@ session_start();
        $(document).ready( function () {
            $('#todosRecursos').DataTable({
               language: {
-                     processing: "Procesando...",
-                     lengthMenu: "Mostrar _MENU_ registros",
-                     zeroRecords: "No se encontraron resultados",
-                     emptyTable: "Ningún dato disponible en esta tabla",
-                     infoEmpty: "Mostrando registros del 0 al 0 de un total de 0 registros",
-                     infoFiltered: "(filtrado de un total de _MAX_ registros)",
-                     info: "Mostrando de _START_ a _END_ de _TOTAL_ entradas",
-                     search: "Buscar:",
-                     infoThousands: ",",
-                     loadingRecords: "Cargando...",
-                     paginate: {
-                            first: "Primero",
-                            last: "Último",
-                            next: "Siguiente",
-                            previous: "Anterior"
-                     },
-                     aria: {
-                            sortAscending: "Activar para ordenar la columna de manera ascendente",
-                            sortDescending: "Activar para ordenar la columna de manera descendente"
-                     },
+                     url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json'
               }
            });
        } );
