@@ -14,12 +14,14 @@ class recursoM extends conexionBD{
 
     public static function registrarRecursoM($datosRecurso){
         try {
-            $pdo = conexionBD::conexion()->prepare("INSERT INTO catrecursos (nombre, ruta, titulo, descripcion, autor) VALUES (:nombre, :ruta, :titulo, :descripcion, :autor)");
+            $pdo = conexionBD::conexion()->prepare("INSERT INTO catrecursos (nombre, ruta, titulo, descripcion, autor, Tipo, Resumen) VALUES (:nombre, :ruta, :titulo, :descripcion, :autor, :Tipo, :Resumen)");
             $pdo    ->  bindParam("nombre",$datosRecurso["nombreArchivo"],PDO::PARAM_STR);
             $pdo    ->  bindParam("ruta", $datosRecurso["ruta"],PDO::PARAM_STR);
             $pdo    ->  bindParam("titulo", $datosRecurso["titulo"], PDO::PARAM_STR);
             $pdo    ->  bindParam("descripcion", $datosRecurso["detalle"], PDO::PARAM_STR);
             $pdo    ->  bindParam("autor", $datosRecurso["autor"], PDO::PARAM_STR);
+            $pdo    ->  bindParam("Tipo", $datosRecurso["tipoArchivo"], PDO::PARAM_STR);
+            $pdo    ->  bindParam("Resumen", $datosRecurso["resumen"], PDO::PARAM_STR);
 
             if($pdo -> execute()){
                 return true;
@@ -34,7 +36,7 @@ class recursoM extends conexionBD{
 
     public static function obtenerRecursoRegistradoM($codigoRecurso){
         try {
-            $pdo = conexionBD::conexion()->prepare("SELECT id, nombre, ruta, titulo, descripcion, autor FROM  catrecursos WHERE id = :id");
+            $pdo = conexionBD::conexion()->prepare("SELECT id, nombre, ruta, titulo, descripcion, autor, Tipo, Resumen FROM  catrecursos WHERE id = :id");
             $pdo -> bindParam("id",$codigoRecurso,PDO::PARAM_INT);
             $pdo -> execute();
             return $pdo->fetch();
@@ -45,13 +47,16 @@ class recursoM extends conexionBD{
 
     public static function actualizarRecursoM($datosRecursoActualizado){
         try {
-            $pdo = conexionBD::conexion()->prepare("UPDATE catrecursos SET nombre = :nombre ,ruta=:ruta,titulo=:titulo,descripcion=:descripcion,autor=:autor WHERE id = :id");
+            $pdo = conexionBD::conexion()->prepare("UPDATE catrecursos SET nombre = :nombre ,ruta=:ruta,titulo=:titulo,descripcion=:descripcion,autor=:autor,Tipo=:Tipo, Resumen=:Resumen WHERE id = :id");
             $pdo -> bindParam("id",$datosRecursoActualizado["id"],PDO::PARAM_INT);
             $pdo -> bindParam("nombre",$datosRecursoActualizado["nombre"],PDO::PARAM_STR);
             $pdo -> bindParam("ruta",$datosRecursoActualizado["ruta"],PDO::PARAM_STR);
             $pdo -> bindParam("titulo",$datosRecursoActualizado["titulo"],PDO::PARAM_STR);
             $pdo -> bindParam("descripcion",$datosRecursoActualizado["detalle"],PDO::PARAM_STR);
             $pdo -> bindParam("autor",$datosRecursoActualizado["autor"],PDO::PARAM_STR);
+            $pdo -> bindParam("Tipo",$datosRecursoActualizado["tipoArchivoEditado"],PDO::PARAM_STR);
+            $pdo -> bindParam("Resumen",$datosRecursoActualizado["resumenEditado"],PDO::PARAM_STR);
+
 
             if ($pdo->execute()) {
                 return true;

@@ -31,6 +31,22 @@
                             <p class="help-block">peso maximo permitido 200 Mb</p>
                             <input type="hidden" name="fotoActual" id="fotoActual">
                         </div>
+
+                        <div class="form-group">
+                            <h2>Tipo de Archivo:</h2>
+                            <select name="tipoN" id="tipoN" class="form-control input-lg">
+                                <option value="WORD">WORD</option>
+                                <option value="POWER POINT">POWER POINT</option>
+                                <option value="EXCEL">EXCEL</option>
+                                <option value="PUBLISHER">PUBLISHER</option>
+                                <option value="PDF">PDF</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Resumen:</h2>
+                            <textarea class="form-control input-lg" name="resumenNuevo" id="resumenNuevo" cols="30" rows="10" required></textarea>
+                        </div>
                         
                     </div>
                 </div>

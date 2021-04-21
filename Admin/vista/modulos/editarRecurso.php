@@ -34,6 +34,23 @@
                         </div>
 
                         <div class="form-group">
+                            <h2>Tipo de Archivo:</h2>
+                            <select name="tipoE" id="tipoE" class="form-control input-lg">
+                                <option id="eleccionTipo"></option>
+                                <option value="WORD">WORD</option>
+                                <option value="POWER POINT">POWER POINT</option>
+                                <option value="EXCEL">EXCEL</option>
+                                <option value="PUBLISHER">PUBLISHER</option>
+                                <option value="PDF">PDF</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <h2>Resumen:</h2>
+                            <textarea class="form-control input-lg" name="resumenEditado" id="resumenEditado" cols="30" rows="10" required></textarea>
+                        </div>
+
+                        <div class="form-group">
                             <h2>Opcion 1</h2>
                             <select name="opcion1" id="opcion1" class="form-control input-lg" required>
                                 <option id="eleccion0"></option>

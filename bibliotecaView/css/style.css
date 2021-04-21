@@ -27,7 +27,7 @@ body {
 /*estilo para los elementos activo de un menu.*/
 .activo {
   text-decoration: underline;
-  background-color: #e55a9c !important;
+  background-color: #003a70 !important;
 }
 
 .media-hover {
@@ -187,7 +187,7 @@ span.label-mhover {
 .logo {
   height: 55px;
   line-height: 55px;
-  background-color: #388df4;
+  background-color: #3487c4;
   color: #fff;
   text-align: center;
   font-size: 21px;
@@ -230,7 +230,7 @@ span.label-mhover {
 }
 /*color hover para menu*/
 .nav-lateral-list-menu ul li a:hover {
-  background-color: #ffd52f;
+  background-color: #3487c4;
 }
 .nav-lateral-list-menu ul li a:active,
 .nav-lateral-list-menu ul li a:focus {
@@ -475,7 +475,7 @@ input.material-control:focus ~ .highlight {
   position: relative;
 }
 .tile-icon {
-  color: #b71c1c;
+  color: #003a70;
   border-bottom: 1px solid #e1e1e1;
   font-size: 50px;
 }

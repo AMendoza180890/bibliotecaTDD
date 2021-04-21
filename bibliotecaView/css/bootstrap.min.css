@@ -2437,7 +2437,7 @@ table th[class*="col-"] {
 .table > thead > tr.success > th,
 .table > thead > tr > td.success,
 .table > thead > tr > th.success {
-  background-color: #388df4;
+  background-color: #3487c4;
   color: white;
 }
 .table-hover > tbody > tr.success:hover > td,
