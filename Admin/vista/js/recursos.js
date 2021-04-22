@@ -18,9 +18,9 @@ $(".TablaRecursos").on("click", ".EditRegistroRecurso", function () {
       $("#detallesEdit").val(response["descripcion"]);
       $("#autorEdit").val(response["autor"]);
       $("#recursoActual").val(response["ruta"]);
-      $("#eleccionTipo").val(response["Tipo"]);
-      $("#eleccionTipo").html(response["Tipo"]);
-      $("#resumenEditado").val(response["Resumen"]);
+      $("#eleccionTipo").val(response["tipo"]);
+      $("#eleccionTipo").html(response["tipo"]);
+      $("#resumenEditado").val(response["resumen"]);
       console.log(response);
     },
   });
