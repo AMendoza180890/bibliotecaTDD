@@ -6,7 +6,7 @@
                             <div class="col-xs-12">
                                 <h3 class="text-center all-tittles">Todos los recursos</h3>
                                 <div class="table-responsive">
-                                    <table class="table table-hover text-center" id="todosRecursos">
+                                    <table class="table table-hover text-center tbl" id="todosRecursos">
                                         <thead>
                                             <tr class="success">
                                                 <th class="text-center">Nombre</th>
@@ -21,6 +21,9 @@
                                                 $etiqueta =13;
                                                 $listaRecurso = new recursoBibliotecaC();
                                                 $listaRecurso -> obtenerRecursoC($etiqueta);
+
+                                                $codigo = null;
+                                                $listaRecurso::verRecursoC($codigo);
                                             ?>
                                         </tbody>
                                         <!-- <tfoot>
@@ -34,3 +37,5 @@
                                 </div>
                             </div>
                         </div>
+
+                        <?php include 'verRecursos.php';?>
