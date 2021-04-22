@@ -6,7 +6,7 @@
         <div class="col-xs-12">
             <h3 class="text-center all-tittles">Todos los recursos de Lectoescritura</h3>
             <div class="table-responsive">
-                <table class="table table-hover text-center">
+                <table class="table table-hover text-center tbl">
                     <thead>
                         <tr class="success">
                             <th class="text-center">Nombre</th>
@@ -21,16 +21,13 @@
                         $etiqueta = 1;
                         $listaRecurso = new recursoBibliotecaC();
                         $listaRecurso->obtenerRecursoC($etiqueta);
+
+                        $codigo = null;
+                        $listaRecurso::verRecursoC($codigo);
                         ?>
                     </tbody>
-                    <!-- <tfoot>
-                                            <tr class="info">
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">0</th>
-                                                <th class="text-center">0%</th>
-                                            </tr>
-                                        </tfoot> -->
                 </table>
             </div>
         </div>
     </div>
+<?php include 'verRecursos.php'?>

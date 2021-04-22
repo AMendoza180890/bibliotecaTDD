@@ -33,6 +33,7 @@ session_start();
     </div>
 </body>
 <script src="bibliotecaView/js/menu.js"></script>
+<script src="bibliotecaView/js/recursos.js"></script>
 <script>
        $(document).ready( function () {
            $('#todosRecursos').DataTable({
