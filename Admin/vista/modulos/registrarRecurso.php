@@ -35,11 +35,11 @@
                         <div class="form-group">
                             <h2>Tipo de Archivo:</h2>
                             <select name="tipoN" id="tipoN" class="form-control input-lg">
-                                <option value="WORD">WORD</option>
-                                <option value="POWER POINT">POWER POINT</option>
-                                <option value="EXCEL">EXCEL</option>
-                                <option value="PUBLISHER">PUBLISHER</option>
-                                <option value="PDF">PDF</option>
+                                <option value="Word">Word</option>
+                                <option value="Power Point">Power Point</option>
+                                <option value="Excel">Excel</option>
+                                <option value="Publisher">Publisher</option>
+                                <option value="Pdf">Pdf</option>
                             </select>
                         </div>
 
