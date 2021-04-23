@@ -23,6 +23,11 @@
                         </div>
 
                         <div class="form-group">
+                            <h2>Nombre de Archivo:</h2>
+                            <input type="text" class="form-control input-lg" name="nombreVer" id="nombreVer" disabled>
+                        </div>
+
+                        <div class="form-group">
                             <h2>Tipo de Archivo:</h2>
                             <input type="text" class="form-control input-lg" name="tipoVer" id="tipoVer" disabled>
                         </div>

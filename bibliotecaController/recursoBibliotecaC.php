@@ -6,10 +6,10 @@ class recursoBibliotecaC{
 
             foreach ($obtenerListaRecurso as $key => $value) {
                echo '<tr>
-                        <td>'.$value["nombre"].'</td>
                         <td>'.$value["titulo"].'</td>
                         <td>'.$value["descripcion"].'</td>
                         <td>'.$value["autor"].'</td>
+                        <td>'.$value["tipo"].'</td>
                         <td> 
                             <div class="btn-group">
                                 <a href="Admin/'.$value["ruta"].'" class="btn btn-primary">Descargar</a>

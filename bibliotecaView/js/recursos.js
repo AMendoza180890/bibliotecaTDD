@@ -18,8 +18,8 @@ $(".tbl").on("click", ".btnVer", function () {
       $("#autorVer").val(response[0]["autor"]);
       $("#tipoVer").val(response[0]["tipo"]);
       $("#resumenVer").val(response[0]["resumen"]);
+      $("#nombreVer").val(response[0]["nombre"]);
       console.log(response);
-      debugger;
     },
   });
 });

@@ -9,10 +9,10 @@
                                     <table class="table table-hover text-center tbl" id="todosRecursos">
                                         <thead>
                                             <tr class="success">
-                                                <th class="text-center">Nombre</th>
                                                 <th class="text-center">Titulo</th>
                                                 <th class="text-center">Descripcion</th>
                                                 <th class="text-center">Autor</th>
+                                                <th class="text-center">Archivo</th>
                                                 <th class="text-center">Acciones</th>
                                             </tr>
                                         </thead>
