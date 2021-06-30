@@ -7,7 +7,7 @@
 <section class="full-reset text-center" style="padding: 40px 0;">
     <a href="academico">
         <article class="tile">
-            <div class="tile-icon full-reset"><i class="zmdi zmdi-face"></i></div>
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-book zmdi-hc-fw"></i></div>
             <div class="tile-name all-tittles">Académico</div>
             <div class="tile-num full-reset"></div>
         </article>
@@ -59,7 +59,7 @@
     </a>
     <a href="independencia"> 
         <article class="tile">
-            <div class="tile-icon full-reset"><i class="zmdi zmdi-plus"></i></div>
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-run zmdi-hc-fw"></i></div>
             <div class="tile-name all-tittles">Independiencia</div>
             <div class="tile-num full-reset"></div>
         </article>
@@ -90,8 +90,8 @@
     </a>
     <a href="terapia">
         <article class="tile">
-            <div class="tile-icon full-reset"><i class="zmdi zmdi-plus-circle-o"></i></div>
-            <div class="tile-name all-tittles">Terapias</div>
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-male zmdi-hc-fw"></i></div>
+            <div class="tile-name all-tittles">Terapia</div>
             <div class="tile-num full-reset"></div>
         </article>
     </a>
