@@ -1,6 +1,6 @@
 <div class="container">
     <div class="page-header">
-        <h1 class="all-tittles">Recursos de Iglesias</h1>
+        <h1 class="all-tittles">Recursos para las Iglesias</h1>
     </div>
 </div>
 <section class="full-reset text-center" style="padding: 40px 0;">

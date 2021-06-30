@@ -1,10 +1,10 @@
 <div class="container-fluid">
                         <div class="page-header">
-                          <h2 class="all-tittles">Recurso Fisioterapia</h2>
+                          <h2 class="all-tittles">Recursos de Terapia</h2>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <h3 class="text-center all-tittles">Todos los recursos para el area Fisioterapia</h3>
+                                <h3 class="text-center all-tittles">Fisioterapia</h3>
                                 <div class="table-responsive">
                                     <table class="table table-hover text-center tbl">
                                         <thead>
@@ -18,7 +18,7 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                                $etiqueta =16;
+                                                $etiqueta =43;
                                                 $listaRecurso = new recursoBibliotecaC();
                                                 $listaRecurso -> obtenerRecursoC($etiqueta);
 

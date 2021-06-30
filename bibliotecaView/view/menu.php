@@ -15,32 +15,30 @@
             <ul class="list-unstyled" id="menuOpciones">
                 <li><a href="home" <?php if ($_GET["ruta"]=="home")
                                     echo " class='activo'"; ?> ><i class="zmdi zmdi-home zmdi-hc-fw"></i>&nbsp;&nbsp; Inicio</a></li>
-                <li><a href="academico"<?php if ($_GET["ruta"]=="academico")
+                <li><a href="academico"<?php if ($_GET["ruta"]=="academico"||$_GET["ruta"]=="catadecuaciones"||$_GET["ruta"]=="catlectura"||$_GET["ruta"]=="catmat")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Académico</a></li>
                 <li><a href="apoyoFamiliar"<?php if ($_GET["ruta"]=="apoyoFamiliar")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-accounts zmdi-hc-fw"></i>&nbsp;&nbsp; Apoyo Familiar</a></li>
-                <li><a href="conducta"<?php if ($_GET["ruta"]=="conducta")
+                <li><a href="conducta"<?php if ($_GET["ruta"]=="conducta"||$_GET["ruta"]=="manejoClases"||$_GET["ruta"]=="intervencionConducta")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-male-alt zmdi-hc-fw"></i>&nbsp;&nbsp; Conducta</a></li>
-                <li><a href="curriculum"<?php if ($_GET["ruta"]=="curriculum")
-                                    echo " class='activo'"; ?>><i class="zmdi zmdi-book zmdi-hc-fw"></i>&nbsp;&nbsp; Currículo Tesoros de Dios</a></li>
-                <li><a href="discapacidades"<?php if ($_GET["ruta"]=="discapacidades")
+                <li><a href="discapacidades"<?php if ($_GET["ruta"]=="discapacidades"||$_GET["ruta"]=="autismo"||$_GET["ruta"]=="emocional"||$_GET["ruta"]=="intelectual"||$_GET["ruta"]=="lenguaje"||$_GET["ruta"]=="motor"||$_GET["ruta"]=="aprendizaje")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-account-add zmdi-hc-fw"></i>&nbsp;&nbsp; Discapacidades</a></li>
-                <li><a href="estimulacion"<?php if ($_GET["ruta"]=="estimulacion")
+                <li><a href="estimulacion"<?php if ($_GET["ruta"]=="estimulacion"||$_GET["ruta"]=="autoCuido"||$_GET["ruta"]=="Cognitiva"||$_GET["ruta"]=="Comunicacion"||$_GET["ruta"]=="FisicoSensorial"||$_GET["ruta"]=="SocioEmocional")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-collection-plus zmdi-hc-fw"></i>&nbsp;&nbsp; Estimulacion Temprana</a></li>
-                <li><a href="fisioterapia"<?php if ($_GET["ruta"]=="fisioterapia")
-                                    echo " class='activo'"; ?>><i class="zmdi zmdi-male zmdi-hc-fw"></i>&nbsp;&nbsp; Fisioterapia</a></li>
                 <li><a href="historia"<?php if ($_GET["ruta"]=="historia")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-assignment-account zmdi-hc-fw"></i>&nbsp;&nbsp; Historias Sociales</a></li>
-                <li><a href="iglesias"<?php if ($_GET["ruta"]=="iglesias")
+                <li><a href="iglesias"<?php if ($_GET["ruta"]=="iglesias"||$_GET["ruta"]=="capacitacionesIglesias"||$_GET["ruta"]=="predicas"||$_GET["ruta"]=="recursosIglesias")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-plus zmdi-hc-fw"></i>&nbsp;&nbsp; Iglesias</a></li>
-                <li><a href="lenguaje"<?php if ($_GET["ruta"]=="lenguaje")
+                <li><a href="independencia"<?php if ($_GET["ruta"]=="independencia" || $_GET["ruta"]=="habilidadesVidaDiaria" || $_GET["ruta"]=="vocacional")
+                                    echo " class='activo'"; ?>><i class="zmdi zmdi-run zmdi-hc-fw"></i>&nbsp;&nbsp; Independencia</a></li>
+                <li><a href="logopedia"<?php if ($_GET["ruta"]=="logopedia"||$_GET["ruta"]=="alimentacion"||$_GET["ruta"]=="audicion"||$_GET["ruta"]=="encuesta"||$_GET["ruta"]=="lengua"||$_GET["ruta"]=="lenguajeSenas"||$_GET["ruta"]=="sistemasAumentativoAlternativos"||$_GET["ruta"]=="sonidosHabla"||$_GET["ruta"]=="protocolos"||$_GET["ruta"]=="talleres"||$_GET["ruta"]=="tartamudez")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-mood zmdi-hc-fw"></i>&nbsp;&nbsp; Logopedia</a></li>
-                <li><a href="piedu"<?php if ($_GET["ruta"]=="piedu")
-                                    echo " class='activo'"; ?>><i class="zmdi zmdi-archive zmdi-hc-fw"></i>&nbsp;&nbsp; Plan Individualizado</a></li>
+                <li><a href="piedu"<?php if ($_GET["ruta"]=="piedu"|| $_GET["ruta"]=="curriculoTdd"|| $_GET["ruta"]=="evalua"|| $_GET["ruta"]=="individual")
+                                    echo " class='activo'"; ?>><i class="zmdi zmdi-archive zmdi-hc-fw"></i>&nbsp;&nbsp; Planes Individualizados</a></li>
                 <li><a href="espiritual"<?php if ($_GET["ruta"]=="espiritual")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-plus-circle-o zmdi-hc-fw"></i>&nbsp;&nbsp; Recursos Espirituales</a></li>
-                <li><a href="habilidad"<?php if ($_GET["ruta"]=="habilidad")
-                                    echo " class='activo'"; ?>><i class="zmdi zmdi-run zmdi-hc-fw"></i>&nbsp;&nbsp; Vocacional</a></li>
+                <li><a href="terapia"<?php if ($_GET["ruta"]=="terapia" || $_GET["ruta"] == 'capacitacionesTerapia'|| $_GET["ruta"] == 'equinoterapia'|| $_GET["ruta"] == 'terapiaOcupacional' || $_GET["ruta"] == 'fisioterapia')
+                                    echo " class='activo'"; ?>><i class="zmdi zmdi-male zmdi-hc-fw"></i>&nbsp;&nbsp; Terapia</a></li>
                 <li><a href="ingles"<?php if ($_GET["ruta"]=="ingles")
                                     echo " class='activo'"; ?>><i class="zmdi zmdi-translate zmdi-hc-fw"></i>&nbsp;&nbsp; Resources in English</a></li>
                 <li><a href="buscar"<?php if ($_GET["ruta"]=="buscar")

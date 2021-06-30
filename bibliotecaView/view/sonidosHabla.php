@@ -4,7 +4,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <h3 class="text-center all-tittles">Todos los recursos de Producción de Sonidos del Habla</h3>
+                                <h3 class="text-center all-tittles">Producción de Sonidos del Habla</h3>
                                 <div class="table-responsive">
                                     <table class="table table-hover text-center tbl">
                                         <thead>

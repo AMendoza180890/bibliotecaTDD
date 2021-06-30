@@ -1,10 +1,10 @@
 <div class="container-fluid">
                         <div class="page-header">
-                          <h2 class="all-tittles">Recursos de Predicas</h2>
+                          <h2 class="all-tittles">Recursos para las Iglesias</h2>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
-                                <h3 class="text-center all-tittles">Todos los recursos de Predicas</h3>
+                                <h3 class="text-center all-tittles">Predicas</h3>
                                 <div class="table-responsive">
                                     <table class="table table-hover text-center tbl">
                                         <thead>
