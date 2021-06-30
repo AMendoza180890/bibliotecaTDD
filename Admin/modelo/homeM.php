@@ -47,5 +47,17 @@ class dashboardHomeM extends conexionBD{
             echo 'Error -'.$ex;
         }
     }
+
+    public static function dashboardRecursosPorCategoriasM(){
+        try {
+            $pdo = conexionBD::conexion()->prepare("SELECT catetiquetas.etiquetaDescripcion as etiqueta, count(catrecursos.id) as total FROM catrecursos inner join unionetiquetascatrecurso on catrecursos.id = unionetiquetascatrecurso.idRecurso inner join catetiquetas on unionetiquetascatrecurso.idEtiqueta = catetiquetas.id group by catetiquetas.etiquetaDescripcion");
+
+            if ($pdo->execute()) {
+                return $pdo->fetchAll();
+            }
+        } catch (exception $ex) {
+            echo 'Error -'.$ex;
+        }
+    }
 }
 ?>

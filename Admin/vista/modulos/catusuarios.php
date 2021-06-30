@@ -14,7 +14,7 @@
             <button class="btn btn-primary" data-toggle="modal" data-target="#crearUsuario">Crear Usuarios</button>
         </div>
         <div class="box-body">
-            <table class="table table-bordered table-hover table-striped TablaUsuario">
+            <table class="table table-bordered table-hover table-striped TablaUsuario" id="tbl">
                 <thead>
                     <tr>
                         <th>Nº</th>

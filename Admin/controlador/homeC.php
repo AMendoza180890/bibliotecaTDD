@@ -151,5 +151,54 @@ class dashboardHomeC{
             echo 'Error -'.$ex;
         }
     }
+
+    public function dashboardRecursosPorCategoriasC(){
+        try {
+            $ListaRecursosPorCategorias = dashboardHomeM::dashboardRecursosPorCategoriasM();
+
+            if ($ListaRecursosPorCategorias != 0 || !empty($ListaRecursosPorCategorias)) {
+                echo '<div class="box box-solid bg-green-gradient">
+                <div class="box-header">
+                  <i class="fa fa-book"></i>
+    
+                  <h3 class="box-title">Recursos por categorias</h3>
+                  <!-- tools box -->
+                  <div class="pull-right box-tools">
+                    <!-- button with a dropdown -->
+                    <button type="button" class="btn btn-success btn-sm" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                  </div>
+                  <!-- /. tools -->
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                  <!--The calendar -->
+                  <div id="calendar" style="width: 100%"></div>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer text-black">
+                  <div class="row">
+                    <div class="col-sm-6">';
+                    /*Aqui se agregan los recursos */
+                foreach ($ListaRecursosPorCategorias as $key => $value) {
+                        echo  '<div class="clearfix">
+                                 <span class="pull-left">'.$value["etiqueta"].'</span>
+                                 <small class="pull-right">'.$value["total"].'</small>
+                               </div>';   
+                }
+
+                   echo  '</div>
+                    <!-- /.col -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+              </div>';
+            }
+        } catch (exception $ex) {
+            echo 'Error -'.$ex;
+        }
+    }
 }
 ?>

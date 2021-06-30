@@ -1,41 +1,45 @@
-<div class="container-fluid">
-                        <div class="page-header">
-                          <h2 class="all-tittles">Recurso Estimulacion</h2>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3 class="text-center all-tittles">Todos los recursos para el area Estimulacion</h3>
-                                <div class="table-responsive">
-                                    <table class="table table-hover text-center tbl">
-                                        <thead>
-                                            <tr class="success">
-                                                <th class="text-center">Titulo</th>
-                                                <th class="text-center">Descripcion</th>
-                                                <th class="text-center">Autor</th>
-                                                <th class="text-center">Archivo</th>
-                                                <th class="text-center">Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                                $etiqueta =15;
-                                                $listaRecurso = new recursoBibliotecaC();
-                                                $listaRecurso -> obtenerRecursoC($etiqueta);
+<div class="container">
+    <div class="page-header">
+        <h1 class="all-tittles">Recursos de Estimulación Temprana</h1>
+    </div>
+</div>
+<section class="full-reset text-center" style="padding: 40px 0;">
+    <a href="autoCuido">
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-face"></i></div>
+            <div class="tile-name all-tittles">Habilidades de Auto-Cuido</div>
+            <div class="tile-num full-reset"></div>
+        </article>
+    </a>
+    <a href="Cognitiva">
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-accounts"></i></div>
+            <div class="tile-name all-tittles">Habilidades Cognitivas</div>
+            <div class="tile-num full-reset"></div>
+        </article>
+    </a>
+    <a href="Comunicacion">
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-accounts"></i></div>
+            <div class="tile-name all-tittles">Habilidades de Comunicación</div>
+            <div class="tile-num full-reset"></div>
+        </article>
+    </a>
+</section>
 
-                                                $codigo = null;
-                                                $listaRecurso::verRecursoC($codigo);
-                                            ?>
-                                        </tbody>
-                                        <!-- <tfoot>
-                                            <tr class="info">
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">0</th>
-                                                <th class="text-center">0%</th>
-                                            </tr>
-                                        </tfoot> -->
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-                        <?php include 'verRecursos.php';?>
+<section class="full-reset text-center" style="padding: 40px 0;">
+    <a href="FisicoSensorial">
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-accounts"></i></div>
+            <div class="tile-name all-tittles">Habilidades Fisicas y Sensoriales</div>
+            <div class="tile-num full-reset"></div>
+        </article>
+    </a>
+<a href="SocioEmocional">
+        <article class="tile">
+            <div class="tile-icon full-reset"><i class="zmdi zmdi-accounts"></i></div>
+            <div class="tile-name all-tittles">Habilidades Socio-Emocionales</div>
+            <div class="tile-num full-reset"></div>
+        </article>
+    </a>
+</section>

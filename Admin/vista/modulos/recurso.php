@@ -14,7 +14,7 @@
         <button class="btn btn-primary" data-toggle="modal" data-target="#registrarRecurso">Agregar Recurso</button>
       </div>
       <div class="box-body">
-        <table class="table table-bordered table-hover table-striped TablaRecursos">
+        <table class="table table-bordered table-hover table-striped TablaRecursos" id="tbl">
           <thead>
             <tr>
               <th>Nº</th>

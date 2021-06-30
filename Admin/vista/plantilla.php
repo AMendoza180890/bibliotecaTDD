@@ -31,6 +31,7 @@ session_start();
   <!-- Daterange picker -->
   <link rel="stylesheet" href="vista/bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
   <!-- <link rel="stylesheet" href="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"> -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -72,6 +73,8 @@ session_start();
 <script src="vista/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="vista/bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!--jQuery Datatable-->
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);
@@ -110,4 +113,13 @@ session_start();
 <script src="vista/js/usuario.js"></script>
 <script src="vista/js/recursos.js"></script>
 </body>
+<script>
+       $(document).ready( function () {
+           $('#tbl').DataTable({
+              language: {
+                     url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json'
+              }
+           });
+       } );
+</script>
 </html>
