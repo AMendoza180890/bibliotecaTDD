@@ -116,6 +116,7 @@ session_start();
 <script>
        $(document).ready( function () {
            $('#tbl').DataTable({
+              "lengthMenu": [[100, 50, 25, 10, -1], [100, 50, 25, 10, "Todos"]],
               language: {
                      url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json'
               }

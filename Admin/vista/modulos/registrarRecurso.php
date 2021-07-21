@@ -39,7 +39,7 @@
                                 <option value="Power Point">Power Point</option>
                                 <option value="Excel">Excel</option>
                                 <option value="Publisher">Publisher</option>
-                                <option value="Pdf">Pdf</option>
+                                <option value="PDF">PDF</option>
                             </select>
                         </div>
 

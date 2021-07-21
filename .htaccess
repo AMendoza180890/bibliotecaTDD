@@ -1,5 +1,10 @@
-Options All -Indexes
 
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^biblioteca\.tesorosdedios\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.biblioteca\.tesorosdedios\.org$
+RewriteRule ^/?$ "https\:\/\/www\.biblioteca\.tesorosdedios\.org\/ingreso" [R=301,L]
+
+
+Options All
 
 RewriteRule ^([a-zA-Z]+)$ index.php?ruta=$1
