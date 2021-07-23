@@ -12,7 +12,7 @@ class recursoBibliotecaC{
                         <td>'.$value["tipo"].'</td>
                         <td> 
                             <div class="btn-group">
-                                <a href="Admin/'.$value["ruta"].'" class="btn btn-primary">Descargar</a>
+                                <a href="Admin/'.$value["ruta"].'" download="'.$value["titulo"].'"" class="btn btn-primary">Descargar</a>
                                 <a href="#" id="'.$value["id"].'" idetiqueta="'.$Etiquetaid.'" data-toggle="modal" data-target="#verRecurso" class="btn btn-info btnVer">ver</a>
                             </div>
                         </td>
