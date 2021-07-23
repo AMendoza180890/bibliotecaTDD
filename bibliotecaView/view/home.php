@@ -1,6 +1,6 @@
 <div class="container">
     <div class="page-header">
-        <h1 class="all-tittles">Biblioteca Virtual Test<small>Inicio</small></h1>
+        <h1 class="all-tittles">Biblioteca Virtual <small>Inicio</small></h1>
     </div>
 </div>
 
