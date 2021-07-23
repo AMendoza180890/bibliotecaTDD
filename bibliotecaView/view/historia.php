@@ -1,6 +1,6 @@
 <div class="container-fluid">
                         <div class="page-header">
-                          <h2 class="all-tittles">Recurso de Historias Sociales</h2>
+                          <h2 class="all-tittles">Recurso de Historias Sociales prueba</h2>
                         </div>
                         <div class="row">
                             <div class="col-xs-12">
