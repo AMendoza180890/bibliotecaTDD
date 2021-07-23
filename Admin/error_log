@@ -23,3 +23,59 @@
 [15-Mar-2021 11:16:32 America/Boise] PHP Warning:  Use of undefined constant session_id - assumed 'session_id' (this will throw an Error in a future version of PHP) in /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php on line 2
 [15-Mar-2021 11:16:32 America/Boise] PHP Warning:  Use of undefined constant session_id - assumed 'session_id' (this will throw an Error in a future version of PHP) in /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php on line 2
 [15-Mar-2021 11:16:36 America/Boise] PHP Warning:  Use of undefined constant session_id - assumed 'session_id' (this will throw an Error in a future version of PHP) in /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php on line 2
+[23-Apr-2021 11:43:31 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
+[23-Apr-2021 11:43:41 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
+[23-Apr-2021 11:43:42 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
+[23-Apr-2021 11:43:43 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
+[23-Apr-2021 11:43:45 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
+[23-Apr-2021 11:43:59 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
+[23-Apr-2021 11:44:01 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
+[23-Apr-2021 11:44:06 America/Boise] PHP Fatal error:  Uncaught Error: Class 'dashboardHomeC' not found in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php:18
+Stack trace:
+#0 /home4/tesorosd/public_html/biblioteca/Admin/vista/plantilla.php(58): include()
+#1 /home4/tesorosd/public_html/biblioteca/Admin/controlador/plantillaC.php(4): include('/home4/tesorosd...')
+#2 /home4/tesorosd/public_html/biblioteca/Admin/index.php(16): plantillaAdminLteC->llamarPlantillaAdminLte()
+#3 {main}
+  thrown in /home4/tesorosd/public_html/biblioteca/Admin/vista/modulos/inicio.php on line 18
