@@ -7,16 +7,6 @@
                                 <h3 class="text-center all-tittles">Recursos Adicionales para las Iglesias</h3>
                                 <div class="table-responsive">
                                     <table class="table table-hover text-center tbl">
-                                        <thead>
-                                            <tr class="success">
-                                                <th class="text-center">Titulo</th>
-                                                <th class="text-center">Descripcion</th>
-                                                <th class="text-center">Autor</th>
-                                                <th class="text-center">Archivo</th>
-                                                <th class="text-center">Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
                                             <?php
                                                 $etiqueta =23;
                                                 $listaRecurso = new recursoBibliotecaC();
@@ -25,14 +15,6 @@
                                                 $codigo = null;
                                                 $listaRecurso::verRecursoC($codigo);
                                             ?>
-                                        </tbody>
-                                        <!-- <tfoot>
-                                            <tr class="info">
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">0</th>
-                                                <th class="text-center">0%</th>
-                                            </tr>
-                                        </tfoot> -->
                                     </table>
                                 </div>
                             </div>
