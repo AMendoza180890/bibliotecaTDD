@@ -1,18 +1,18 @@
 <?php
     // en arreglo con clave valor
-    //$parametrosConexion = [
-        //'bd' => "bdbibliotecatdd",
-        //'server' => "localhost",
-        //'user' => "root",
-        //'passw' => "",
-    //];
+    // $parametrosConexion = [
+    //     'bd' => "bdbibliotecatdd",
+    //     'server' => "localhost",
+    //     'user' => "root",
+    //     'passw' => "",
+    // ];
 
     // en variables
-     $databaseName = "bdbibliotecatdd";
-     $servidor = "localhost";
-     $user = "root";
-     $passw = "";
+      $databaseName = "tesorosd_bdbibliotecatdd";
+      $servidor = "localhost";
+      $user = "tesorosd_library";
+      $passw = "yOLtH_qK?8gt";
 
-     include 'conexionBD.php';
+     //include '../bibliotecaModel/conexionBD.php';
 
 ?>
