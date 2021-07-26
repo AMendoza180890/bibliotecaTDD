@@ -8,10 +8,10 @@
     // ];
 
     // en variables
-      $databaseName = "tesorosd_bdbibliotecatdd";
+      $databaseName = "bdbibliotecatdd";
       $servidor = "localhost";
-      $user = "tesorosd_library";
-      $passw = "yOLtH_qK?8gt";
+      $user = "root";
+      $passw = "";
 
      //include '../bibliotecaModel/conexionBD.php';
 
