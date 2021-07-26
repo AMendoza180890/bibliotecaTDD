@@ -50,14 +50,14 @@
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-    <a href="iglesias"> 
+    <a href="iglesias">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-plus"></i></div>
             <div class="tile-name all-tittles">Iglesias</div>
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-    <a href="independencia"> 
+    <a href="independencia">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-run zmdi-hc-fw"></i></div>
             <div class="tile-name all-tittles">Independiencia</div>

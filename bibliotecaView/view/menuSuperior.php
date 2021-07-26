@@ -3,16 +3,16 @@
                 <?php
                 if ($_SESSION["foto"] != "") {
                     echo '<figure>
-                    <img src="Admin/'.$_SESSION["foto"].'" alt="user-picture" class="img-responsive img-circle center-box">
+                    <img src="Admin/' . $_SESSION["foto"] . '" alt="user-picture" class="img-responsive img-circle center-box">
                  </figure>';
-                }else{
+                } else {
                     echo '<figure>
                     <img src="bibliotecaView/assets/img/user01.png" alt="user-picture" class="img-responsive img-circle center-box">
                  </figure>';
                 }
-                 
-                 echo '<li style="color:#fff; cursor:default;">
-                     <span class="all-tittles">'.$_SESSION["usuario"].'</span>
+
+                echo '<li style="color:#fff; cursor:default;">
+                     <span class="all-tittles">' . $_SESSION["usuario"] . '</span>
                  </li>
                  <li  class="tooltips-general exit-system-button" data-href="salir" data-placement="bottom" title="Salir del sistema">
                      <i class="zmdi zmdi-power"></i>

@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="bibliotecaView/css/bootstrap.min.css">
     <link rel="stylesheet" href="bibliotecaView/css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="bibliotecaView/css/style.css">
-    <link rel="stylesheet" href="bibliotecaView/css/login.css"/>
+    <link rel="stylesheet" href="bibliotecaView/css/login.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="bibliotecaView/js/jquery-1.11.2.min.js"><\/script>')</script>
+    <script>
+        window.jQuery || document.write('<script src="bibliotecaView/js/jquery-1.11.2.min.js"><\/script>')
+    </script>
     <script src="bibliotecaView/js/modernizr.js"></script>
     <script src="bibliotecaView/js/bootstrap.min.js"></script>
     <script src="bibliotecaView/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="bibliotecaView/js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
-    
+
 </head>
 <title>Biblioteca</title>

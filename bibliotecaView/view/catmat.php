@@ -7,17 +7,17 @@
             <h3 class="text-center all-tittles">Matemática</h3>
             <div class="table-responsive">
                 <table class="table table-hover text-center tbl">
-                        <?php
-                            $etiqueta = 2;
-                            $listaRecurso = new recursoBibliotecaC();
-                            $listaRecurso->obtenerRecursoC($etiqueta);
+                    <?php
+                    $etiqueta = 2;
+                    $listaRecurso = new recursoBibliotecaC();
+                    $listaRecurso->obtenerRecursoC($etiqueta);
 
-                            $codigo = null;
-                            $listaRecurso::verRecursoC($codigo);
-                        ?>
+                    $codigo = null;
+                    $listaRecurso::verRecursoC($codigo);
+                    ?>
                 </table>
             </div>
         </div>
     </div>
 
-    <?php include 'verRecursos.php';?>
+    <?php include 'verRecursos.php'; ?>
