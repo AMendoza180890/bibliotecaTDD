@@ -51,9 +51,12 @@ session_start();
     
     include 'modulos/cabecera.php';
     include 'modulos/menu.php';
+    include 'modulos/rutasAdmin.php';
+      //global $rutasAdmin;
+
     
     if (isset($_GET["ruta"])) {
-      if ($_GET["ruta"] == "inicio" || $_GET["ruta"] == "catusuarios" || $_GET["ruta"] == "login" || $_GET["ruta"] == "salir" || $_GET["ruta"] == "recurso") {
+      if ($rutasAdmin[$_GET["ruta"]]) {
         include "modulos/".$_GET["ruta"].".php";
       }else {
         include "modulos/inicio.php";

@@ -4,7 +4,7 @@ $rutas = [
     "buscar" => "buscar",
     "academico" => "academico",
     "home" => "home",
-    "salir" == "salir",
+    "salir" => "salir",
     "autismo" => "autismo",
     "conducta" => "conducta",
     "curriculum" => "curriculum",

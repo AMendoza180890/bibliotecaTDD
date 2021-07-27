@@ -6,7 +6,7 @@ if (!headers_sent()) {
 <!DOCTYPE html>
 <html lang="es">
 <?php include 'bibliotecaView/view/encabezado.php';
-require_once 'rutas.php' ?>
+include 'rutas.php' ?>
 
 <body class="full-cover-background" style="background-image:url(bibliotecaView/assets/img/BibliotecaVirtual.png);">
        <!-- cuerpo de la pagina -->
@@ -19,7 +19,6 @@ require_once 'rutas.php' ?>
 
               if (isset($_GET["ruta"])) {
                      if ($rutas[$_GET["ruta"]]) {
-
                             include 'bibliotecaView/view/' . $_GET["ruta"] . ".php";
                      } else {
                             include 'bibliotecaView/view/home.php';
