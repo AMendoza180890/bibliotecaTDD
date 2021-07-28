@@ -4,6 +4,7 @@
         'catusuarios' => "catusuarios" , 
         'login' => "login" , 
         'salir' => "salir" , 
-        'recurso' => "recurso"
+        'recurso' => "recurso",
+        'ayuda' => 'ayuda'
     ]
 ?>

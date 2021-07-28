@@ -25,16 +25,9 @@
         public function actualizarAyudaC()
         {
             try {
+            $obtenerInformacionDeAyuda = ayudaModel::actualizarAyudaM();
 
-            } catch (exception $ex) {
-                echo 'error:' . $ex->getMessage();
-            }
-        }
-
-        public function desabilitarAyudaC()
-        {
-            try {
-
+            echo '';
             } catch (exception $ex) {
                 echo 'error:' . $ex->getMessage();
             }
