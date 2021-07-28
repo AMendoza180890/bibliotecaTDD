@@ -35,7 +35,7 @@
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-<a href="SocioEmocional">
+    <a href="SocioEmocional">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-accounts"></i></div>
             <div class="tile-name all-tittles">Habilidades Socio-Emocionales</div>

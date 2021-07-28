@@ -17,14 +17,21 @@
                 </a>
             </li>
 
-            <!-- <li>
-                <a href="#">
-                    <i class="fa fa-home"></i>
-                    <span>opcion 2</span>
+            <li>
+                <a href="catusuarios">
+                    <i class="fa fa-user"></i>
+                    <span>Usuarios</span>
                 </a>
             </li>
 
             <li>
+                <a href="ayuda">
+                    <i class="fa fa-question-circle"></i>
+                    <span>ayuda</span>
+                </a>
+            </li>
+
+            <!--<li>
                 <a href="#">
                     <i class="fa fa-home"></i>
                     <span>Opcion 3</span>
@@ -62,12 +69,6 @@
                 </a>
             </li> -->
 
-            <li>
-                <a href="catusuarios">
-                    <i class="fa fa-home"></i>
-                    <span>Usuarios</span>
-                </a>
-            </li>
 
         </ul>
 

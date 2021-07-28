@@ -7,35 +7,17 @@
             <h3 class="text-center all-tittles">Discapacidad Intelectual</h3>
             <div class="table-responsive">
                 <table class="table table-hover text-center tbl">
-                    <thead>
-                        <tr class="success">
-                            <th class="text-center">Titulo</th>
-                            <th class="text-center">Descripcion</th>
-                            <th class="text-center">Autor</th>
-                            <th class="text-center">Archivo</th>
-                            <th class="text-center">Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $etiqueta = 9;
-                        $listaRecurso = new recursoBibliotecaC();
-                        $listaRecurso->obtenerRecursoC($etiqueta);
+                    <?php
+                    $etiqueta = 9;
+                    $listaRecurso = new recursoBibliotecaC();
+                    $listaRecurso->obtenerRecursoC($etiqueta);
 
-                        $codigo = null;
-                        $listaRecurso::verRecursoC($codigo);
-                        ?>
-                    </tbody>
-                    <!-- <tfoot>
-                                            <tr class="info">
-                                                <th class="text-center">Total</th>
-                                                <th class="text-center">0</th>
-                                                <th class="text-center">0%</th>
-                                            </tr>
-                                        </tfoot> -->
+                    $codigo = null;
+                    $listaRecurso::verRecursoC($codigo);
+                    ?>
                 </table>
             </div>
         </div>
     </div>
 
-    <?php include 'verRecursos.php';?>
+    <?php include 'verRecursos.php'; ?>

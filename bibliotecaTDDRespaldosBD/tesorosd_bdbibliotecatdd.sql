@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 30, 2021 at 10:04 AM
--- Server version: 5.6.41-84.1
--- PHP Version: 7.3.28
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 28-07-2021 a las 14:13:38
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tesorosd_bdbibliotecatdd`
+-- Base de datos: `bdbibliotecatdd`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catetiquetas`
+-- Estructura de tabla para la tabla `artayuda`
+--
+
+CREATE TABLE `artayuda` (
+  `id` int(11) NOT NULL,
+  `titulo` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `estado` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Se guardara informacion del modulo de ayuda';
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `catetiquetas`
 --
 
 CREATE TABLE `catetiquetas` (
@@ -34,7 +46,7 @@ CREATE TABLE `catetiquetas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Contiene todas las ubicaciones del menu';
 
 --
--- Dumping data for table `catetiquetas`
+-- Volcado de datos para la tabla `catetiquetas`
 --
 
 INSERT INTO `catetiquetas` (`id`, `etiquetaDescripcion`) VALUES
@@ -86,7 +98,7 @@ INSERT INTO `catetiquetas` (`id`, `etiquetaDescripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catrecursos`
+-- Estructura de tabla para la tabla `catrecursos`
 --
 
 CREATE TABLE `catrecursos` (
@@ -96,12 +108,12 @@ CREATE TABLE `catrecursos` (
   `titulo` text COLLATE utf8_spanish_ci NOT NULL,
   `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
   `autor` text COLLATE utf8_spanish_ci NOT NULL,
-  `tipo` text COLLATE utf8_spanish_ci,
-  `resumen` text COLLATE utf8_spanish_ci
+  `tipo` text COLLATE utf8_spanish_ci DEFAULT NULL,
+  `resumen` text COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Tabla para registrar los recursos';
 
 --
--- Dumping data for table `catrecursos`
+-- Volcado de datos para la tabla `catrecursos`
 --
 
 INSERT INTO `catrecursos` (`id`, `nombre`, `ruta`, `titulo`, `descripcion`, `autor`, `tipo`, `resumen`) VALUES
@@ -119,12 +131,13 @@ INSERT INTO `catrecursos` (`id`, `nombre`, `ruta`, `titulo`, `descripcion`, `aut
 (14, 'Tengo amigos en la escuela [Ana Jarquin].docx.pdf', 'vista/recurso/Tengo amigos en la escuela [Ana Jarquin].docx.pdf', 'Tengo Amigos en la Escuela', 'Historia Social', 'Ana Jarquin', 'Pdf', NULL),
 (15, 'Mis lugares privados [Ana Jarquin].docx.pdf', 'vista/recurso/Mis lugares privados [Ana Jarquin].docx.pdf', 'Mis Lugares Privados', 'Historia Social', 'Ana Jarquin', 'Pdf', NULL),
 (16, 'Historia Social-Levantar las manos - Dr VanTol.pdf', 'vista/recurso/Historia Social-Levantar las manos - Dr VanTol.pdf', 'Levantar las Manos', 'Historia Social', 'Dr. Kathleen VanTol', 'Pdf', NULL),
-(17, 'Historia Social-Miedo a Dormir - Paul Blas.pdf', 'vista/recurso/Historia Social-Miedo a Dormir - Paul Blas.pdf', 'Miedo a Dormir', 'Historia Social', 'Paul Blas', 'Pdf', NULL);
+(17, 'Historia Social-Miedo a Dormir - Paul Blas.pdf', 'vista/recurso/Historia Social-Miedo a Dormir - Paul Blas.pdf', 'Miedo a Dormir', 'Historia Social', 'Paul Blas', 'Pdf', NULL),
+(18, '00056_python20para20todos.pdf', 'vista/recurso/00056_python20para20todos.pdf', 'tutorial de python', 'tutorial de python para jugar', 'Allan Mendoza', 'PDF', 'Un recuros para probar si no hay problema');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catroles`
+-- Estructura de tabla para la tabla `catroles`
 --
 
 CREATE TABLE `catroles` (
@@ -133,7 +146,7 @@ CREATE TABLE `catroles` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Dumping data for table `catroles`
+-- Volcado de datos para la tabla `catroles`
 --
 
 INSERT INTO `catroles` (`rolid`, `catRolesDescripcion`) VALUES
@@ -144,19 +157,19 @@ INSERT INTO `catroles` (`rolid`, `catRolesDescripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catTipoArchivo`
+-- Estructura de tabla para la tabla `cattipoarchivo`
 --
 
-CREATE TABLE `catTipoArchivo` (
+CREATE TABLE `cattipoarchivo` (
   `id` int(11) NOT NULL,
-  `descripcion` text COLLATE utf8_unicode_ci
+  `descripcion` text COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Normalizacion de tipo de archivo en cat recursos';
 
 --
--- Dumping data for table `catTipoArchivo`
+-- Volcado de datos para la tabla `cattipoarchivo`
 --
 
-INSERT INTO `catTipoArchivo` (`id`, `descripcion`) VALUES
+INSERT INTO `cattipoarchivo` (`id`, `descripcion`) VALUES
 (1, 'Word'),
 (2, 'PowerPoint'),
 (3, 'Excel'),
@@ -166,7 +179,7 @@ INSERT INTO `catTipoArchivo` (`id`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `unionetiquetascatrecurso`
+-- Estructura de tabla para la tabla `unionetiquetascatrecurso`
 --
 
 CREATE TABLE `unionetiquetascatrecurso` (
@@ -176,7 +189,7 @@ CREATE TABLE `unionetiquetascatrecurso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Enlace etiqueta con el recurso para existir +1 lugar';
 
 --
--- Dumping data for table `unionetiquetascatrecurso`
+-- Volcado de datos para la tabla `unionetiquetascatrecurso`
 --
 
 INSERT INTO `unionetiquetascatrecurso` (`id`, `idRecurso`, `idEtiqueta`) VALUES
@@ -227,12 +240,14 @@ INSERT INTO `unionetiquetascatrecurso` (`id`, `idRecurso`, `idEtiqueta`) VALUES
 (142, 6, 3),
 (143, 6, 13),
 (144, 6, 13),
-(145, 6, 13);
+(145, 6, 13),
+(146, 18, 1),
+(147, 18, 13);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
@@ -244,7 +259,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='estructura de tabla de usuario';
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `clave`, `foto`, `rolid`) VALUES
@@ -263,35 +278,41 @@ INSERT INTO `usuarios` (`id`, `usuario`, `clave`, `foto`, `rolid`) VALUES
 (13, 'Mrosales', 'Tesoros456', '', 2);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `catetiquetas`
+-- Indices de la tabla `artayuda`
+--
+ALTER TABLE `artayuda`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `catetiquetas`
 --
 ALTER TABLE `catetiquetas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `catrecursos`
+-- Indices de la tabla `catrecursos`
 --
 ALTER TABLE `catrecursos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `catroles`
+-- Indices de la tabla `catroles`
 --
 ALTER TABLE `catroles`
   ADD PRIMARY KEY (`rolid`);
 
 --
--- Indexes for table `catTipoArchivo`
+-- Indices de la tabla `cattipoarchivo`
 --
-ALTER TABLE `catTipoArchivo`
+ALTER TABLE `cattipoarchivo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `unionetiquetascatrecurso`
+-- Indices de la tabla `unionetiquetascatrecurso`
 --
 ALTER TABLE `unionetiquetascatrecurso`
   ADD PRIMARY KEY (`id`),
@@ -299,65 +320,71 @@ ALTER TABLE `unionetiquetascatrecurso`
   ADD KEY `idEtiquetaBiblioteca` (`idEtiqueta`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD KEY `rolid` (`rolid`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `catetiquetas`
+-- AUTO_INCREMENT de la tabla `artayuda`
+--
+ALTER TABLE `artayuda`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `catetiquetas`
 --
 ALTER TABLE `catetiquetas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
--- AUTO_INCREMENT for table `catrecursos`
+-- AUTO_INCREMENT de la tabla `catrecursos`
 --
 ALTER TABLE `catrecursos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `catroles`
+-- AUTO_INCREMENT de la tabla `catroles`
 --
 ALTER TABLE `catroles`
   MODIFY `rolid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `catTipoArchivo`
+-- AUTO_INCREMENT de la tabla `cattipoarchivo`
 --
-ALTER TABLE `catTipoArchivo`
+ALTER TABLE `cattipoarchivo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `unionetiquetascatrecurso`
+-- AUTO_INCREMENT de la tabla `unionetiquetascatrecurso`
 --
 ALTER TABLE `unionetiquetascatrecurso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=146;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `unionetiquetascatrecurso`
+-- Filtros para la tabla `unionetiquetascatrecurso`
 --
 ALTER TABLE `unionetiquetascatrecurso`
   ADD CONSTRAINT `unionetiquetascatrecurso_ibfk_1` FOREIGN KEY (`idRecurso`) REFERENCES `catrecursos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `unionetiquetascatrecurso_ibfk_2` FOREIGN KEY (`idEtiqueta`) REFERENCES `catetiquetas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `usuarios`
+-- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rolid`) REFERENCES `catroles` (`rolid`) ON DELETE CASCADE ON UPDATE CASCADE;

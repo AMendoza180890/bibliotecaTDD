@@ -1,5 +1,6 @@
 <?php
-require_once 'conexionBD.php';
+    require_once 'Admin/modelo/conexionBD.php';
+
 class recursoBibliotecaM extends conexionBD{
     public static function obtenerRecursoM($Etiquetaid){
         try {
