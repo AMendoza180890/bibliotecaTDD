@@ -13,7 +13,14 @@
             <li>
                 <a href="recurso">
                     <i class="fa fa-home"></i>
-                    <span>Recursos</span>
+                    <span>Recursos Archivos</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="recursoVideo">
+                    <i class="fa fa-home"></i>
+                    <span>Recursos Videos</span>
                 </a>
             </li>
 

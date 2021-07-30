@@ -3,39 +3,22 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Informacion de Ayuda
+      Modulo de ayuda para visitas
     </h1>
+    <small id="helpcontent" class="form-text text-muted">(Mostrar información de ayuda a los visitantes.)</small>
   </section>
   <!-- Main content -->
   <section class="content">
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#registrarRecurso">Agregar la Información de ayuda</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#editarAyuda">Editar</button>
       </div>
       <div class="box-body">
-        <table class="table table-bordered table-hover table-striped TablaRecursos" id="tbl">
-          <thead>
-            <tr>
-              <th>Nº</th>
-              <th>ruta</th>
-              <th>nombre</th>
-              <th>titulo</th>
-              <th>descripcion</th>
-              <th>autor</th>
-              <th>Editar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-                  $mostrarRecurso = new recursoC;
-                  $mostrarRecurso ->mostrarRecursosRegistrados();
-
-                  $codigoRecurso = null;
-                  $obtenerRecurso = recursoC::obtenerRecursoRegistradoC($codigoRecurso);
-            ?> 
-          </tbody>
-        </table>
+        <?php
+          $verAyuda = new ayudaController();
+          $verAyuda -> mostrarAyudaC();
+        ?>
       </div>
       <!-- /.box-body -->
     </div>
@@ -44,9 +27,5 @@
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<?php include 'registrarRecurso.php'; ?>
-<?php include 'editarRecurso.php'; ?>
-<?php
-// $desactivarUsuarioRol = new usuariosC;
-// $desactivarUsuarioRol->DesactivarUsuarioC();
-?> 
+<?php include 'editAyuda.php'; ?>
+<?php //include 'editarRecurso.php'; ?>

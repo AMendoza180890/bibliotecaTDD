@@ -16,11 +16,10 @@
                  </li>
                  <li  class="tooltips-general exit-system-button" data-href="salir" data-placement="bottom" title="Salir del sistema">
                      <i class="zmdi zmdi-power"></i>
-                 </li>
-                 <li  class="tooltips-general btn-help" data-placement="bottom" title="Ayuda">
-                     <i class="zmdi zmdi-help-outline zmdi-hc-fw"></i>
-                 </li>
-                 <li  class="tooltips-general" data-placement="bottom" title="Buscar">
+                 </li>';
+                $estadoAyuda = new ayudaVisitaController();
+                $estadoAyuda -> estadoInfoAyudaC();
+                 echo '<li  class="tooltips-general" data-placement="bottom" title="Buscar">
                      <i class="zmdi zmdi-search zmdi-hc-fw" id="btn-search"></i>
                  </li>
                  <li class="mobile-menu-button visible-xs" style="float: left !important;">

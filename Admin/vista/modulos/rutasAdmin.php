@@ -5,6 +5,7 @@
         'login' => "login" , 
         'salir' => "salir" , 
         'recurso' => "recurso",
-        'ayuda' => 'ayuda'
+        'ayuda' => 'ayuda',
+        'recursoVideo'=>'recursoVideo'
     ]
 ?>

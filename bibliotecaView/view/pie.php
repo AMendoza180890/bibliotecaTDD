@@ -18,5 +18,5 @@
             </div>
         </div>
     </div>
-    <div class="footer-copyright full-reset all-tittles"><a href="https://www.tesorosdedios.org">© 2021 Tesoros de Dios</a></div>
+    <div class="footer-copyright full-reset all-tittles"><a href="https://www.tesorosdedios.org">© Tesoros de Dios</a></div>
 </footer>

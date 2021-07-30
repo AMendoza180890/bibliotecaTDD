@@ -1,6 +1,6 @@
 <?php
 if(!headers_sent()){
-session_start();
+  session_start();
 }
 ?>
 <!DOCTYPE html>
