@@ -36,7 +36,7 @@ class recursoBibliotecaC{
     public static function verRecursoC($codigo){
         try {
             if ($codigo != null) {
-                $obtenerVerRecursos = recursoBibliotecaM::verRecursoM($codigo);
+                $obtenerVerRecursos = recursoverBibliotecaM::verRecursoM($codigo);
                 return $obtenerVerRecursos;
             }
         } catch (Exception $ex) {

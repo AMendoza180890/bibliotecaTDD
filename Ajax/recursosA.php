@@ -1,9 +1,10 @@
 <?php
 require_once '../bibliotecaController/recursoBibliotecaC.php';
-require_once '../bibliotecaModel/recursoBibliotecaM.php';
+require_once '../bibliotecaModel/recursosverBibliotecaM.php';
 
 class recursosbiblitecaA {
     public $codigo;
+
     public function obtenerDatosRecurso(){
         $id = $this->codigo;
 
