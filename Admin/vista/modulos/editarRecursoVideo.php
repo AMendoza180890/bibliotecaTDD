@@ -1,4 +1,4 @@
-<div class="modal fade" role="dialog" id="editarRecurso">
+<div class="modal fade" role="dialog" id="editarRecursoVideo">
     <div class="modal-dialog">
         <div class="modal-content">
             <form role="form" method="post" enctype="multipart/form-data">
@@ -22,27 +22,13 @@
                         </div>
 
                         <div class="form-group">
+                            <h2>Link</h2>
+                            <input type="text" class="form-control input-lg" name="linkEdit" id="linkEdit" required>
+                        </div>
+
+                        <div class="form-group">
                             <h2>Autor</h2>
                             <input type="text" class="form-control input-lg" name="autorEdit" id="autorEdit" required>
-                        </div>
-
-                        <div class="form-group">
-                            <h2>Recurso:</h2>
-                            <input type="file" name="recursoEdit" id="recursoEdit">
-                            <p class="help-block">peso maximo permitido 200 Mb</p>
-                            <input type="hidden" name="recursoActual" id="recursoActual">
-                        </div>
-
-                        <div class="form-group">
-                            <h2>Tipo de Archivo:</h2>
-                            <select name="tipoE" id="tipoE" class="form-control input-lg">
-                                <option id="eleccionTipo"></option>
-                                <option value="Word">Word</option>
-                                <option value="Power Point">Power Point</option>
-                                <option value="Excel">Excel</option>
-                                <option value="Publisher">Publisher</option>
-                                <option value="PDF">PDF</option>
-                            </select>
                         </div>
 
                         <div class="form-group">
@@ -167,9 +153,9 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                $actualizarRecurso      =   new recursoC;
-                $actualizarRecurso      ->  actualizarRecurso();
-                $actualizarRecurso      ->  asignarEtiquetas(); 
+                $actualizarRecurso      =   new recursoVideosC;
+                $actualizarRecurso->actualizarRecursoVideo();
+                $actualizarRecurso->asignarEtiquetasRecursoVideo();
                 ?>
             </form>
         </div>

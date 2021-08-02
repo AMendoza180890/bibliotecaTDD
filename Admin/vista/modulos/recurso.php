@@ -5,6 +5,7 @@
     <h1>
       Gestor de Recursos
     </h1>
+    <small id="emailHelp" class="form-text text-muted">(Gestiona los Archivos)</small>
   </section>
   <!-- Main content -->
   <section class="content">
@@ -28,12 +29,12 @@
           </thead>
           <tbody>
             <?php
-                  $mostrarRecurso = new recursoC;
-                  $mostrarRecurso ->mostrarRecursosRegistrados();
+            $mostrarRecurso = new recursoC;
+            $mostrarRecurso->mostrarRecursosRegistrados();
 
-                  $codigoRecurso = null;
-                  $obtenerRecurso = recursoC::obtenerRecursoRegistradoC($codigoRecurso);
-            ?> 
+            $codigoRecurso = null;
+            $obtenerRecurso = recursoC::obtenerRecursoRegistradoC($codigoRecurso);
+            ?>
           </tbody>
         </table>
       </div>
@@ -49,4 +50,4 @@
 <?php
 // $desactivarUsuarioRol = new usuariosC;
 // $desactivarUsuarioRol->DesactivarUsuarioC();
-?> 
+?>

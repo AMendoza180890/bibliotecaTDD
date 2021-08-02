@@ -7,14 +7,14 @@ class recursoVideosC{
                 foreach ($mostrarRecurso as $key => $value) {
                     echo '<tr>
                         <td>' . ($key + 1) . '</td>
-                        <td>' . $value["link"] . '</td>
-                        <td>' . $value["nombre"] . '</td>
                         <td>' . $value["titulo"] . '</td>
-                        <td>'.$value["descripcion"].'</td>
                         <td>' . $value["autor"] . '</td>
+                        <td>' . $value["nombre"] . '</td>
+                        <td>'.$value["descripcion"].'</td>
+                        <td>' . $value["link"] . '</td>
                         <td>
                             <div class="btn-group">
-                                <button class="btn btn-success EditRegistroRecurso" codValor=' . $value["id"] . '><i data-toggle="modal" data-target="#editarRecurso" class="fa fa-pencil"></i></button>
+                                <button class="btn btn-success EditRegistroRecursoVideo" codValor=' . $value["id"] . '><i data-toggle="modal" data-target="#editarRecursoVideo" class="fa fa-pencil"></i></button>
                                 <button class="btn btn-danger DesactivarRegistroUsuario" style="display:none;" codValor=' . $value["id"] . '><i class="fa fa-times"></i></button>
                             </div>
                         </td>
@@ -30,7 +30,7 @@ class recursoVideosC{
         try {
             if (isset($_POST["titulosNuevo"])) {
                
-                $datosRecurso = array( "link"=>$_POST["linkNuevo"], "titulo"=>$_POST["titulosNuevo"], "detalle"=>$_POST["detallesNuevo"], "autor" =>$_POST["autorNuevo"], "tipoArchivo"=>$_POST["tipoN"], "resumenN"=>$_POST["resumenNuevo"]);
+                $datosRecurso = array( "link"=>$_POST["linkNuevo"], "titulo"=>$_POST["titulosNuevo"], "detalle"=>$_POST["detallesNuevo"], "autor" =>$_POST["autorNuevo"], "resumen"=>$_POST["resumenNuevo"]);
 
                 $registrarRecurso = recursoVideosM::registrarRecursoVideoM($datosRecurso);
 
@@ -57,34 +57,28 @@ class recursoVideosC{
         }
     }
 
-    // public static function obtenerEtiquetaRecursoVideoC($codigoRecurso){
-    //     try {
-    //         if ($codigoRecurso != null) {
-    //             $recursoEtiqueta = recursoVideosM::obtenerEtiquetaRecurso($codigoRecurso);
-    //             return $recursoEtiqueta;
-    //         }
-    //     } catch (exception $ex) {
-    //         echo 'Error - '.$ex;
-    //     }
-    // }
+    public static function obtenerEtiquetaRecursoVideoC($codigoRecurso){
+        try {
+            if ($codigoRecurso != null) {
+                $recursoEtiqueta = recursoVideosM::obtenerEtiquetaRecursoVideo($codigoRecurso);
+                return $recursoEtiqueta;
+            }
+        } catch (exception $ex) {
+            echo 'Error - '.$ex;
+        }
+    }
 
     public function actualizarRecursoVideo(){
         try {
             if (isset($_POST["idEdit"])) {
-                if ($_FILES["recursoEdit"]["tmp_name"] != "") {
-                    $rutaRecurso = tratamientoRecurso::subirRecurso($_FILES["recursoEdit"]["tmp_name"], $_FILES["recursoEdit"]["name"]);
-                    $nombreRecurso = basename($_FILES["recursoEdit"]["name"]);
-                }else{
-                    $rutaRecurso = $_POST["recursoActual"];
-                    $nombreRecurso = basename($_POST["recursoActual"]);
-                }
-
-                $datosRecursoActualizado = array("id" => $_POST["idEdit"],"nombre"=>$nombreRecurso, "titulo"=>$_POST["titulosEdit"],"detalle"=>$_POST["detallesEdit"],"autor"=>$_POST["autorEdit"], "ruta" => $rutaRecurso, "tipoArchivoEditado"=>$_POST["tipoE"], "resumenEditado" => $_POST["resumenEditado"] );
+    
+                $datosRecursoActualizado = array("id" => $_POST["idEdit"],"titulo"=>$_POST["titulosEdit"],"detalle"=>$_POST["detallesEdit"],"link"=>$_POST["linkEdit"],
+                "autor"=>$_POST["autorEdit"], "resumen" => $_POST["resumenEditado"] );
 
                 $datosActualizados = recursoVideosM::actualizarRecursoVideoM($datosRecursoActualizado);
 
                 if ($datosActualizados == true) {
-                    echo '<script>window.location="recurso"</script>';
+                    echo '<script>window.location="recursoVideo"</script>';
                 }else{
                     echo 'Error al actualizar recurso';
                 }

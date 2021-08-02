@@ -1,4 +1,4 @@
-<div class="modal fade" role="dialog" id="registrarRecurso">
+<div class="modal fade" role="dialog" id="registrarRecursoVideo">
     <div class="modal-dialog">
         <div class="modal-content">
             <form role="form" method="post" enctype="multipart/form-data">
@@ -43,8 +43,8 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                    $registrarRecurso   =   new recursoC();
-                    $registrarRecurso->registrarRecurso();
+                    $registrarRecurso   =   new recursoVideosC();
+                    $registrarRecurso   ->  registrarVideoRecurso();
                 ?>
             </form>
         </div>

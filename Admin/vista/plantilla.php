@@ -115,6 +115,7 @@ if(!headers_sent()){
 <!-- Evento de obtejer informacion y desactivar Usuarios-->
 <script src="vista/js/usuario.js"></script>
 <script src="vista/js/recursos.js"></script>
+<script src="vista/js/recursosvideos.js"></script>
 </body>
 <script>
        $(document).ready( function () {

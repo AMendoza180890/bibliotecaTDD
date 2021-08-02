@@ -12,28 +12,28 @@
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <button class="btn btn-primary" data-toggle="modal" data-target="#registrarRecurso">Agregar Recurso</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#registrarRecursoVideo">Agregar Recurso</button>
       </div>
       <div class="box-body">
         <table class="table table-bordered table-hover table-striped TablaRecursos" id="tbl">
           <thead>
             <tr>
               <th>Nº</th>
-              <th>ruta</th>
-              <th>nombre</th>
-              <th>titulo</th>
-              <th>descripcion</th>
-              <th>autor</th>
+              <th>Titulo</th>
+              <th>Autor</th>
+              <th>Detalle</th>
+              <th>Descripcion</th>
+              <th>Link</th>
               <th>Editar</th>
             </tr>
           </thead>
           <tbody>
             <?php
-            $mostrarRecurso = new recursoC;
-            $mostrarRecurso->mostrarRecursosRegistrados();
+            $mostrarRecurso = new recursoVideosC;
+            $mostrarRecurso->mostrarRecursosVideoRegistrados();
 
             $codigoRecurso = null;
-            $obtenerRecurso = recursoC::obtenerRecursoRegistradoC($codigoRecurso);
+            $obtenerRecurso = recursoVideosC::obtenerRecursoRegistradoVideoC($codigoRecurso);
             ?>
           </tbody>
         </table>
