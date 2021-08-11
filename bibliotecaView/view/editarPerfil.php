@@ -12,7 +12,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <h2 class="all-tittles">Cambiar Contraseña</h2>
-                            <input type="text" class="form-control input-lg" name="claveEditPerfil" id="claveEditPerfil" required>
+                            <input type="password" class="form-control input-lg" name="claveEditPerfil" id="claveEditPerfil" required>
                         </div>
 
                         <div class="form-group">
@@ -35,8 +35,8 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                    // $actualizarUsuario  = new usuariosC();
-                    // $actualizarUsuario -> actualizarRegistroUsuarioC();
+                    $actualizarPerfilUsuario  = new perfilUsuarioC();
+                    $actualizarPerfilUsuario -> actualizarPerfilUsuarioC();
                 ?>
             </form>
         </div>

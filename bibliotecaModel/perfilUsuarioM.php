@@ -1,7 +1,9 @@
 <?php
 
-class perfilUsuarioM{
-    public static function actualizataperfilUsuarioM($datosActualizarUsuario){
+require_once 'Admin/modelo/conexionBD.php';
+
+class perfilUsuarioM extends conexionBD{
+    public static function actualizaPerfilUsuarioM($datosActualizarUsuario){
         try {
             $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET usuario=:usuario, clave=:clave, foto=:foto WHERE id=:id");
             $pdo -> bindParam("id",$datosActualizarUsuario["id"],PDO::PARAM_STR);
@@ -13,8 +15,6 @@ class perfilUsuarioM{
             }else{
                 return false;
             }
-
-            
         } catch (exception $ex) {
             echo 'Error - '.$ex;
         }
