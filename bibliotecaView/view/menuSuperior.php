@@ -11,7 +11,7 @@
                  </figure>';
                 }
 
-                echo '<li class="tooltips-general exit-system-button" data-href="editarPerfil" data-placement="bottom" title="">
+                echo '<li  data-toggle="modal" data-target="#editarPerfilUsuario" data-placement="bottom" title="Editar Perfil">
                      <span class="all-tittles">' . $_SESSION["usuario"] . '</span>
                  </li>
                  <li  class="tooltips-general exit-system-button" data-href="salir" data-placement="bottom" title="Salir del sistema">

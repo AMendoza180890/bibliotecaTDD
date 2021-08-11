@@ -20,3 +20,4 @@
     </div>
     <div class="footer-copyright full-reset all-tittles"><a href="https://www.tesorosdedios.org">© Tesoros de Dios</a></div>
 </footer>
+<?php include 'editarPerfil.php' ?>
