@@ -5,7 +5,8 @@ class perfilUsuarioC{
             if (isset($_POST["claveEditPerfil"])) {
                 $rutaImagen = $_SESSION['foto'];
                 if ($_FILES["fotoEditPerfil"]["tmp_name"] != "") {
-                    $rutaImagen = tratamientoImagenPerfil::tratamientoTipoImagenPerfil($_FILES["fotoEditPerfil"]["tmp_name"], $_FILES["fotoEditPerfil"]);
+                    $nombreImagen = tratamientoImagenPerfil::tratamientoTipoImagenPerfil($_FILES["fotoEditPerfil"]["tmp_name"], $_FILES["fotoEditPerfil"]);
+                    $rutaImagen = "vista/img/usuario/U".$nombreImagen;
                 }
                 $datosActualizarPefilUsuario = array("id"=>$_SESSION['id'],"clave"=>$_POST["claveEditPerfil"],"foto"=>$rutaImagen);
 
