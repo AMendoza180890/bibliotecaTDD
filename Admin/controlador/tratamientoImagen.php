@@ -1,19 +1,19 @@
 <?php
 
 class tratamientoImagen {
-    public static function tratamientoTipoImagen($nombreElemento,$elemento){
+    public static function tratamientoTipoImagen($nombreElemento,$elemento,$rutaImagen){
         try {
             $rutaImagen = "";
              if (isset($nombreElemento) && !empty($nombreElemento)) {
                 if ($elemento["type"] == "image/jpeg") {
                     $nombreImagen = mt_rand(10,999);
-                    $rutaImagen = "vista/img/usuario/U".$nombreImagen.".jpg";
+                    $rutaImagen = $rutaImagen.$nombreImagen.".jpg";
                     $foto = imagecreatefromjpeg($nombreElemento);
                     imagejpeg($foto,$rutaImagen);
                 }
                 if ($elemento["type"] == "image/png") {
                     $nombreImagen = mt_rand(10,999);
-                    $rutaImagen = "vista/img/usuario/U".$nombreImagen.".png";
+                    $rutaImagen = $rutaImagen.$nombreImagen.".png";
                     $foto = imagecreatefrompng($nombreElemento);
                     imagepng($foto,$rutaImagen);
                 }

@@ -1,7 +1,7 @@
 <div class="modal fade" role="dialog" id="editarPerfilUsuario">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form role="form" method="post" enctype="multipart/form-data">
+            <form role="form" method="POST" enctype="multipart/form-data">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">
                         <li class="fa fa-time"></li>
@@ -10,6 +10,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="box-body">
+                        
                         <div class="form-group">
                             <h2 class="all-tittles">Cambiar Contraseña</h2>
                             <input type="password" class="form-control input-lg" name="claveEditPerfil" id="claveEditPerfil" required>
@@ -26,8 +27,8 @@
                                     echo '<img src="Admin/'.$_SESSION["foto"].'" alt="imagen" class="img-thumbnail visor" width="100px;">';
                                 }
                             ?>
-                            
                         </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">

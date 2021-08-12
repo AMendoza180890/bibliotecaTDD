@@ -3,15 +3,15 @@ require_once 'Admin/controlador/tratamientoImagen.php';
 class perfilUsuarioC{
     public function actualizarPerfilUsuarioC(){
         try {
-            if (isset($_SESSION["id"])) {
+            if (isset($_POST["claveEditPerfil"])) {
                 $rutaImagen = $_SESSION['foto'];
                 if ($_FILES["fotoEditPerfil"]["tmp_name"] != "") {
-                    
-                    $rutaImagen = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoEditPerfil"]["tmp_name"], $_FILES["fotoEditPerfil"]);
+                    $rutaGuardar = "Admin/vista/img/usuario/U";
+                    $rutaImagen = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoEditPerfil"]["tmp_name"], $_FILES["fotoEditPerfil"], $rutaGuardar);
                 }
-                $datosActualizarUsuario = array("id"=>$_SESSION['id'],"clave"=>$_POST["claveEditPerfil"],"foto"=>$rutaImagen);
+                $datosActualizarPefilUsuario = array("id"=>$_SESSION['id'],"clave"=>$_POST["claveEditPerfil"],"foto"=>$rutaImagen);
 
-                $datosActualizados = perfilUsuarioM::actualizaPerfilUsuarioM($datosActualizarUsuario);
+                $datosActualizados = perfilUsuarioM::actualizaPerfilUsuarioM($datosActualizarPefilUsuario);
 
                 if($datosActualizados == true){
                     echo '<script>location.reload();</script>';
