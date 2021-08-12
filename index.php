@@ -5,6 +5,7 @@ require_once 'bibliotecaController/recursoBibliotecaC.php';
 require_once 'bibliotecaController/ayudaVisitaC.php';
 require_once 'bibliotecaController/recursosVideosC.php';
 require_once 'bibliotecaController/perfilUsuarioC.php';
+require_once 'bibliotecaController/tratamientoImagenPerfil.php';
 
 require_once 'bibliotecaModel/usuarioBibliotecaM.php';
 require_once 'bibliotecaModel/recursoBibliotecaM.php';

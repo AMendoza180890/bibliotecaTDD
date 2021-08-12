@@ -65,8 +65,7 @@ class usuariosC {
         try {
                 if(isset($_POST["usuarioNuevo"])){
                     // codigo de validacion de imagen
-                    $rutaGuardar = "vista/img/usuario/U";
-                    $rutaImagenProcesada = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoNuevo"]["tmp_name"], $_FILES["fotoNuevo"],$rutaGuardar);
+                    $rutaImagenProcesada = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoNuevo"]["tmp_name"], $_FILES["fotoNuevo"]);
                     $datosNuevoUsuario = array("usuario"=>$_POST["usuarioNuevo"],"clave"=>$_POST["claveNuevo"],"rol"=>$_POST["rolNuevo"],"foto"=>$rutaImagenProcesada);                  
                     $crearNuevoUsuario = usuariosM::registrarUsuariosM($datosNuevoUsuario);
                     if ($crearNuevoUsuario == true) {
@@ -94,8 +93,7 @@ class usuariosC {
             if (isset($_POST["idEdit"])) {
                 $rutaImagen = $_POST["fotoActual"];
                 if ($_FILES["fotoEdit"]["tmp_name"] != "") {
-                    $rutaGuardar = "vista/img/usuario/U";
-                    $rutaImagen = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoEdit"]["tmp_name"], $_FILES["fotoEdit"],$rutaGuardar);
+                    $rutaImagen = tratamientoImagen::tratamientoTipoImagen($_FILES["fotoEdit"]["tmp_name"], $_FILES["fotoEdit"]);
                 }
                 $datosActualizarUsuario = array("id"=>$_POST["idEdit"],"usuario"=>$_POST["usuarioEdit"],"clave"=>$_POST["claveEdit"],"rol"=>$_POST["rolEdit"],"foto"=>$rutaImagen);
 
