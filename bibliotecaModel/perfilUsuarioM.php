@@ -5,7 +5,6 @@ require_once 'Admin/modelo/conexionBD.php';
 class perfilUsuarioM extends conexionBD{
     public static function actualizaPerfilUsuarioM($datosActualizarUsuario){
         try {
-            echo $datosActualizarUsuario["id"].$datosActualizarUsuario["clave"].$datosActualizarUsuario["foto"];
             $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET clave=:clave, foto=:foto WHERE id=:id");
             $pdo -> bindParam("id",$datosActualizarUsuario["id"],PDO::PARAM_INT);
             $pdo -> bindParam("clave",$datosActualizarUsuario["clave"],PDO::PARAM_STR);
