@@ -57,5 +57,10 @@ $rutas = [
     "terapia" => 'terapia',
     "capacitacionesTerapia" => 'capacitacionesTerapia',
     "equinoterapia" => 'equinoterapia',
-    "terapiaOcupacional" => 'terapiaOcupacional'
+    "terapiaOcupacional" => 'terapiaOcupacional',
+    "articulacion" => "articulacion",
+    "apraxia" => "apraxia",
+    "fonologico" => "fonologico",
+    "particulacion" => "particulacion",
+    "velofaringea" => "velofaringea"
 ];
