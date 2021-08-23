@@ -8,9 +8,11 @@ class recursoBibliotecaC{
                 
                 if (!empty($obtenerInformacion)) {
                     $CodigoEtiqueta = $obtenerInformacion["id"];
-                    
+
                     $recursosPorEtiquetas = new recursoBibliotecaC;
                     $recursosPorEtiquetas ->  obtenerRecursoC($CodigoEtiqueta);
+                } else{
+                    echo 'Error al cargar la pagina web ';
                 }
 
 
