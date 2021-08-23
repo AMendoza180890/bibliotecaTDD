@@ -1,5 +1,25 @@
 <?php
 class recursoBibliotecaC{
+    public function obtenerCodigoEtiquetaC(){
+        try {
+            if(isset($_GET["ruta"])){
+                $ruta = $_GET["ruta"];
+                $obtenerInformacion = recursoBibliotecaM::obtenerCodigoEtiquetaM($ruta);
+                
+                if (!empty($obtenerInformacion)) {
+                    $CodigoEtiqueta = $obtenerInformacion["id"];
+                    
+                    $recursosPorEtiquetas = new recursoBibliotecaC;
+                    $recursosPorEtiquetas ->  obtenerRecursoC($CodigoEtiqueta);
+                }
+
+
+            }
+        } catch (exception $ex) {
+            echo $ex->getMessage();
+        }
+    }
+
     public function obtenerRecursoC($Etiquetaid){
         try {
             $obtenerListaRecurso = recursoBibliotecaM::obtenerRecursoM($Etiquetaid);

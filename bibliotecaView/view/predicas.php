@@ -8,9 +8,8 @@
             <div class="table-responsive">
                 <table class="table table-hover text-center tbl">
                     <?php
-                    $etiqueta = 22;
                     $listaRecurso = new recursoBibliotecaC();
-                    $listaRecurso->obtenerRecursoC($etiqueta);
+                    $listaRecurso->obtenerCodigoEtiquetaC();
 
                     $codigo = null;
                     $listaRecurso::verRecursoC($codigo);
