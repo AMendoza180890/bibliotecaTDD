@@ -2,7 +2,7 @@
     require_once '../Admin/modelo/conexionBD.php';
 
 class recursoverBibliotecaM extends conexionBD{
-
+    
     public static function verRecursoM($codigo){
         try {
             

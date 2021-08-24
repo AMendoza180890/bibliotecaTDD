@@ -2,6 +2,19 @@
     require_once 'Admin/modelo/conexionBD.php';
 
 class recursoBibliotecaM extends conexionBD{
+    
+    public static function obtenerCodigoEtiquetaM($ruta){
+        try {
+            $pdo = conexionBD::conexion()->prepare("SELECT id, etiquetaDescripcion FROM catetiquetas WHERE etiquetaDescripcion = :etiqueta");
+            $pdo->bindParam("etiqueta",$codigo,PDO::PARAM_STR);
+            $pdo->execute();
+            return $pdo->fetch();
+        } catch (Exception $ex) {
+            echo 'Error -'.$ex;
+        }
+    }
+    
+    
     public static function obtenerRecursoM($Etiquetaid){
         try {
             $pdo = conexionBD::conexion()->prepare("SELECT DISTINCT catrecursos.id, catrecursos.nombre, catrecursos.ruta, catrecursos.titulo, catrecursos.descripcion, catrecursos.autor, catetiquetas.etiquetaDescripcion, catrecursos.tipo, catrecursos.resumen FROM catrecursos INNER JOIN unionetiquetascatrecurso on catrecursos.id = unionetiquetascatrecurso.idRecurso INNER JOIN catetiquetas on unionetiquetascatrecurso.idEtiqueta = catetiquetas.id WHERE unionetiquetascatrecurso.idEtiqueta = :etiqueta");
