@@ -19,7 +19,7 @@ include 'rutas.php' ?>
 
               if (isset($_GET["ruta"])) {
                      if ($rutas[$_GET["ruta"]]) {
-                            include 'bibliotecaView/view/' . $_GET["ruta"] . ".php";
+                            include 'bibliotecaView/view/' . $rutas[$_GET["ruta"]] . ".php";
                      } else {
                             include 'bibliotecaView/view/home.php';
                      }

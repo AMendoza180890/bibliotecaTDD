@@ -5,7 +5,7 @@ class recursoBibliotecaM extends conexionBD{
     
     public static function obtenerCodigoEtiquetaM($ruta){
         try {
-            $pdo = conexionBD::conexion()->prepare("SELECT id, etiquetaDescripcion FROM catetiquetas WHERE etiquetaDescripcion = :etiqueta");
+            $pdo = conexionBD::conexion()->prepare("SELECT id, idEtiqueta, nombrePagina, paginaTitulo, paginaSubtitulo FROM catpaginas WHERE nombrePagina = :etiqueta ");
             $pdo->bindParam("etiqueta",$ruta,PDO::PARAM_STR);
             $pdo->execute();
             return $pdo->fetch();
