@@ -1,4 +1,5 @@
 <?php
+// Estas rutas son las paginas a las que se pueden acceder (mejorar esto)
 $rutas = [
     "login" => "login",
     "buscar" => "plantillaPagina",

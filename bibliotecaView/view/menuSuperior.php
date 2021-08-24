@@ -1,3 +1,4 @@
+        <!-- barra superior centro y opciones de la barra superior -->
         <nav class="navbar-user-top full-reset">
             <ul class="list-unstyled full-reset">
                 <?php

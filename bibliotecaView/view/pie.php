@@ -20,4 +20,5 @@
     </div>
     <div class="footer-copyright full-reset all-tittles"><a href="https://www.tesorosdedios.org">© Tesoros de Dios</a></div>
 </footer>
+<!-- enlace al fomulario de editar perfil del usuario actual -->
 <?php include 'editarPerfil.php' ?>
