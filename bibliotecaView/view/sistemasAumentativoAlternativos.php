@@ -4,9 +4,6 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <h3 class="text-center all-tittles">Sistemas Aumentativos y Alternativos</h3>
-            <div class="table-responsive">
-                <table class="table table-hover text-center tbl">
                     <?php
                     $etiqueta = 31;
                     $listaRecurso = new recursoBibliotecaC();
@@ -15,7 +12,6 @@
                     $codigo = null;
                     $listaRecurso::verRecursoC($codigo);
                     ?>
-                </table>
             </div>
         </div>
     </div>

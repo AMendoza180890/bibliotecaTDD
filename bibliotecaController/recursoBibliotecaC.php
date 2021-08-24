@@ -8,33 +8,41 @@ class recursoBibliotecaC{
                 
                 if (!empty($obtenerInformacion)) {
                     $CodigoEtiqueta = $obtenerInformacion["id"];
-
+                    $DescripcionEtiqueta = $obtenerInformacion["etiquetaDescripcion"];
                     $recursosPorEtiquetas = new recursoBibliotecaC;
-                    $recursosPorEtiquetas ->  obtenerRecursoC($CodigoEtiqueta);
+                    $recursosPorEtiquetas ->  obtenerRecursoC($CodigoEtiqueta, $DescripcionEtiqueta);
+                    //echo '<script> Console.log("'.var_dump($obtenerInformacion).'")</script>';
                 } else{
-                    echo 'Error al cargar la pagina web ';
+                    echo '<script> console.log("'.'Error al cargar la pagina web'. var_dump($obtenerInformacion).$_GET["ruta"].'")</script>';
                 }
-
-
             }
         } catch (exception $ex) {
             echo $ex->getMessage();
         }
     }
 
-    public function obtenerRecursoC($Etiquetaid){
+    public function obtenerRecursoC($Etiquetaid, $DescripcionEtiqueta = ""){
         try {
             $obtenerListaRecurso = recursoBibliotecaM::obtenerRecursoM($Etiquetaid);
-                echo '<thead>
-                        <tr class="success">
-                            <th class="text-center">Titulo</th>
-                            <th class="text-center">Descripcion</th>
-                            <th class="text-center">Autor</th>
-                            <th class="text-center">Archivo</th>
-                            <th class="text-center">Acciones</th>
-                        </tr>
-                    </thead>
-                        <tbody>';
+                echo '
+                <div class="page-header">
+                    <h2 class="all-tittles">Recursos '. $DescripcionEtiqueta.'</h2>
+                </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3 class="text-center all-tittles">'.$DescripcionEtiqueta.'</h3>
+                        <div class="table-responsive">
+                            <table class="table table-hover text-center tbl">
+                        <thead>
+                                <tr class="success">
+                                    <th class="text-center">Titulo</th>
+                                    <th class="text-center">Descripcion</th>
+                                    <th class="text-center">Autor</th>
+                                    <th class="text-center">Archivo</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                                <tbody>';
             foreach ($obtenerListaRecurso as $key => $value) {
                         echo '<tr>
                                 <td>'.$value["titulo"].'</td>
@@ -49,7 +57,10 @@ class recursoBibliotecaC{
                                 </td>
                             </tr>';
             }
-                echo '</tbody>';
+                echo '</table>
+                </tbody>
+            </div>
+        </div>';
         } catch (exception $ex) {
             echo 'Error -'.$ex;
         }

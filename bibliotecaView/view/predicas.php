@@ -1,23 +1,12 @@
 <div class="container-fluid">
-    <div class="page-header">
-        <h2 class="all-tittles">Recursos para las Iglesias</h2>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <h3 class="text-center all-tittles">Predicas</h3>
-            <div class="table-responsive">
-                <table class="table table-hover text-center tbl">
-                    <?php
+                <?php
                     $listaRecurso = new recursoBibliotecaC();
                     $listaRecurso->obtenerCodigoEtiquetaC();
 
                     $codigo = null;
                     $listaRecurso::verRecursoC($codigo);
-                    ?>
-                </table>
-            </div>
-        </div>
-    </div>
+                ?>
+</div>
 
 
     <?php include 'verRecursos.php'; ?>
