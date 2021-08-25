@@ -17,15 +17,10 @@ include 'rutas.php' ?>
               echo '<div class="content-page-container full-reset custom-scroll-containers">';
               include 'bibliotecaView/view/menuSuperior.php';
 
-              if (isset($_GET["ruta"])) {
-                     if ($rutas[$_GET["ruta"]]) {
-                            include 'bibliotecaView/view/' . $rutas[$_GET["ruta"]] . ".php";
-                     } else {
-                            include 'bibliotecaView/view/home.php';
-                     }
-              } else {
-                     include 'bibliotecaView/view/home.php';
-              }
+              //La funcion instanciada consulta las paginas para saber si existe la pagina
+              $rutaRecurso = new rutaRecursoBibliotecaC();
+              $rutaRecurso -> obtenerRutaEtiquetaC();
+              
               //plantilla de footer
               include 'bibliotecaView/view/pie.php';
        } else {

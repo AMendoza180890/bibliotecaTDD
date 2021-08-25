@@ -24,11 +24,11 @@ class ayudaVisitaController
             $informacionAyuda = ayudaVisitaModel::cargarInfoAyudaM();
 
             if ($informacionAyuda["estado"] == 1) {
-                echo '<li  class="tooltips-general btn-help" data-placement="bottom" title="Ayuda">
+                echo '<li  class="tooltips-general btn-help" data-placement="bottom" title="Información">
                          <i class="zmdi zmdi-help-outline zmdi-hc-fw"></i>
                      </li>';
             } else {
-                echo '<li  class="tooltips-general btn-help" data-placement="bottom" style="display:none;" title="Ayuda">
+                echo '<li  class="tooltips-general btn-help" data-placement="bottom" style="display:none;" title="Información">
                      <i class="zmdi zmdi-help-outline zmdi-hc-fw"></i>
                  </li>';
             }

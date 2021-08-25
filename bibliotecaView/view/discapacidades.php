@@ -3,6 +3,7 @@
         <h1 class="all-tittles">Recursos sobre discapacidades</h1>
     </div>
 </div>
+
 <section class="full-reset text-center" style="padding: 40px 0;">
     <a href="autismo">
         <article class="tile">
@@ -26,6 +27,7 @@
         </article>
     </a>
 </section>
+
 <section class="full-reset text-center" style="padding: 40px 0;">
     <a href="lenguaje">
         <article class="tile">
