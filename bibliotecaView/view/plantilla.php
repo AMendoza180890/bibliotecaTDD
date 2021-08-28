@@ -5,8 +5,7 @@ if (!headers_sent()) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<?php include 'bibliotecaView/view/encabezado.php';
-include 'rutas.php' ?>
+<?php include 'bibliotecaView/view/encabezado.php';?>
 
 <body class="full-cover-background" style="background-image:url(bibliotecaView/assets/img/BibliotecaVirtual.png);">
        <!-- cuerpo de la pagina -->
