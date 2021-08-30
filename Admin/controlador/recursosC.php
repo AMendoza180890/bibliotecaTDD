@@ -34,12 +34,13 @@ class recursoC{
 
                 $datosRecurso = array("nombreArchivo"=>$nombreRecurso, "ruta"=>$rutaRecurso, "titulo"=>$_POST["titulosNuevo"], "detalle"=>$_POST["detallesNuevo"], "autor" =>$_POST["autorNuevo"], "tipoArchivo"=>$_POST["tipoN"], "resumenN"=>$_POST["resumenNuevo"]);
                 // echo '<script>console.log("'.$rutaRecurso.'")</script>';
-                //"opcion1" => $_POST["opcion1"],"opcion2" => $_POST["opcion2"], "opcion3" => $_POST["opcion3"], "opcion4" => $_POST["opcion4"], "opcion5" => $_POST["opcion5"], "opcion6" => $_POST["opcion6"], "opcion7" => $_POST["opcion7"], "opcion8" => $_POST["opcion8"], "opcion9" => $_POST["opcion9"],"opcion10" => $_POST["opcion10"]
 
                 $registrarRecurso = recursoM::registrarRecursoM($datosRecurso);
 
-                if ($registrarRecurso == true) {
+                if ($registrarRecurso["id"] != "") {
+                    echo '<script>alert("'."se registro correctamente el recurso con codigo " . $registrarRecurso["id"].'")</script>';
                     echo '<script>window.location="recurso"</script>';
+                    echo "se registro correctamente el recurso con codigo ".$registrarRecurso["id"];
                 }else {
                     echo 'No se pudo registrar el recurso';
                 }

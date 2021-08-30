@@ -14,6 +14,7 @@ class recursoM extends conexionBD{
 
     public static function registrarRecursoM($datosRecurso){
         try {
+            //conexionBD::conexion()->setAttribute(PDO::ATTR_EMULATE_PREPARES, TRUE);
             $pdo = conexionBD::conexion()->prepare("INSERT INTO catrecursos (nombre, ruta, titulo, descripcion, autor, tipo, resumen) VALUES (:nombre, :ruta, :titulo, :descripcion, :autor, :tipo, :resumen)");
             $pdo    ->  bindParam("nombre",$datosRecurso["nombreArchivo"],PDO::PARAM_STR);
             $pdo    ->  bindParam("ruta", $datosRecurso["ruta"],PDO::PARAM_STR);
@@ -22,11 +23,16 @@ class recursoM extends conexionBD{
             $pdo    ->  bindParam("autor", $datosRecurso["autor"], PDO::PARAM_STR);
             $pdo    ->  bindParam("tipo", $datosRecurso["tipoArchivo"], PDO::PARAM_STR);
             $pdo    ->  bindParam("resumen", $datosRecurso["resumenN"], PDO::PARAM_STR);
-
+            
             if($pdo -> execute()){
-                return true;
-            }else {
-                return false;
+                //obtener el codigo de registro del archivo
+                $proceso = conexionBD::conexion()->prepare("SELECT id, nombre, ruta, titulo, descripcion, autor, tipo, resumen FROM catrecursos WHERE nombre = :nombre and ruta = :ruta and titulo = :titulo");
+                $proceso->bindParam("nombre", $datosRecurso["nombreArchivo"], PDO::PARAM_STR);
+                $proceso->bindParam("ruta", $datosRecurso["ruta"], PDO::PARAM_STR);
+                $proceso->bindParam("titulo", $datosRecurso["titulo"], PDO::PARAM_STR);
+                $proceso -> execute();
+                //$id = conexionBD::conexion()->lastInsertId();
+                return $proceso->fetch();
             }
 
         } catch (exception $ex) {
