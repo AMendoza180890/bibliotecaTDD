@@ -25,13 +25,6 @@
             <div class="tile-num full-reset"></div>
         </article>
     </a>
-    <a href="particulacion">
-        <article class="tile">
-            <div class="tile-icon full-reset"><i class="zmdi zmdi-assignment-o"></i></div>
-            <div class="tile-name all-tittles">Fotos para Practicar la Articulación</div>
-            <div class="tile-num full-reset"></div>
-        </article>
-    </a>
     <a href="velofaringea">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-assignment-o"></i></div>
