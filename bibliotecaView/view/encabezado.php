@@ -1,6 +1,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" CONTENT="Author: Tesoros de Dios, La biblioteca virtual es una herramienta que facilita al usuario obtener información acerca de los servicios que como organización brindamos a los niños, jóvenes, y adultos con discapacidad. Dentro de la información puede encontrar estrategias prácticas para ayudar a las personas con discapacidad a obtener un desarrollo integral.">
+    
     <link rel="Shortcut Icon" type="image/x-icon" href="bibliotecaView/assets/icons/book.ico" />
     <script src="bibliotecaView/js/sweet-alert.min.js"></script>
     <link rel="stylesheet" href="bibliotecaView/css/sweet-alert.css">

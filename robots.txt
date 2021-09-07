@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /Admin
+Disallow: /Ajax
+Disallow: /bibliotecaController
+Disallow: /bibliotecaModel
+Disallow: /bibliotecaTDDRespaldosBD
+Disallow: /754.png
+Disallow: /Admin.zip
+Disallow: /error_log
+Disallow: /.vscode
+Disallow: /bibliotecaView/assets
+Disallow: /bibliotecaView/css
+Disallow: /bibliotecaView/fonts
+Disallow: /bibliotecaView/js
+
+
+Allow: /bibliotecaView/view
