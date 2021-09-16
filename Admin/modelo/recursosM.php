@@ -31,7 +31,7 @@ class recursoM extends conexionBD{
                 $proceso->bindParam("ruta", $datosRecurso["ruta"], PDO::PARAM_STR);
                 $proceso->bindParam("titulo", $datosRecurso["titulo"], PDO::PARAM_STR);
                 $proceso -> execute();
-                //$id = conexionBD::conexion()->lastInsertId();
+                //$id = conexionBD::conexion()->lastInsertId(); no funciona.
                 return $proceso->fetch();
             }
 
@@ -103,6 +103,27 @@ class recursoM extends conexionBD{
             return $pdo->fetchAll();
         } catch (exception $ex) {
             echo 'Error - '.$ex;
+        }
+    }
+
+    public static function listaDeTipoDeArchivosM(){
+        try {
+            $pdo = conexionBD::conexion()->prepare("SELECT id, descripcion FROM cattipoarchivo");
+            $pdo->execute();
+            return $pdo->fetchAll();
+        } catch (exception $ex) {
+            echo 'Error -'.$ex->getMessage();
+        }
+    }
+
+    public static function listaDeEtiquetasM()
+    {
+        try {
+            $pdo = conexionBD::conexion()->prepare("SELECT id, etiquetaDescripcion FROM catetiquetas");
+            $pdo->execute();
+            return $pdo->fetchAll();
+        } catch (exception $ex) {
+            echo 'Error -' . $ex->getMessage();
         }
     }
 }

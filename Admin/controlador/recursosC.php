@@ -38,9 +38,9 @@ class recursoC{
                 $registrarRecurso = recursoM::registrarRecursoM($datosRecurso);
 
                 if ($registrarRecurso["id"] != "") {
-                    echo '<script>alert("'."se registro correctamente el recurso con codigo " . $registrarRecurso["id"].'")</script>';
+                    /* Se debe enlazar la lista de las etiquetas para asignarlas y por ultimo se actualiza la página */
+
                     echo '<script>window.location="recurso"</script>';
-                    echo "se registro correctamente el recurso con codigo ".$registrarRecurso["id"];
                 }else {
                     echo 'No se pudo registrar el recurso';
                 }
@@ -160,6 +160,44 @@ class recursoC{
             }
         } catch (exception $ex) {
             echo 'Error - '.$ex;
+        }
+    }
+
+    public function listaDeTipoDeArchivos(){
+        try {
+            $listaDeTipo = recursoM::listaDeTipoDeArchivosM();
+
+            if (!empty($listaDeTipo)) {
+                echo '<select name="tipoN" id="tipoN" class="form-control input-lg">';
+                foreach ($listaDeTipo as $key => $value) {
+                    echo '<option value="' . $value["descripcion"] . '">'.$value["descripcion"].'</option>';
+                }
+                echo '</select>';
+            }else{
+                print_r('No pudo cargar lista, revisar Admin - recursosC - listaDeTipoArchivos()');
+            }
+        } catch (Exception $ex) {
+            echo 'Error -' . $ex->getMessage();
+        }
+    }
+
+    //Para recuperar los registros de la lista de etiquetas que estan asociadas al recurso en el formulario editarRecursos.
+    public function listaDeEtiquetasC()
+    {
+        try {
+            $listaDeTipo = recursoM::listaDeEtiquetasM();
+
+            if (!empty($listaDeTipo)) {
+                echo '<select name="tipoEtiquetaN" id="tipoEtiquetaN" class="form-control input-lg">';
+                foreach ($listaDeTipo as $key => $value) {
+                    echo '<option value="' . $value["descripcion"] . '">' . $value["descripcion"] . '</option>';
+                }
+                echo '</select>';
+            } else {
+                print_r('No pudo cargar lista, revisar Admin - recursosC - listaDeTipoArchivos()');
+            }
+        } catch (Exception $ex) {
+            echo 'Error -' . $ex->getMessage();
         }
     }
 }

@@ -34,20 +34,27 @@
 
                         <div class="form-group">
                             <h2>Tipo de Archivo:</h2>
-                            <select name="tipoN" id="tipoN" class="form-control input-lg">
-                                <option value="Word">Word</option>
-                                <option value="Power Point">Power Point</option>
-                                <option value="Excel">Excel</option>
-                                <option value="Publisher">Publisher</option>
-                                <option value="PDF">PDF</option>
-                            </select>
+                            <?php
+                            $opcionesDeTipoArchivos = new recursoC();
+                            $opcionesDeTipoArchivos->listaDeTipoDeArchivos();
+                            ?>
                         </div>
 
                         <div class="form-group">
                             <h2>Resumen:</h2>
                             <textarea class="form-control input-lg" name="resumenNuevo" id="resumenNuevo" cols="30" rows="10" required></textarea>
                         </div>
-                        
+
+                        <div class="from-group">
+                            <h2>Asignar Etiquetas</h2>
+                            <?php
+                            $opcionesDeTipoEtiquetas = new recursoC();
+                            $opcionesDeTipoEtiquetas->listaDeEtiquetasC();
+                            ?>
+
+                            
+                        </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">
