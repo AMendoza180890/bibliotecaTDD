@@ -190,7 +190,7 @@ class recursoC{
             if (!empty($listaDeTipo)) {
                 echo '<select name="tipoEtiquetaN" id="tipoEtiquetaN" class="form-control input-lg">';
                 foreach ($listaDeTipo as $key => $value) {
-                    echo '<option value="' . $value["descripcion"] . '">' . $value["descripcion"] . '</option>';
+                    echo '<option value="' . $value["etiquetaDescripcion"] . '">' . $value["etiquetaDescripcion"] . '</option>';
                 }
                 echo '</select>';
             } else {
