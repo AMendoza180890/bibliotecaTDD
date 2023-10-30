@@ -6,8 +6,5 @@
       // $passw = "yOLtH_qK?8gt";
 
       //conexion en local
-      $databaseName = "bdbibliotecatdd";
-      $servidor = "localhost";
-      $user = "root";
-      $passw = "";
+      
 ?>

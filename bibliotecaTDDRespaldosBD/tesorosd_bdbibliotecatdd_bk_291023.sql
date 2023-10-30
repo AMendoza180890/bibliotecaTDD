@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Aug 30, 2021 at 10:44 AM
--- Server version: 5.6.41-84.1
--- PHP Version: 7.3.28
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 30-10-2023 a las 00:59:59
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tesorosd_bdbibliotecatdd`
+-- Base de datos: `tesorosd_bdbibliotecatdd`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `artayuda`
+-- Estructura de tabla para la tabla `artayuda`
 --
 
 CREATE TABLE `artayuda` (
@@ -33,10 +32,10 @@ CREATE TABLE `artayuda` (
   `titulo` text NOT NULL,
   `descripcion` text NOT NULL,
   `estado` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Se guardara informacion del modulo de ayuda';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Se guardara informacion del modulo de ayuda';
 
 --
--- Dumping data for table `artayuda`
+-- Volcado de datos para la tabla `artayuda`
 --
 
 INSERT INTO `artayuda` (`id`, `titulo`, `descripcion`, `estado`) VALUES
@@ -45,16 +44,16 @@ INSERT INTO `artayuda` (`id`, `titulo`, `descripcion`, `estado`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catetiquetas`
+-- Estructura de tabla para la tabla `catetiquetas`
 --
 
 CREATE TABLE `catetiquetas` (
   `id` int(11) NOT NULL,
-  `etiquetaDescripcion` text COLLATE utf8_spanish_ci NOT NULL
+  `etiquetaDescripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Contiene todas las ubicaciones del menu';
 
 --
--- Dumping data for table `catetiquetas`
+-- Volcado de datos para la tabla `catetiquetas`
 --
 
 INSERT INTO `catetiquetas` (`id`, `etiquetaDescripcion`) VALUES
@@ -102,17 +101,12 @@ INSERT INTO `catetiquetas` (`id`, `etiquetaDescripcion`) VALUES
 (43, 'Fisioterapia'),
 (44, 'Terapia Ocupacional'),
 (45, 'Resources in English'),
-(46, 'Eliminar'),
-(48, 'apraxia'),
-(49, 'articulacion'),
-(50, 'fonologico'),
-(51, 'practica articulacion'),
-(52, 'velofaringea');
+(46, 'Eliminar');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catpaginas`
+-- Estructura de tabla para la tabla `catpaginas`
 --
 
 CREATE TABLE `catpaginas` (
@@ -122,10 +116,10 @@ CREATE TABLE `catpaginas` (
   `paginaTitulo` text NOT NULL,
   `paginaSubtitulo` text NOT NULL,
   `nombrePaginaTipo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Catalogo para crear una pagina';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Catalogo para crear una pagina';
 
 --
--- Dumping data for table `catpaginas`
+-- Volcado de datos para la tabla `catpaginas`
 --
 
 INSERT INTO `catpaginas` (`id`, `idEtiqueta`, `nombrePagina`, `paginaTitulo`, `paginaSubtitulo`, `nombrePaginaTipo`) VALUES
@@ -156,7 +150,7 @@ INSERT INTO `catpaginas` (`id`, `idEtiqueta`, `nombrePagina`, `paginaTitulo`, `p
 (25, 11, 'motor', 'Recurso Sobre discapacidades', 'Discapacidad Motor', 'plantillaPagina'),
 (26, 9, 'intelectual', 'Recurso Sobre discapacidades', 'Discapacidad Intelectual', 'plantillaPagina'),
 (27, 8, 'emocional', 'Recurso Sobre discapacidades', 'Trastorno Emocional', 'plantillaPagina'),
-(28, 0, 'independencia', '', '', 'independencia'),
+(28, 0, 'independencia', '', '', 'plantillaPagina'),
 (29, 25, 'vocacional', 'Recursos de Independencia', 'Vocacional', 'plantillaPagina'),
 (30, 24, 'habilidadesVidaDiaria', 'Recursos de Independencia', 'Habilidades de la Vida Diaria', 'plantillaPagina'),
 (31, 5, 'manejoClases', 'Recursos de Conducta', 'Manejo de Clase', 'plantillaPagina'),
@@ -196,22 +190,22 @@ INSERT INTO `catpaginas` (`id`, `idEtiqueta`, `nombrePagina`, `paginaTitulo`, `p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catrecursos`
+-- Estructura de tabla para la tabla `catrecursos`
 --
 
 CREATE TABLE `catrecursos` (
   `id` int(11) NOT NULL,
-  `nombre` text COLLATE utf8_spanish_ci NOT NULL,
-  `ruta` text COLLATE utf8_spanish_ci NOT NULL,
-  `titulo` text COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` text COLLATE utf8_spanish_ci NOT NULL,
-  `autor` text COLLATE utf8_spanish_ci NOT NULL,
-  `tipo` text COLLATE utf8_spanish_ci,
-  `resumen` text COLLATE utf8_spanish_ci
+  `nombre` text NOT NULL,
+  `ruta` text NOT NULL,
+  `titulo` text NOT NULL,
+  `descripcion` text NOT NULL,
+  `autor` text NOT NULL,
+  `tipo` text DEFAULT NULL,
+  `resumen` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Tabla para registrar los recursos';
 
 --
--- Dumping data for table `catrecursos`
+-- Volcado de datos para la tabla `catrecursos`
 --
 
 INSERT INTO `catrecursos` (`id`, `nombre`, `ruta`, `titulo`, `descripcion`, `autor`, `tipo`, `resumen`) VALUES
@@ -221,7 +215,7 @@ INSERT INTO `catrecursos` (`id`, `nombre`, `ruta`, `titulo`, `descripcion`, `aut
 (8, 'Seguimiento de Patrones.pdf', 'vista/recurso/Seguimiento de Patrones.pdf', 'Seguimiento de Patrones - Preescolar', 'Actividades - Patrones', 'Tesoros de Dios', 'PDF', 'En este documento se plasman algunas ideas que permiten al docente reforzar el seguimiento de patrones con estudiantes a nivel de preescolar.'),
 (9, 'El Espectro del Autismo - NICHCY.pdf', 'vista/recurso/El Espectro del Autismo - NICHCY.pdf', 'El Espectro del Autismo - NICHCY', 'Recurso Autismo', 'NICHCY', 'PDF', NULL),
 (10, 'Exp-STAFFDiapositiva de autismo.pptx', 'vista/recurso/Exp-STAFFDiapositiva de autismo.pptx', 'Exp-STAFFDiapositiva de autismo', 'Recurso Autismo', 'Tesoros de Dios', 'Power Point', NULL),
-(11, 'LA FAMILIA y EL AUTISMO-DnaAngela.pptx', 'vista/recurso/LA FAMILIA y EL AUTISMO-DnaAngela.pptx', 'La Familia y El Autismo', 'Capacitación a Padres - Autismo', 'Lic. Angela Herrera', 'Power Point', 'Este recurso presenta las principales funciones que ejercen los padres de familia en el hogar cuando tienen niños con Autismo, para brindar un desarrollo optimo en el mismo. '),
+(11, 'LA FAMILIA y EL AUTISMO-DnaAngela.pptx', 'vista/recurso/LA FAMILIA y EL AUTISMO-DnaAngela.pptx', 'LA FAMILIA y EL AUTISMO', 'Recurso Autismo', 'Angela Herrera', 'Power Point', 'Este recurso trata de las principales funciones de las familias con niños con autismo. '),
 (12, 'Manual 100 Dias - Autism Speaks.pdf', 'vista/recurso/Manual 100 Dias - Autism Speaks.pdf', 'Manual 100 Dias - Autism Speaks', 'Recurso Autismo', 'Autism Speaks', 'PDF', NULL),
 (13, 'TRASTORNO DEL ESPECTRO AUTISTA - Bren Dna Angela.pptx', 'vista/recurso/TRASTORNO DEL ESPECTRO AUTISTA - Bren Dna Angela.pptx', 'TRASTORNO DEL ESPECTRO AUTISTA - Bren Dña Angela', 'Recurso Autismo', 'Angela Herrera y Brenda Villalobos', 'Power Point', NULL),
 (14, 'Tengo amigos en la escuela [Ana Jarquin].docx.pdf', 'vista/recurso/Tengo amigos en la escuela [Ana Jarquin].docx.pdf', 'Tengo Amigos en la Escuela', 'Historia Social', 'Ana Jarquin', 'PDF', 'Esta historia social ayuda a los estudiantes con dificultades sociales como hacer amistades en la escuela. '),
@@ -245,28 +239,15 @@ INSERT INTO `catrecursos` (`id`, `nombre`, `ruta`, `titulo`, `descripcion`, `aut
 (32, 'TEACCH - Colores-Unir-Formas.pdf', 'vista/recurso/TEACCH - Colores-Unir-Formas.pdf', 'TEACCH - Materiales de conceptos básicos', 'Materiales para Actividades - TEACCH', 'Paige Ferrell', 'PDF', 'Este método (TEACCH) ayudará al estudiante a reforzar la identificación de varios conceptos (por ejemplo, colores, números, letras, formas) de una manera práctica y divertida.'),
 (33, 'TEACCH Binder (Nombre-Fechas-Dias).docx', 'vista/recurso/TEACCH Binder (Nombre-Fechas-Dias).docx', 'TEACCH Binder', 'Materiales para Binder - TEACCH', 'Paige Ferrell', 'Word', 'Este es un método útil y sencillo que el docente puede utilizar a la hora de querer que el estudiante aprenda los nombres de los meses del año, los días de la semana, y que se apropie de su nombre.'),
 (34, 'Adaptaciones para estudiantes con Discalculia.pdf', 'vista/recurso/Adaptaciones para estudiantes con Discalculia.pdf', 'Adaptaciones para Estudiantes con Discalculia', 'Adaptaciones - Discalculia', 'Tesoros de Dios', 'PDF', 'Este documento tiene plasmadas adecuaciones prácticas para apoyar a estudiantes con dificultades en las matemáticas.'),
-(35, 'Desarrollo de Juego de un Niño.pdf', 'vista/recurso/Desarrollo de Juego de un Niño.pdf', 'Desarrollo de Juego', 'Juegos - Selección de Juguetes para Niños ', 'Bright Children', 'PDF', 'Este documento proporciona diferentes juegos utilizados para desarrollar habilidades y destrezas con instrumentos o juguetes apropiados a la edad del niño. '),
-(36, 'Duelo en Niños.pdf', 'vista/recurso/Duelo en Niños.pdf', 'Duelo en Niños', 'Duelo - Proceso para Niños', 'Elim Christian Services', 'PDF', 'Este documento provee información breve y relevante de como una persona puede apoyar a niños o adolescentes en el proceso del duelo.  También describe las diferentes fases del desarrollo en el que se pueden encontrar un niño o adolescente para comprender el significado del muerte.  '),
+(35, 'Desarrollo de Juego de un Niño.pdf', 'vista/recurso/Desarrollo de Juego de un Niño.pdf', 'Desarrollo de Juego', 'Juegos - Selección de Juguetes para Niños ', 'Bright Children', 'PDF', 'Este documento describe el propósito del juego con niños y como seleccionar juguetes apropiados a los diferentes edades de un niño.  '),
+(36, 'Duelo en Niños.pdf', 'vista/recurso/Duelo en Niños.pdf', 'Duelo en Niños', 'Duelo - Proceso para Niños', 'Elim Christian Services', 'PDF', 'Este documento provee información breve de como uno puede apoyar a niños y adolescentes en el proceso de duelo, y describe las diferentes fases del dessarollo en un niño para entender la muerte.'),
 (37, 'Consejos y Técnicas para la Alimentación .doc', 'vista/recurso/Consejos y Técnicas para la Alimentación .doc', 'Consejos y Ténicas para la Alimentación', 'Alimentación - Consejos y Técnicas', 'Dr. Ken Bleile', 'Word', 'Este documento provee recomendaciones de técnicas de como dar de comer y beber a un niño para evitar aspirar.'),
-(38, 'Guia de Alimentación TEA.pdf', 'vista/recurso/Guia de Alimentación TEA.pdf', 'Guía de Alimentación TEA', 'Autismo - Guía de Alimentación', 'Federación Autismo Madrid', 'PDF', 'La presente guía, hecho por la Federación Autismo Madrid, ¨trata de ofrecer una base de conocimientos teórico-prácticos necesarios para abordar con éxito los problemas de alimentación que con frecuencia se asocian a niños y niñas con Trastornos del Espectro del Autismo (TEA).¨'),
-(39, 'La Habilitacion Audiologica Auditiva para Niños.pdf', 'vista/recurso/La Habilitacion Audiologica Auditiva para Niños.pdf', 'La Habilitación Audiológica/Auditiva para Niños', 'Audiologia - Habilitación para niños', 'Asociación Americana del Habla, Lenguaje y Audición', 'PDF', 'Este documento provee una breve explicación de los diferentes servicios tipicos de habilitación/rehabilitación auditiva para los niños. '),
-(40, 'Los Efectos de la Perdida de Audicion en el Desarrollo.pdf', 'vista/recurso/Los Efectos de la Perdida de Audicion en el Desarrollo.pdf', 'Los Efectos de la Pérdida de Audición en el Desarrollo', 'Audiologia - Efectos en Desarrollo', 'Asociación Americana del Habla, Lenguaje y Audición', 'PDF', 'Este documento de la Asociación Americana del Habla, Lenguaje y Audición describe los efectos de la pérdida de audición en el desarrollo de un niño. (www.asha.org)'),
-(41, 'Los Niños y los Auxiliares Auditivos.pdf', 'vista/recurso/Los Niños y los Auxiliares Auditivos.pdf', 'Los Niños y los Auxiliares Auditivos', 'Audiologia - Auxiliares Auditivos', 'Asociación Americana del Habla, Lenguaje y Audición', 'PDF', 'En este documento, la Asociación Americana del Habla, Lenguaje y Audición provee un breve explicación del uso de auxiliares auditivos en niños. '),
-(42, 'Encuesta de articulacion - profesores.docx', 'vista/recurso/Encuesta de articulacion - profesores.docx', 'Encuesta de Articulación - Profesores', 'Articulación - Encuesta para Profesores', 'Tesoros de Dios', 'Word', 'Esta encuesta debe estar llenado por los profesores de un niño que está presentando dificultades en su articulación, con proposito de dar más información a la logopeda al momento de una evaluación.'),
-(43, 'Encuesta de Habla y Lenguaje - Profesores.docx', 'vista/recurso/Encuesta de Habla y Lenguaje - Profesores.docx', 'Encuesta de Habla y Lenguaje - Profesores', 'Habla y Lenguaje - Encuesta para Profesores', 'Tesoros de Dios', 'Word', 'Esta encuesta debe estar llenado por los profesores de un niño que está teniendo dificultades y su habla y lenguaje, con proposito de dar más información a la logopeda al momento de una evaluación.'),
-(44, 'Encuesta de lenguaje - profesores.docx', 'vista/recurso/Encuesta de lenguaje - profesores.docx', 'Encuesta de Lenguaje - Profesores', 'Lenguaje - Encuesta para Profesores', 'Tesoros de Dios', 'Word', 'Esta encuesta es parte de una evaluación de lenguaje de un niño que está presentando dificultades en esta area.  Debe estar llenado por los profesores del niño.  '),
-(45, 'Encuesta para padres - Articulacion.pdf', 'vista/recurso/Encuesta para padres - Articulacion.pdf', 'Encuesta de Articulación - Padres', 'Articulación - Encuesta para Padres', 'Austin ISD Eligibility Manual', 'PDF', 'Esta encuesta debe estar llenado por los padres de un niño que está presentando dificultades en su articulación, con proposito de dar más información a la logopeda al momento de una evaluación.  '),
-(46, 'Historial del Caso Clinico - para los padres.docx', 'vista/recurso/Historial del Caso Clinico - para los padres.docx', 'Historial del Caso Clinico para los Padres', 'Historial - Caso Clinico - Padres', 'Tesoros de Dios', 'Word', 'Este historial de caso clinico debe estar llenado por los padres de un niño presentando dificultades en su lenguaje, con proposito de dar mas información a la logopeda al momento de una evaluación.'),
-(47, 'Historial del Caso Clinico.docx', 'vista/recurso/Historial del Caso Clinico.docx', 'Historial del Caso Clinico', 'Historial - Caso Clinico', 'Tesoros de Dios', 'Word', 'Este es un historial del caso clinico de un niño que está presentando algun atraso, especialmente en el lenguaje.  Generalmente es para uso al momento de una evaluación.  '),
-(48, 'Lenguaje de Señas Manual de Bebes.pdf', 'vista/recurso/Lenguaje de Señas Manual de Bebes.pdf', 'Lenguaje de Señas Manual de Bebes', 'Lenguaje de Señas - Bebes', 'Super Duper Publications', 'PDF', 'L'),
-(49, 'Lenguaje de Señas.pdf', 'vista/recurso/Lenguaje de Señas.pdf', 'Lenguaje de Señas', 'Lenguaje de Señas', 'Super Duper Publications', 'PDF', 'L'),
-(50, 'Los Sistemas Aumentativos y Alternativos de Comunicación.docx', 'vista/recurso/Los Sistemas Aumentativos y Alternativos de Comunicación.docx', 'Los Sistemas Aumentativos y Alternativos de Comunicación', 'Sistemas de Comunicación', 'Asociación Americana del Habla, Lenguaje y Audición', 'Word', 'S'),
-(51, 'Protocolo de Unir-Emparejar.pdf', 'vista/recurso/Protocolo de Unir-Emparejar.pdf', 'Protocolo de Unir/Emparejar', 'Unir/Emparejar - Lenguaje', 'Dra. Kathleen VanTol', 'PDF', 'E');
+(38, 'Guia de Alimentación TEA.pdf', 'vista/recurso/Guia de Alimentación TEA.pdf', 'Guía de Alimentación TEA', 'Autismo - Guía de Alimentación', 'Federación Autismo Madrid', 'PDF', 'La presente guía, hecho por la Federación Autismo Madrid, ¨trata de ofrecer una base de conocimientos teórico-prácticos necesarios para abordar con éxito los problemas de alimentación que con frecuencia se asocian a niños y niñas con Trastornos del Espectro del Autismo (TEA).¨');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catrecursosvideos`
+-- Estructura de tabla para la tabla `catrecursosvideos`
 --
 
 CREATE TABLE `catrecursosvideos` (
@@ -276,28 +257,21 @@ CREATE TABLE `catrecursosvideos` (
   `titulo` text NOT NULL,
   `descripcion` text NOT NULL,
   `autor` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Guardar recursos audiovisual';
-
---
--- Dumping data for table `catrecursosvideos`
---
-
-INSERT INTO `catrecursosvideos` (`id`, `nombre`, `link`, `titulo`, `descripcion`, `autor`) VALUES
-(1, 'Recurso de video para aprender las vocales', 'https://www.youtube.com/watch?v=CqTXFbnG0ag', 'Ronda De Las Vocales, Canticuentos - Kids Song', 'Recurso para aprender las vocales, por medio audiovisual', 'Mundo Canticuentos - Kids Song');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Guardar recursos audiovisual';
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catroles`
+-- Estructura de tabla para la tabla `catroles`
 --
 
 CREATE TABLE `catroles` (
   `rolid` int(11) NOT NULL,
-  `catRolesDescripcion` text COLLATE utf8_spanish_ci NOT NULL
+  `catRolesDescripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Dumping data for table `catroles`
+-- Volcado de datos para la tabla `catroles`
 --
 
 INSERT INTO `catroles` (`rolid`, `catRolesDescripcion`) VALUES
@@ -308,19 +282,19 @@ INSERT INTO `catroles` (`rolid`, `catRolesDescripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `catTipoArchivo`
+-- Estructura de tabla para la tabla `cattipoarchivo`
 --
 
-CREATE TABLE `catTipoArchivo` (
+CREATE TABLE `cattipoarchivo` (
   `id` int(11) NOT NULL,
-  `descripcion` text COLLATE utf8_unicode_ci
+  `descripcion` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Normalizacion de tipo de archivo en cat recursos';
 
 --
--- Dumping data for table `catTipoArchivo`
+-- Volcado de datos para la tabla `cattipoarchivo`
 --
 
-INSERT INTO `catTipoArchivo` (`id`, `descripcion`) VALUES
+INSERT INTO `cattipoarchivo` (`id`, `descripcion`) VALUES
 (1, 'Word'),
 (2, 'PowerPoint'),
 (3, 'Excel'),
@@ -330,27 +304,19 @@ INSERT INTO `catTipoArchivo` (`id`, `descripcion`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `unionetiquetacatrecursovideo`
+-- Estructura de tabla para la tabla `unionetiquetacatrecursovideo`
 --
 
 CREATE TABLE `unionetiquetacatrecursovideo` (
   `id` int(11) NOT NULL,
   `recursovideoid` int(11) NOT NULL,
   `etiquetaid` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='union Recursos Videos y etiquetas';
-
---
--- Dumping data for table `unionetiquetacatrecursovideo`
---
-
-INSERT INTO `unionetiquetacatrecursovideo` (`id`, `recursovideoid`, `etiquetaid`) VALUES
-(1, 1, 43),
-(2, 1, 13);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='union Recursos Videos y etiquetas';
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `unionetiquetascatrecurso`
+-- Estructura de tabla para la tabla `unionetiquetascatrecurso`
 --
 
 CREATE TABLE `unionetiquetascatrecurso` (
@@ -360,7 +326,7 @@ CREATE TABLE `unionetiquetascatrecurso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='Enlace etiqueta con el recurso para existir +1 lugar';
 
 --
--- Dumping data for table `unionetiquetascatrecurso`
+-- Volcado de datos para la tabla `unionetiquetascatrecurso`
 --
 
 INSERT INTO `unionetiquetascatrecurso` (`id`, `idRecurso`, `idEtiqueta`) VALUES
@@ -374,6 +340,9 @@ INSERT INTO `unionetiquetascatrecurso` (`id`, `idRecurso`, `idEtiqueta`) VALUES
 (89, 13, 7),
 (90, 13, 13),
 (113, 17, 13),
+(133, 11, 4),
+(134, 11, 7),
+(135, 11, 13),
 (249, 14, 20),
 (250, 14, 13),
 (251, 14, 13),
@@ -418,6 +387,14 @@ INSERT INTO `unionetiquetascatrecurso` (`id`, `idRecurso`, `idEtiqueta`) VALUES
 (303, 6, 13),
 (304, 6, 13),
 (305, 6, 13),
+(313, 5, 3),
+(314, 5, 14),
+(315, 5, 13),
+(316, 5, 13),
+(317, 5, 13),
+(318, 5, 13),
+(319, 5, 13),
+(320, 5, 13),
 (321, 19, 3),
 (322, 19, 5),
 (323, 19, 13),
@@ -451,6 +428,10 @@ INSERT INTO `unionetiquetascatrecurso` (`id`, `idRecurso`, `idEtiqueta`) VALUES
 (351, 28, 16),
 (352, 28, 13),
 (353, 28, 13),
+(354, 29, 1),
+(355, 29, 37),
+(356, 29, 13),
+(357, 29, 13),
 (362, 16, 20),
 (363, 16, 13),
 (364, 16, 13),
@@ -490,92 +471,38 @@ INSERT INTO `unionetiquetascatrecurso` (`id`, `idRecurso`, `idEtiqueta`) VALUES
 (401, 34, 3),
 (402, 34, 13),
 (403, 34, 13),
+(404, 35, 4),
+(405, 35, 19),
+(406, 35, 13),
+(407, 35, 13),
+(411, 36, 4),
+(412, 36, 13),
+(413, 36, 13),
+(414, 36, 13),
 (415, 37, 26),
 (416, 37, 13),
 (417, 37, 13),
 (418, 38, 26),
 (419, 38, 13),
 (420, 38, 7),
-(421, 38, 13),
-(425, 40, 27),
-(426, 40, 13),
-(427, 40, 13),
-(435, 39, 27),
-(436, 39, 13),
-(437, 39, 13),
-(438, 39, 13),
-(439, 39, 13),
-(440, 41, 27),
-(441, 41, 13),
-(442, 41, 13),
-(443, 41, 13),
-(444, 5, 3),
-(445, 5, 14),
-(446, 5, 46),
-(447, 5, 46),
-(448, 5, 46),
-(449, 5, 46),
-(450, 5, 46),
-(451, 5, 46),
-(452, 5, 13),
-(453, 42, 28),
-(454, 42, 13),
-(455, 43, 28),
-(456, 43, 13),
-(457, 44, 28),
-(458, 44, 13),
-(459, 45, 28),
-(460, 45, 13),
-(461, 46, 28),
-(462, 46, 13),
-(463, 47, 28),
-(464, 47, 13),
-(465, 48, 30),
-(466, 48, 13),
-(467, 49, 30),
-(468, 49, 13),
-(469, 50, 31),
-(470, 50, 13),
-(471, 51, 33),
-(472, 51, 13),
-(477, 35, 4),
-(478, 35, 19),
-(479, 35, 13),
-(480, 35, 13),
-(481, 35, 13),
-(487, 36, 4),
-(488, 36, 13),
-(489, 36, 13),
-(490, 36, 13),
-(491, 36, 13),
-(492, 36, 13),
-(493, 11, 4),
-(494, 11, 7),
-(495, 11, 13),
-(496, 11, 13),
-(497, 11, 13),
-(498, 29, 1),
-(499, 29, 37),
-(500, 29, 13),
-(501, 29, 13),
-(502, 29, 13);
+(421, 38, 13);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuarios`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
-  `usuario` text COLLATE utf8_spanish_ci NOT NULL,
-  `clave` text COLLATE utf8_spanish_ci NOT NULL,
-  `foto` text COLLATE utf8_spanish_ci NOT NULL,
+  `usuario` text NOT NULL,
+  `clave` text NOT NULL,
+  `foto` text NOT NULL,
   `rolid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci COMMENT='estructura de tabla de usuario';
 
 --
--- Dumping data for table `usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `clave`, `foto`, `rolid`) VALUES
@@ -593,66 +520,57 @@ INSERT INTO `usuarios` (`id`, `usuario`, `clave`, `foto`, `rolid`) VALUES
 (12, 'Ajarquin', 'Tesoros123', '', 2),
 (13, 'Mrosales', 'Tesoros456', '', 2),
 (14, 'JennyA', 'Tesoros123', '', 2),
-(15, 'MilenaS', 'Tesoros123', '', 2),
-(16, 'AZuniga', 'AZuniga', '', 2),
-(17, 'Thamara', '2808', '', 2),
-(18, 'Eydy', 'tesoros2021', '', 2),
-(19, 'Camryn', 'trustnGod3!+', '', 2),
-(20, 'Alexandra', 'tesoros2021', '', 2),
-(21, 'phernandez', 'tesoros', '', 2),
-(22, 'IvaniaAndrade', 'tesoros123', '', 2),
-(23, 'AMSuarez', 'tesoros123', '', 2),
-(24, 'Lordian', 'tesoros123', '', 2);
+(15, 'MilenaS', 'Tesoros123', '', 2);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `artayuda`
+-- Indices de la tabla `artayuda`
 --
 ALTER TABLE `artayuda`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `catetiquetas`
+-- Indices de la tabla `catetiquetas`
 --
 ALTER TABLE `catetiquetas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `catpaginas`
+-- Indices de la tabla `catpaginas`
 --
 ALTER TABLE `catpaginas`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idEtiqueta` (`idEtiqueta`);
 
 --
--- Indexes for table `catrecursos`
+-- Indices de la tabla `catrecursos`
 --
 ALTER TABLE `catrecursos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `catrecursosvideos`
+-- Indices de la tabla `catrecursosvideos`
 --
 ALTER TABLE `catrecursosvideos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `catroles`
+-- Indices de la tabla `catroles`
 --
 ALTER TABLE `catroles`
   ADD PRIMARY KEY (`rolid`);
 
 --
--- Indexes for table `catTipoArchivo`
+-- Indices de la tabla `cattipoarchivo`
 --
-ALTER TABLE `catTipoArchivo`
+ALTER TABLE `cattipoarchivo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `unionetiquetacatrecursovideo`
+-- Indices de la tabla `unionetiquetacatrecursovideo`
 --
 ALTER TABLE `unionetiquetacatrecursovideo`
   ADD PRIMARY KEY (`id`),
@@ -660,7 +578,7 @@ ALTER TABLE `unionetiquetacatrecursovideo`
   ADD KEY `etiquetaid` (`etiquetaid`);
 
 --
--- Indexes for table `unionetiquetascatrecurso`
+-- Indices de la tabla `unionetiquetascatrecurso`
 --
 ALTER TABLE `unionetiquetascatrecurso`
   ADD PRIMARY KEY (`id`),
@@ -668,96 +586,101 @@ ALTER TABLE `unionetiquetascatrecurso`
   ADD KEY `idEtiquetaBiblioteca` (`idEtiqueta`);
 
 --
--- Indexes for table `usuarios`
+-- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`),
   ADD KEY `rolid` (`rolid`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `artayuda`
+-- AUTO_INCREMENT de la tabla `artayuda`
 --
 ALTER TABLE `artayuda`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `catetiquetas`
+-- AUTO_INCREMENT de la tabla `catetiquetas`
 --
 ALTER TABLE `catetiquetas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
--- AUTO_INCREMENT for table `catpaginas`
+-- AUTO_INCREMENT de la tabla `catpaginas`
 --
 ALTER TABLE `catpaginas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
 
 --
--- AUTO_INCREMENT for table `catrecursos`
+-- AUTO_INCREMENT de la tabla `catrecursos`
 --
 ALTER TABLE `catrecursos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT for table `catrecursosvideos`
+-- AUTO_INCREMENT de la tabla `catrecursosvideos`
 --
 ALTER TABLE `catrecursosvideos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `catroles`
+-- AUTO_INCREMENT de la tabla `catroles`
 --
 ALTER TABLE `catroles`
   MODIFY `rolid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `catTipoArchivo`
+-- AUTO_INCREMENT de la tabla `cattipoarchivo`
 --
-ALTER TABLE `catTipoArchivo`
+ALTER TABLE `cattipoarchivo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `unionetiquetacatrecursovideo`
+-- AUTO_INCREMENT de la tabla `unionetiquetacatrecursovideo`
 --
 ALTER TABLE `unionetiquetacatrecursovideo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `unionetiquetascatrecurso`
+-- AUTO_INCREMENT de la tabla `unionetiquetascatrecurso`
 --
 ALTER TABLE `unionetiquetascatrecurso`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=503;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=422;
 
 --
--- AUTO_INCREMENT for table `usuarios`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `unionetiquetacatrecursovideo`
+-- Filtros para la tabla `catrecursosvideos`
+--
+ALTER TABLE `catrecursosvideos`
+  ADD CONSTRAINT `catrecursosvideos_ibfk_1` FOREIGN KEY (`id`) REFERENCES `unionetiquetacatrecursovideo` (`recursovideoid`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `unionetiquetacatrecursovideo`
 --
 ALTER TABLE `unionetiquetacatrecursovideo`
-  ADD CONSTRAINT `unionetiquetacatrecursovideo_ibfk_1` FOREIGN KEY (`etiquetaid`) REFERENCES `catetiquetas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `unionetiquetacatrecursovideo_ibfk_2` FOREIGN KEY (`recursovideoid`) REFERENCES `catrecursosvideos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `unionetiquetacatrecursovideo_ibfk_1` FOREIGN KEY (`etiquetaid`) REFERENCES `catetiquetas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `unionetiquetascatrecurso`
+-- Filtros para la tabla `unionetiquetascatrecurso`
 --
 ALTER TABLE `unionetiquetascatrecurso`
   ADD CONSTRAINT `unionetiquetascatrecurso_ibfk_1` FOREIGN KEY (`idRecurso`) REFERENCES `catrecursos` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `unionetiquetascatrecurso_ibfk_2` FOREIGN KEY (`idEtiqueta`) REFERENCES `catetiquetas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `usuarios`
+-- Filtros para la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rolid`) REFERENCES `catroles` (`rolid`) ON DELETE CASCADE ON UPDATE CASCADE;
