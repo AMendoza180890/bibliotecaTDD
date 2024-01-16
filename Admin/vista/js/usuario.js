@@ -19,6 +19,10 @@ $(".TablaUsuario").on("click", ".EditRegistroUsuario", function() {
             $("#idEdit").val(response["id"]);
             $("#usuarioEdit").val(response["usuario"]);
             $("#claveEdit").val(response["clave"]);
+            $("#emailEdit").val(response["email"]);
+            $("#organizacionEdit").val(response["organizacion"]);
+            $("#cargoEdit").val(response["cargo"]);
+            $("#telefonoEdit").val(response["telefono"]);
             $("#rolEdit").html(response["catRolesDescripcion"]);
             $("#rolEdit").val(response["rolid"]);
             $("#fotoActual").val(response["foto"]);

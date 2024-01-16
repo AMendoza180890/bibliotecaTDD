@@ -89,9 +89,6 @@ if(!headers_sent()){
 <script src="vista/bower_components/morris.js/morris.min.js"></script>
 <!-- Sparkline -->
 <script src="vista/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<!-- <script src="vista/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script> -->
-<!-- <script src="vista/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script> -->
 <!-- jQuery Knob Chart -->
 <script src="vista/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -99,8 +96,6 @@ if(!headers_sent()){
 <script src="vista/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
 <script src="vista/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<!-- <script src="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script> -->
 <!-- Slimscroll -->
 <script src="vista/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -112,11 +107,12 @@ if(!headers_sent()){
 <!-- AdminLTE for demo purposes -->
 <script src="vista/dist/js/demo.js"></script>
 <!-- De aqui van los eventos de jquery personalizados-->
-<!-- Evento de obtejer informacion y desactivar Usuarios-->
+<!-- Evento de obtener informacion y desactivar Usuarios-->
 <script src="vista/js/usuario.js"></script>
 <script src="vista/js/recursos.js"></script>
 <script src="vista/js/recursosVideos.js"></script>
 </body>
+<!-- Este evento es para parsear la informacion en la tabla y que pueda filtrarse -->
 <script>
        $(document).ready( function () {
            $('#tbl').DataTable({

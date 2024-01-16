@@ -19,6 +19,22 @@
                             <input type="password" class="form-control input-lg" name="claveNuevo" id="claveNuevo" required>
                         </div>
                         <div class="form-group">
+                            <h2>Email</h2>
+                            <input type="email" class="form-control input-lg" name="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <h2>Organización</h2>
+                            <input type="text" class="form-control input-lg" name="organizacion" id="organizacion" required>
+                        </div>
+                        <div class="form-group">
+                            <h2>Cargo</h2>
+                            <input type="texto" class="form-control input-lg" name="cargo" id="cargo" required>
+                        </div>
+                        <div class="form-group">
+                            <h2>Telefono</h2>
+                            <input type="tel" class="form-control input-lg" name="telefono" id="telefono" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" placeholder="505-1234-1234" required>
+                        </div>
+                        <div class="form-group">
                             <h2>Rol</h2>
                             <select name="rolNuevo" id="rolNuevo" class="form-control input-lg">
                                 <?php
@@ -40,8 +56,8 @@
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                    $crearUsuario = new usuariosC();
-                    $crearUsuario -> registrarUsuariosC();
+                $crearUsuario = new usuariosC();
+                $crearUsuario->registrarUsuariosC();
                 ?>
             </form>
         </div>

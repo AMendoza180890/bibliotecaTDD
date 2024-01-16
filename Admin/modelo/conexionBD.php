@@ -1,45 +1,25 @@
 <?php
-
-    //require_once ('envConexion.php');
-
-class conexionBD{
-    // //propiedades
-    protected $servidor =  "localhost"; 
-    protected $databaseName = "tesorosd_bdbibliotecatdd"; 
-    protected $user = "root";
-    protected $passw = "";
-
-    // //constructor para poder mantener la conexion a la base de datos por separado.
-    // public function __construct($servidor, $databaseName, $user, $passw){
-    //     try {
-    //         $this->servidor = $servidor;
-    //         $this->databaseName = $databaseName;
-    //         $this->user = $user;
-    //         $this->passw = $passw;
-
-    //     } catch (Exception $ex) {
-    //         echo 'error constructor- '.$ex;
-    //     }
-    // }
-
-    // La funcion principal, es la encargada de poder realizar la conexion en las diferentes partes del sistema.
-    protected function conexionMySQL(){
-        try{    
-            $bd = new PDO("mysql:host=" .$this->servidor . ";dbname=" . $this->databaseName, $this->user, $this->passw);
+require_once('env.php');
+class conexionBD
+{
+    protected function conexionMySQL()
+    {
+        try {
+            $bd = new PDO("mysql:host=" . getenv('servidor') . ";dbname=" . getenv('databaseName'), getenv('user'), getenv('passw'));
             $bd->exec("set names utf8");
             return $bd;
         } catch (Exception $ex) {
-            echo 'error funcion privada - '.$ex;
+            echo 'Error en cadena de conexion' . $ex;
         }
     }
 
-    public static function conexion(){
+    public static function conexion()
+    {
         try {
             $cn = new conexionBD();
             return $cn->conexionMySQL();
         } catch (Exception $ex) {
-            echo 'error funcion publica - '.$ex;
+            echo 'Error en la conexion - ' . $ex;
         }
     }
 }
-?>
