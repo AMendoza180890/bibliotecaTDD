@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/bibliotecaTDD
+    - export DEPLOYPATH=/home4/tesorosd/public_html/bibliotecaTDD
     - /bin/cp -R Admin $DEPLOYPATH
     - /bin/cp -R Ajax $DEPLOYPATH
     - /bin/cp -R bibliotecaController $DEPLOYPATH
