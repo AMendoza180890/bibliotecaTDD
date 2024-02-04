@@ -1,0 +1,15 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/example/public_html/bibliotecaTDD
+    - /bin/cp -R Admin $DEPLOYPATH
+    - /bin/cp -R Ajax $DEPLOYPATH
+    - /bin/cp -R bibliotecaController $DEPLOYPATH
+    - /bin/cp -R bibliotecaModel $DEPLOYPATH
+    - /bin/cp -R bibliotecaTDDRespaldosBD $DEPLOYPATH
+    - /bin/cp -R bibliotecaView $DEPLOYPATH
+    - /bin/cp .gitignore $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp cpanel.yml $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp robots.txt $DEPLOYPATH
