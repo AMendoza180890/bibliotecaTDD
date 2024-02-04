@@ -10,6 +10,5 @@ deployment:
     - /bin/cp -R bibliotecaView $DEPLOYPATH
     - /bin/cp .gitignore $DEPLOYPATH
     - /bin/cp .htaccess $DEPLOYPATH
-    - /bin/cp cpanel.yml $DEPLOYPATH
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
