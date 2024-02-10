@@ -15,6 +15,8 @@ require_once 'bibliotecaModel/recursosVideosM.php';
 require_once 'bibliotecaModel/perfilUsuarioM.php';
 require_once 'bibliotecaModel/rutaBibliotecaM.php';
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 $plantilla = new plantillaC();
-$plantilla -> llamarPlantilla();
-?>
+$plantilla->llamarPlantilla();
