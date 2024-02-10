@@ -19,5 +19,4 @@ include_once 'modelo/ayudaM.php';
 include_once 'modelo/recursosVideosM.php';
 
 $plantilla = new plantillaAdminLteC();
-$plantilla -> llamarPlantillaAdminLte();
-?>
+$plantilla->llamarPlantillaAdminLte();
