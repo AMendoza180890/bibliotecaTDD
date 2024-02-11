@@ -14,12 +14,11 @@ require_once 'bibliotecaModel/ayudaVisitaM.php';
 require_once 'bibliotecaModel/recursosVideosM.php';
 require_once 'bibliotecaModel/perfilUsuarioM.php';
 require_once 'bibliotecaModel/rutaBibliotecaM.php';
-require 'vendor/autoload.php';
+require_once 'Admin/vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+$dotenv = Dotenv::createImmutable(__DIR__)->load();
 
 $plantilla = new plantillaC();
 $plantilla->llamarPlantilla();
