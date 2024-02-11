@@ -6,7 +6,6 @@ class conexionBD
     protected function conexionMySQL()
     {
         try {
-
             $bd = new PDO("mysql:host=" . $_ENV['SER_VR'] . ";dbname=" . $_ENV['DATA_NAME'], $_ENV['USER_CON'], $_ENV['P_CON']);
             $bd->exec("set names utf8");
             return $bd;

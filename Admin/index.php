@@ -17,6 +17,11 @@ include_once 'modelo/etiquetasM.php';
 include_once 'modelo/homeM.php';
 include_once 'modelo/ayudaM.php';
 include_once 'modelo/recursosVideosM.php';
+require_once 'vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__)->load();
 
 $plantilla = new plantillaAdminLteC();
 $plantilla->llamarPlantillaAdminLte();
