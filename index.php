@@ -14,7 +14,7 @@ require_once 'bibliotecaModel/ayudaVisitaM.php';
 require_once 'bibliotecaModel/recursosVideosM.php';
 require_once 'bibliotecaModel/perfilUsuarioM.php';
 require_once 'bibliotecaModel/rutaBibliotecaM.php';
-require_once __DIR__ . 'Admin/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
