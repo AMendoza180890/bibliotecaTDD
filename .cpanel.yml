@@ -13,5 +13,3 @@ deployment:
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
     - /bin/cp .env $DEPLOYPATH
-    - /bin/cp composer.json $DEPLOYPATH
-    - /bin/cp composer.lock $DEPLOYPATH
