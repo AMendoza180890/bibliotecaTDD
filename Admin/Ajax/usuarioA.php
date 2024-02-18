@@ -1,14 +1,16 @@
 <?php
-
+require_once '../vendor/autoload.php';
 require_once '../controlador/usuariosC.php';
 require_once '../modelo/usuariosM.php';
 // require_once '../controlador/rolesC.php';
 // require_once '../modelo/rolesM.php';
 
-class usuariosAjax{
+class usuariosAjax
+{
     public $id;
 
-    public function usuarioEditA(){
+    public function usuarioEditA()
+    {
         $valor = $this->id;
         $editarUsuario = usuariosC::editarRegistroUsuarioC($valor);
         echo json_encode($editarUsuario);
@@ -25,9 +27,7 @@ class usuariosAjax{
 
 if (isset($_POST["id"])) {
     $editarUsuario = new usuariosAjax;
-    $editarUsuario -> id = $_POST["id"];
-    $editarUsuario -> usuarioEditA();
+    $editarUsuario->id = $_POST["id"];
+    $editarUsuario->usuarioEditA();
     // usuariosAjax::setRolEditA($_POST["id"]);
 }
-
-?>
