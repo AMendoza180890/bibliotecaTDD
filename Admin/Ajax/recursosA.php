@@ -1,7 +1,7 @@
 <?php
 require_once '../../vendor/autoload.php';
-include_once '../controlador/recursosC.php';
-include_once '../modelo/recursosM.php';
+require_once '../controlador/recursosC.php';
+require_once '../modelo/recursosM.php';
 
 use Dotenv\Dotenv;
 

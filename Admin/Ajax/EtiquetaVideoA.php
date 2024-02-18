@@ -1,7 +1,7 @@
 <?php
 require_once '../../vendor/autoload.php';
-include_once '../controlador/recursosVideosC.php';
-include_once '../modelo/recursosVideosM.php';
+require_once '../controlador/recursosVideosC.php';
+require_once '../modelo/recursosVideosM.php';
 
 use Dotenv\Dotenv;
 
