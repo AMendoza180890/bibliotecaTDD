@@ -12,4 +12,3 @@ deployment:
     - /bin/cp .htaccess $DEPLOYPATH
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp robots.txt $DEPLOYPATH
-    - /bin/cp .env $DEPLOYPATH
