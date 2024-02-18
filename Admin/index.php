@@ -19,9 +19,9 @@ include_once 'modelo/ayudaM.php';
 include_once 'modelo/recursosVideosM.php';
 // require_once __DIR__ . '/autoload.php';
 
-// use Dotenv\Dotenv;
+use Dotenv\Dotenv;
 
-// $dotenv = Dotenv::createImmutable(__DIR__)->load();
+$dotenv = Dotenv::createImmutable(__DIR__)->load();
 
 $plantilla = new plantillaAdminLteC();
 $plantilla->llamarPlantillaAdminLte();
