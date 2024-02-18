@@ -1,6 +1,7 @@
 <?php
 class usuariosC
 {
+    //Se encarga de consultar la informacion para el inicio de sesion del sistema
     public function ingresoUsuariosC()
     {
         try {
@@ -31,7 +32,7 @@ class usuariosC
             echo "Error - " . $ex;
         }
     }
-
+    // Enlista a los usuario y los muestra en la tabla de usuario en el Admin.
     public function listadeUsuarios()
     {
         try {
@@ -64,7 +65,8 @@ class usuariosC
             echo 'Error - ' . $ex;
         }
     }
-
+    //Registra a un usuario, Se encarga de guardar todoa la informacion en la base de datos.
+    //Aun se necesita modificar la base de datos para que no se encuentre la contrase;a en la misma tabla.
     public function registrarUsuariosC()
     {
         try {
@@ -85,7 +87,8 @@ class usuariosC
             echo 'Error - ' . $ex;
         }
     }
-    // esta funcion es para obtener informacion del usuario usuando jquery y ajax
+    // Esta funcion es para obtener informacion del usuario usuando jquery y ajax, consulta a la base de datos.
+    // Luego se envia al .js para poder colocar la informacion en los campos del formulario.
     public static function editarRegistroUsuarioC($valor)
     {
         try {
@@ -95,7 +98,8 @@ class usuariosC
             echo 'Error -' . $ex;
         }
     }
-
+    // Se encarga de actualizar la informacion del usuario en la base de datos.
+    // Con los datos cargados en el formulario.
     public function actualizarRegistroUsuarioC()
     {
         try {
@@ -118,7 +122,8 @@ class usuariosC
             echo 'Error - ' . $ex;
         }
     }
-
+    // Se desactiva el usuario en la base de datos, nunca se elimina la informacion
+    // Se traslada a estado de DESACTIVADO.
     public function DesactivarUsuarioC()
     {
         try {
@@ -126,7 +131,7 @@ class usuariosC
                 $codigoUsuario = $_GET["CodValor"];
                 $RespuestadesactivarUsuario = usuariosM::DesactivarRegistroUsuarioM($codigoUsuario);
                 if ($RespuestadesactivarUsuario == true) {
-                    echo '<script>window.location="catusuario"</script>';
+                    echo '<script>window.location="catusuarios"</script>';
                 } else {
                     echo 'Hubo un error, favor reportarlo al administrador del sistema';
                 }
