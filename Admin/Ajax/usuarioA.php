@@ -2,8 +2,10 @@
 require_once '../vendor/autoload.php';
 require_once '../controlador/usuariosC.php';
 require_once '../modelo/usuariosM.php';
-// require_once '../controlador/rolesC.php';
-// require_once '../modelo/rolesM.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__)->load();
 
 class usuariosAjax
 {

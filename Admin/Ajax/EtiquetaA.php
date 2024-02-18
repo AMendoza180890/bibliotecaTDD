@@ -3,6 +3,10 @@ require_once '../vendor/autoload.php';
 include_once '../controlador/recursosC.php';
 include_once '../modelo/recursosM.php';
 
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__)->load();
+
 class obtenerRecursoEtiquetaA
 {
     public $idRecurso;
