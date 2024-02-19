@@ -72,21 +72,33 @@ $(".TablaRecursos").on("click", ".EditRegistroRecursoVideo", function() {
 
 
 const documentoLink = document.getElementById("linkNuevo");
-documentoLink.onchange = function(){
+documentoLink.oninput = function(){
     const options = {
-        method: 'POST',
-        headers: {
-            accept: 'application/json',
-            'x-apikey': '231c1810edd3c20173029964fb79ab84c2c0a37cd03495a6ff6122bef36fab58',
-            'content-type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams({
-            url: documentoLink
-        })
+            method: 'POST',
+            headers: {
+                accept: 'application/json',
+                'x-apikey': '231c1810edd3c20173029964fb79ab84c2c0a37cd03495a6ff6122bef36fab58',
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams({
+                url: documentoLink.value
+            })
         };
 
         fetch('https://www.virustotal.com/api/v3/urls', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+            .then(response => {
+                    if(response.status == 200){ 
+                        console.log(response),
+                        document.getElementById("btnCrear").disabled = false
+                    }
+                    else {
+                        console.log(response),
+                        alert("El link es incorrecto o tiene virus, por favor revisar lo y revisa lo confiable del sitio"),
+                        document.getElementById("btnCrear").disabled = true
+                    }
+            })
+            .catch(err => {
+                console.error(err),
+                document.getElementById("btnCrear").disabled = true
+            })
 }

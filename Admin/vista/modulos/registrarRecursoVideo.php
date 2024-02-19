@@ -24,7 +24,7 @@
                             <h2>Autor</h2>
                             <input type="text" class="form-control input-lg" name="autorNuevo" id="autorNuevo" required>
                         </div>
-                        
+
                         <div class="form-group">
                             <h2>Resumen:</h2>
                             <textarea class="form-control input-lg" name="resumenNuevo" id="resumenNuevo" cols="30" rows="10" required></textarea>
@@ -39,12 +39,12 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Crear</button>
+                    <button type="submit" class="btn btn-primary" id="btnCrear" disabled>Crear</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
                 <?php
-                    $registrarRecurso   =   new recursoVideosC();
-                    $registrarRecurso   ->  registrarVideoRecurso();
+                $registrarRecurso   =   new recursoVideosC();
+                $registrarRecurso->registrarVideoRecurso();
                 ?>
             </form>
         </div>
