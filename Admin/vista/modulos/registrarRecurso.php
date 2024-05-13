@@ -47,15 +47,17 @@
 
                         <div class="from-group">
                             <h2>Asignar Etiquetas</h2>
-                            <div class="row">
-                                <div class="col-sm-8">
+                            <p class="help-block">La etiqueta es para poder indicar donde se mostrará el recurso en la biblioteca, puedes elegir más de una ubicación</p>
+                            <div id="tagFormGroup" class="row">
+                                <div class="col-sm-8" id="tagResource">
                                     <?php
                                     $opcionesDeTipoEtiquetas = new recursoC();
                                     $opcionesDeTipoEtiquetas->listaDeEtiquetasC();
                                     ?>
                                 </div>
+                                <span id="nuevoElemento"></span>
                                 <div class="col-sm-4">
-                                    <button type="button" class="form-control input-lg btn btn-success">Agregar</button>
+                                    <button type="button" id="addTag" class="form-control input-lg btn btn-success">Agregar</button>
                                 </div>
                             </div>
                         </div>
