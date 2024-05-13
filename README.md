@@ -3,7 +3,7 @@
 ¡Bienvenido/a a la Biblioteca Virtual de la Organización sin fines de lucro ONG Tesoros de Dios! Este recurso ha sido creado con el propósito de facilitar el acceso a recursos compartidos que promueven la inclusión de personas con discapacidad. Aquí encontrarás una variedad de materiales, incluyendo PDFs, presentaciones de PowerPoint, documentos de Word y enlaces a videos sobre diversos temas relacionados con la inclusión.
 
 **1. Acceso a la Biblioteca Virtual:**
-   - Ingresa al sitio web de la ONG Tesoros de Dios: [www.tesorosdedios.org/biblioteca]
+   - Ingresa al sitio web de la ONG Tesoros de Dios: [www.biblioteca.tesorosdedios.org]
    - Haz clic en el enlace que te llevará directamente a la sección de la Biblioteca Virtual.
 
 **2. Exploración de Recursos:**
