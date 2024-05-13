@@ -1,11 +1,14 @@
 <?php
+require_once '../vendor/autoload.php';
 require_once '../bibliotecaController/recursoBibliotecaC.php';
 require_once '../bibliotecaModel/recursosverBibliotecaM.php';
 
-class recursosbiblitecaA {
+class recursosbiblitecaA
+{
     public $codigo;
 
-    public function obtenerDatosRecurso(){
+    public function obtenerDatosRecurso()
+    {
         $id = $this->codigo;
 
         $obtenerVerRecursos = recursoBibliotecaC::verRecursoC($id);
@@ -13,9 +16,8 @@ class recursosbiblitecaA {
     }
 }
 
-    if (isset($_POST["codRecurso"])) {
-        $recurso = new recursosbiblitecaA();
-        $recurso->codigo = $_POST["codRecurso"];
-        $recurso->obtenerDatosRecurso();
-    }
-?>
+if (isset($_POST["codRecurso"])) {
+    $recurso = new recursosbiblitecaA();
+    $recurso->codigo = $_POST["codRecurso"];
+    $recurso->obtenerDatosRecurso();
+}

@@ -7,8 +7,8 @@ $(".TablaUsuario").on("click", ".EditRegistroUsuario", function() {
 
 
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "Ajax/usuarioA.php", FALSE);
-    xhr.send();
+    xhr.open("POST", "Ajax/usuarioA.php");
+    xhr.send(datos);
     xhr.onload = function(response) {
         if (xhr.status != 200) { // analiza el estado HTTP de la respuesta
             alert(`Error ${xhr.status}: ${xhr.statusText}`); // ej. 404: No encontrado

@@ -6,7 +6,7 @@ $(".TablaRecursos").on("click", ".EditRegistroRecurso", function () {
 
 
   let xhr = new XMLHttpRequest();
-    xhr.open("POST", "Ajax/recursosA.php", FALSE);
+    xhr.open("POST", "Ajax/recursosA.php");
     xhr.send(datosRecurso);
     xhr.onload = function(response) {
         if (xhr.status != 200) { // analiza el estado HTTP de la respuesta
@@ -23,6 +23,21 @@ $(".TablaRecursos").on("click", ".EditRegistroRecurso", function () {
         }
      };
 
+    
+     let xhrEtiqueta = new XMLHttpRequest();
+     xhrEtiqueta.open("POST", "Ajax/EtiquetaA.php");
+     xhrEtiqueta.send(datosRecurso);
+     xhrEtiqueta.onload = function(response) {
+         if (xhrEtiqueta.status != 200) { // analiza el estado HTTP de la respuesta
+             alert(`Error ${xhrEtiqueta.status}: ${xhrEtiqueta.statusText}`); // ej. 404: No encontrado
+         } else { // muestra el resultado
+             for (let i = 0; i <= Object.keys(response).length; i++) {
+               $("#eleccion" + i).val(response["etiquetaId"]);
+               $("#eleccion" + i).html(response["etiquetaDescripcion"]);
+             }
+         }
+      };
+});
   // $.ajax({
   //   method: "POST",
   //   url: "Ajax/recursosA.php",
@@ -43,20 +58,6 @@ $(".TablaRecursos").on("click", ".EditRegistroRecurso", function () {
   //     console.log(response);
   //   },
   // });
-
-  let xhrEtiqueta = new XMLHttpRequest();
-    xhrEtiqueta.open("POST", "Ajax/EtiquetaA.php", FALSE);
-    xhrEtiqueta.send(datosRecurso);
-    xhrEtiqueta.onload = function(response) {
-        if (xhrEtiqueta.status != 200) { // analiza el estado HTTP de la respuesta
-            alert(`Error ${xhrEtiqueta.status}: ${xhrEtiqueta.statusText}`); // ej. 404: No encontrado
-        } else { // muestra el resultado
-            for (let i = 0; i <= Object.keys(response).length; i++) {
-              $("#eleccion" + i).val(response[i]["etiquetaId"]);
-              $("#eleccion" + i).html(response[i]["etiquetaDescripcion"]);
-            }
-        }
-     };
 
 
 //   $.ajax({
@@ -101,4 +102,3 @@ $(".TablaRecursos").on("click", ".EditRegistroRecurso", function () {
 //   contenedor.insertBefore(segundoElemento, elementoDuplicar)
 
 //   console.log(contenedor, elementoDuplicar );
-});
