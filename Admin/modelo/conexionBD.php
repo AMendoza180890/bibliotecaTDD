@@ -1,6 +1,5 @@
 <?php
-//require_once('env.php');
-
+error_reporting(0);
 class conexionBD
 {
     protected function conexionMySQL()
@@ -9,18 +8,23 @@ class conexionBD
             $bd = new PDO("mysql:host=" . $_ENV['SER_VR'] . ";dbname=" . $_ENV['DATA_NAME'], $_ENV['USER_CON'], $_ENV['P_CON']);
             $bd->exec("set names utf8");
             return $bd;
-        } catch (Exception $ex) {
-            echo 'Error en cadena de conexion' . $ex;
+        } catch (Throwable) {
+            die("Uncaught exception occurred!");
+        } finally{
+            echo 'error con la conexion';
         }
     }
 
     public static function conexion()
     {
-        try {
+        try {   
             $cn = new conexionBD();
             return $cn->conexionMySQL();
-        } catch (Exception $ex) {
-            echo 'Error en la conexion - ' . $ex;
+        } catch (Throwable) {
+            die("Error en la conexion");
+        } finally{
+            echo 'Error con la conexion';
         }
     }
+    
 }

@@ -15,7 +15,7 @@ class usuariosM extends conexionBD
             $pdo->execute();
             return $pdo->fetch();
         } catch (Exception $ex) {
-            echo "Error - " . $ex;
+            throw new Exception("Uncaught exception occurred!");
         }
     }
 
@@ -26,7 +26,7 @@ class usuariosM extends conexionBD
             $pdo->execute();
             return $pdo->fetchAll();
         } catch (exception $ex) {
-            echo 'error - ' . $ex;
+            throw new Exception("Uncaught exception occurred!");
         }
     }
 
@@ -51,7 +51,7 @@ class usuariosM extends conexionBD
                 return false;
             }
         } catch (Exception $ex) {
-            echo 'Error - ' . $ex;
+            throw new Exception("Uncaught exception occurred!");
         }
     }
 
@@ -76,7 +76,7 @@ class usuariosM extends conexionBD
                 return $pdo->fetchAll();
             }
         } catch (Exception $ex) {
-            echo 'Error - ' . $ex;
+            throw new Exception("Uncaught exception occurred!");
         }
     }
 
@@ -91,7 +91,7 @@ class usuariosM extends conexionBD
                 return false;
             }
         } catch (Exception $ex) {
-            echo 'Error - ' . $ex;
+            throw new Exception("Uncaught exception occurred!");
         }
     }
 
@@ -115,7 +115,13 @@ class usuariosM extends conexionBD
                 return false;
             }
         } catch (exception $ex) {
-            echo 'Error - ' . $ex;
+            throw new Exception("Uncaught exception occurred!");
         }
     }
 }
+
+function myException($exception) {
+    echo "<b>Exception:</b> ", $exception->getMessage();
+}
+
+set_exception_handler("myException");

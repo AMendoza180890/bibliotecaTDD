@@ -28,8 +28,8 @@ class usuariosC
                     }
                 }
             }
-        } catch (Exception $ex) {
-            echo "Error - " . $ex;
+        } catch (Throwable) {
+            throw new Exception("Uncaught exception occurred!");
         }
     }
     // Enlista a los usuario y los muestra en la tabla de usuario en el Admin.
@@ -61,8 +61,8 @@ class usuariosC
                 </tr>';
                 }
             }
-        } catch (Exception $ex) {
-            echo 'Error - ' . $ex;
+        } catch (Throwable) {
+            throw new Exception("Uncaught exception occurred!");
         }
     }
     //Registra a un usuario, Se encarga de guardar todoa la informacion en la base de datos.
@@ -83,8 +83,8 @@ class usuariosC
                     echo 'Error - Ocurrio un error al hora de insertar';
                 }
             }
-        } catch (Exception $ex) {
-            echo 'Error - ' . $ex;
+        } catch (Throwable) {
+            throw new Exception("Uncaught exception occurred!");
         }
     }
     // Esta funcion es para obtener informacion del usuario usuando jquery y ajax, consulta a la base de datos.
@@ -94,8 +94,8 @@ class usuariosC
         try {
             $editarUsuario = usuariosM::editarRegistroUsuarioM($valor);
             return $editarUsuario;
-        } catch (Exception $ex) {
-            echo 'Error -' . $ex;
+        } catch (Throwable) {
+            throw new Exception("Uncaught exception occurred!");
         }
     }
     // Se encarga de actualizar la informacion del usuario en la base de datos.
@@ -118,8 +118,8 @@ class usuariosC
                     echo 'Hay un error no se pudo realizar actualizacion';
                 }
             }
-        } catch (exception $ex) {
-            echo 'Error - ' . $ex;
+        } catch (Throwable) {
+            throw new Exception("Uncaught exception occurred!");
         }
     }
     // Se desactiva el usuario en la base de datos, nunca se elimina la informacion
@@ -136,8 +136,14 @@ class usuariosC
                     echo 'Hubo un error, favor reportarlo al administrador del sistema';
                 }
             }
-        } catch (Exception $ex) {
-            echo 'Error - ' . $ex;
+        } catch (Throwable) {
+            throw new Exception("Uncaught exception occurred!");
         }
     }
 }
+
+function myException($exception) {
+    echo "<b>Exception:</b> ", $exception->getMessage();
+}
+
+set_exception_handler("myException");
