@@ -10,9 +10,7 @@ class conexionBD
             return $bd;
         } catch (Throwable) {
             die("Uncaught exception occurred!");
-        } finally{
-            echo 'error con la conexion';
-        }
+        } 
     }
 
     public static function conexion()
@@ -22,9 +20,7 @@ class conexionBD
             return $cn->conexionMySQL();
         } catch (Throwable) {
             die("Error en la conexion");
-        } finally{
-            echo 'Error con la conexion';
-        }
+        } 
     }
     
 }

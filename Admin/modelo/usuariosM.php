@@ -14,8 +14,8 @@ class usuariosM extends conexionBD
             //$pdo->bindParam(":clave", $password, PDO::PARAM_STR);
             $pdo->execute();
             return $pdo->fetch();
-        } catch (Exception $ex) {
-            throw new Exception("Uncaught exception occurred!");
+        } catch (Throwable) {
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
 
@@ -25,8 +25,8 @@ class usuariosM extends conexionBD
             $pdo = conexionBD::conexion()->prepare("SELECT usuarios.id, usuarios.usuario, usuarios.email, usuarios.organizacion, usuarios.cargo, usuarios.telefono, usuarios.foto, usuarios.rolid, catroles.catRolesDescripcion  FROM usuarios INNER JOIN catroles ON usuarios.rolid = catroles.rolid");
             $pdo->execute();
             return $pdo->fetchAll();
-        } catch (exception $ex) {
-            throw new Exception("Uncaught exception occurred!");
+        } catch (Throwable) {
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
 
@@ -50,8 +50,8 @@ class usuariosM extends conexionBD
             } else {
                 return false;
             }
-        } catch (Exception $ex) {
-            throw new Exception("Uncaught exception occurred!");
+        } catch (Throwable) {
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
 
@@ -75,8 +75,8 @@ class usuariosM extends conexionBD
 
                 return $pdo->fetchAll();
             }
-        } catch (Exception $ex) {
-            throw new Exception("Uncaught exception occurred!");
+        } catch (Throwable) {
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
 
@@ -90,8 +90,8 @@ class usuariosM extends conexionBD
             } else {
                 return false;
             }
-        } catch (Exception $ex) {
-            throw new Exception("Uncaught exception occurred!");
+        } catch (Throwable) {
+        echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
 
@@ -114,14 +114,8 @@ class usuariosM extends conexionBD
             } else {
                 return false;
             }
-        } catch (exception $ex) {
-            throw new Exception("Uncaught exception occurred!");
+        } catch (Throwable) {
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
 }
-
-function myException($exception) {
-    echo "<b>Exception:</b> ", $exception->getMessage();
-}
-
-set_exception_handler("myException");

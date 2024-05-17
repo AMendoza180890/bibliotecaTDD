@@ -29,7 +29,7 @@ class usuariosC
                 }
             }
         } catch (Throwable) {
-            throw new Exception("Uncaught exception occurred!");
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
     // Enlista a los usuario y los muestra en la tabla de usuario en el Admin.
@@ -62,7 +62,7 @@ class usuariosC
                 }
             }
         } catch (Throwable) {
-            throw new Exception("Uncaught exception occurred!");
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
     //Registra a un usuario, Se encarga de guardar todoa la informacion en la base de datos.
@@ -84,7 +84,7 @@ class usuariosC
                 }
             }
         } catch (Throwable) {
-            throw new Exception("Uncaught exception occurred!");
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
     // Esta funcion es para obtener informacion del usuario usuando jquery y ajax, consulta a la base de datos.
@@ -95,7 +95,7 @@ class usuariosC
             $editarUsuario = usuariosM::editarRegistroUsuarioM($valor);
             return $editarUsuario;
         } catch (Throwable) {
-            throw new Exception("Uncaught exception occurred!");
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
     // Se encarga de actualizar la informacion del usuario en la base de datos.
@@ -119,7 +119,7 @@ class usuariosC
                 }
             }
         } catch (Throwable) {
-            throw new Exception("Uncaught exception occurred!");
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
     // Se desactiva el usuario en la base de datos, nunca se elimina la informacion
@@ -137,13 +137,7 @@ class usuariosC
                 }
             }
         } catch (Throwable) {
-            throw new Exception("Uncaught exception occurred!");
+            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
         }
     }
 }
-
-function myException($exception) {
-    echo "<b>Exception:</b> ", $exception->getMessage();
-}
-
-set_exception_handler("myException");
