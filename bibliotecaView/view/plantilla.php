@@ -5,7 +5,7 @@ if (!headers_sent()) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<?php include 'bibliotecaView/view/encabezado.php';?>
+<?php include 'bibliotecaView/view/encabezado.php'; ?>
 
 <body class="full-cover-background" style="background-image:url(bibliotecaView/assets/img/BibliotecaVirtual.png);">
        <!-- cuerpo de la pagina -->
@@ -18,8 +18,8 @@ if (!headers_sent()) {
 
               //La funcion instanciada consulta las paginas para saber si existe la pagina
               $rutaRecurso = new rutaRecursoBibliotecaC();
-              $rutaRecurso -> obtenerRutaEtiquetaC();
-              
+              $rutaRecurso->obtenerRutaEtiquetaC();
+
               //plantilla de footer
               include 'bibliotecaView/view/pie.php';
        } else {
@@ -31,17 +31,28 @@ if (!headers_sent()) {
 <script src="bibliotecaView/js/menu.js"></script>
 <script src="bibliotecaView/js/recursos.js"></script>
 <script>
-       $(document).ready(function() {
-              $('#todosRecursos').DataTable({
-                     "lengthMenu": [
-                            [100, 50, 25, 10, -1],
-                            [100, 50, 25, 10, "Todos"]
+       $('#todosRecursos').DataTable({
+              "lengthMenu": [
+                          [100, 50, 25, 10, -1],
+                          [100, 50, 25, 10, "Todos"]
                      ],
-                     language: {
-                            url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json'
-                     }
-              });
+              language: {
+                     url: 'https://cdn.datatables.net/plug-ins/2.0.7/i18n/es-CO.json',
+              },
+              Response:true,
        });
+       // $(document).ready(function() {
+       //        $('#todosRecursos').DataTable({
+       //               "lengthMenu": [
+       //                      [100, 50, 25, 10, -1],
+       //                      [100, 50, 25, 10, "Todos"]
+       //               ],
+       //               language: {
+       //                      url: '//cdn.datatables.net/plug-ins/2.0.7/i18n/es-CO.json',
+       //               },
+       //               
+       //        });
+       // });
 </script>
 
 </html>

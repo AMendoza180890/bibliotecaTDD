@@ -6,11 +6,11 @@ $(".TablaRecursos").on("click", ".EditRegistroRecursoVideo", function() {
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "Ajax/recursosVideosA.php", FALSE);
-    xhr.send(datosRecurso);
-    xhr.onload = function(response) {
+    xhr.onload = () => {
         if (xhr.status != 200) { // analiza el estado HTTP de la respuesta
             alert(`Error ${xhr.status}: ${xhr.statusText}`); // ej. 404: No encontrado
         } else { // muestra el resultado
+            let datosVideos = JSON.parse(xhr.response);
             $("#idEdit").val(response["id"]);
             $("#titulosEdit").val(response["titulo"]);
             $("#detallesEdit").val(response["nombre"]);
@@ -20,6 +20,7 @@ $(".TablaRecursos").on("click", ".EditRegistroRecursoVideo", function() {
         }
      };
 
+    xhr.send(datosRecurso);
     // $.ajax({
     //     method: "POST",
     //     url: "Ajax/recursosVideosA.php",
@@ -40,18 +41,19 @@ $(".TablaRecursos").on("click", ".EditRegistroRecursoVideo", function() {
     // });
 
     xhr.open("POST", "Ajax/EtiquetaVideoA.php", FALSE);
-    xhr.send(datosRecurso);
     xhr.onload = function(response) {
         if (xhr.status != 200) { // analiza el estado HTTP de la respuesta
             alert(`Error ${xhr.status}: ${xhr.statusText}`); // ej. 404: No encontrado
         } else { // muestra el resultado
-           for (let i = 0; i <= Object.keys(response).length; i++) {
-                $("#eleccion" + i).val(response[i]["etiquetaId"]);
-                $("#eleccion" + i).html(response[i]["etiquetaDescripcion"]);
+            let obtenerEtiquetaRecursoVideo = JSON.parse(xhr.response);
+           for (let i = 0; i <= Object.keys(obtenerEtiquetaRecursoVideo).length; i++) {
+                $("#eleccion" + i).val(obtenerEtiquetaRecursoVideo[i]["etiquetaId"]);
+                $("#eleccion" + i).html(obtenerEtiquetaRecursoVideo[i]["etiquetaDescripcion"]);
             }
         }
+        console.log(obtenerEtiquetaRecursoVideo);
      };
-    
+     xhr.send(datosRecurso);
     //  $.ajax({
     //     method: "POST",
     //     url: "Ajax/EtiquetaVideoA.php",

@@ -34,12 +34,9 @@ if(!headers_sent()){
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
   <!-- <link rel="stylesheet" href="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"> -->
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+  <!-- Script y Link de Toastify para las notificaciones -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -118,7 +115,7 @@ if(!headers_sent()){
            $('#tbl').DataTable({
               "lengthMenu": [[100, 50, 25, 10, -1], [100, 50, 25, 10, "Todos"]],
               language: {
-                     url: '//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json'
+                     url: 'https://cdn.datatables.net/plug-ins/2.0.7/i18n/es-CO.json',
               }
            });
        } );

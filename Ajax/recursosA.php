@@ -3,6 +3,10 @@ require_once '../vendor/autoload.php';
 require_once '../bibliotecaController/recursoBibliotecaC.php';
 require_once '../bibliotecaModel/recursosverBibliotecaM.php';
 
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__)->load();
+
 class recursosbiblitecaA
 {
     public $codigo;

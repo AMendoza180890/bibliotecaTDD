@@ -7,36 +7,40 @@ $(".TablaRecursos").on("click", ".EditRegistroRecurso", function () {
 
   let xhr = new XMLHttpRequest();
     xhr.open("POST", "Ajax/recursosA.php");
-    xhr.send(datosRecurso);
-    xhr.onload = function(response) {
+    xhr.onload = () => {
         if (xhr.status != 200) { // analiza el estado HTTP de la respuesta
             alert(`Error ${xhr.status}: ${xhr.statusText}`); // ej. 404: No encontrado
         } else { // muestra el resultado
-            $("#idEdit").val(response["id"]);
-            $("#titulosEdit").val(response["titulo"]);
-            $("#detallesEdit").val(response["descripcion"]);
-            $("#autorEdit").val(response["autor"]);
-            $("#recursoActual").val(response["ruta"]);
-            $("#eleccionTipo").val(response["tipo"]);
-            $("#eleccionTipo").html(response["tipo"]);
-            $("#resumenEditado").val(response["resumen"]);
+            let obtenerRecursos = JSON.parse(xhr.response);
+            $("#idEdit").val(obtenerRecursos["id"]);
+            $("#titulosEdit").val(obtenerRecursos["titulo"]);
+            $("#detallesEdit").val(obtenerRecursos["descripcion"]);
+            $("#autorEdit").val(obtenerRecursos["autor"]);
+            $("#recursoActual").val(obtenerRecursos["ruta"]);
+            $("#eleccionTipo").val(obtenerRecursos["tipo"]);
+            $("#eleccionTipo").html(obtenerRecursos["tipo"]);
+            $("#resumenEditado").val(obtenerRecursos["resumen"]);
         }
      };
+
+    xhr.send(datosRecurso);
 
     
      let xhrEtiqueta = new XMLHttpRequest();
      xhrEtiqueta.open("POST", "Ajax/EtiquetaA.php");
-     xhrEtiqueta.send(datosRecurso);
-     xhrEtiqueta.onload = function(response) {
+     xhrEtiqueta.onload = () => {
          if (xhrEtiqueta.status != 200) { // analiza el estado HTTP de la respuesta
              alert(`Error ${xhrEtiqueta.status}: ${xhrEtiqueta.statusText}`); // ej. 404: No encontrado
          } else { // muestra el resultado
-             for (let i = 0; i <= Object.keys(response).length; i++) {
-               $("#eleccion" + i).val(response["etiquetaId"]);
-               $("#eleccion" + i).html(response["etiquetaDescripcion"]);
+            let obtenerValorEtiquetas = JSON.parse(xhrEtiqueta.response);
+             for (let i = 0; i <= Object.keys(obtenerValorEtiquetas).length; i++) {
+               $("#eleccion" + i).val(obtenerValorEtiquetas[i]["etiquetaId"]);
+               $("#eleccion" + i).html(obtenerValorEtiquetas[i]["etiquetaDescripcion"]);
              }
+             console.log(obtenerValorEtiquetas);
          }
       };
+      xhrEtiqueta.send(datosRecurso);
 });
   // $.ajax({
   //   method: "POST",
