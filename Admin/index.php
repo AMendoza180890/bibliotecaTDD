@@ -10,6 +10,8 @@ include_once 'controlador/homeC.php';
 include_once 'controlador/ayudaC.php';
 include_once 'controlador/recursosVideosC.php';
 
+include_once 'src/notification.php';
+
 include_once 'modelo/usuariosM.php';
 include_once 'modelo/recursosM.php';
 include_once 'modelo/rolesM.php';
@@ -19,9 +21,9 @@ include_once 'modelo/ayudaM.php';
 include_once 'modelo/recursosVideosM.php';
 require_once '../vendor/autoload.php';
 
-use Dotenv\Dotenv;
+    use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable(__DIR__)->load();
+    $dotenv = Dotenv::createImmutable(__DIR__)->load();
 
 $plantilla = new plantillaAdminLteC();
 $plantilla->llamarPlantillaAdminLte();

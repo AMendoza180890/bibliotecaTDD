@@ -15,7 +15,7 @@ class usuariosM extends conexionBD
             $pdo->execute();
             return $pdo->fetch();
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Problemas con la conexion, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
 
@@ -26,7 +26,7 @@ class usuariosM extends conexionBD
             $pdo->execute();
             return $pdo->fetchAll();
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Problemas con la conexion, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
 
@@ -51,7 +51,7 @@ class usuariosM extends conexionBD
                 return false;
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Problemas con la conexion, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
 
@@ -76,7 +76,7 @@ class usuariosM extends conexionBD
                 return $pdo->fetchAll();
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Problemas con la conexion, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
 
@@ -91,7 +91,7 @@ class usuariosM extends conexionBD
                 return false;
             }
         } catch (Throwable) {
-        echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Problemas con la conexion, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
 
@@ -115,7 +115,8 @@ class usuariosM extends conexionBD
                 return false;
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Problemas con la conexion, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
 }
+?>

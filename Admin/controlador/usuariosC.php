@@ -21,15 +21,15 @@ class usuariosC
 
                             echo '<script>window.location = "inicio";</script>';
                         } else {
-                            echo 'Error con el usuario o clave';
+                            notificationC::showNotification("Error con el usuario o clave", "error");
                         }
                     } else {
-                        echo 'Error con el usuario o clave';
+                        notificationC::showNotification("Error con el usuario o clave", "error");
                     }
                 }
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            echo notificationC::showNotification("Error que ocurrio, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
     // Enlista a los usuario y los muestra en la tabla de usuario en el Admin.
@@ -62,7 +62,7 @@ class usuariosC
                 }
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+             notificationC::showNotification("Error que ocurrio, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
     //Registra a un usuario, Se encarga de guardar todoa la informacion en la base de datos.
@@ -80,11 +80,11 @@ class usuariosC
                 if ($crearNuevoUsuario == true) {
                     echo '<script>window.location="catusuarios"</script>';
                 } else {
-                    echo 'Error - Ocurrio un error al hora de insertar';
+                    notificationC::showNotification("Ocurrio un error al hora de insertar", "error");
                 }
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Error que ocurrio, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
     // Esta funcion es para obtener informacion del usuario usuando jquery y ajax, consulta a la base de datos.
@@ -95,7 +95,7 @@ class usuariosC
             $editarUsuario = usuariosM::editarRegistroUsuarioM($valor);
             return $editarUsuario;
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Error que ocurrio, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
     // Se encarga de actualizar la informacion del usuario en la base de datos.
@@ -119,7 +119,7 @@ class usuariosC
                 }
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Error que ocurrio, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
     // Se desactiva el usuario en la base de datos, nunca se elimina la informacion
@@ -133,11 +133,11 @@ class usuariosC
                 if ($RespuestadesactivarUsuario == true) {
                     echo '<script>window.location="catusuarios"</script>';
                 } else {
-                    echo 'Hubo un error, favor reportarlo al administrador del sistema';
+                    notificationC::showNotification("Error que ocurrio, contacte a biblioteca@tesorosdedios.org", "error");
                 }
             }
         } catch (Throwable) {
-            echo "Error que ocurrio, contacte a biblioteca@tesorosdedios.org";
+            notificationC::showNotification("Error que ocurrio, contacte a biblioteca@tesorosdedios.org", "error");
         }
     }
 }
