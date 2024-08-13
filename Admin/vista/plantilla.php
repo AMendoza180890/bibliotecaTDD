@@ -34,9 +34,8 @@ if(!headers_sent()){
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css">
   <!-- <link rel="stylesheet" href="vista/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css"> -->
 
-  <!-- Script y Link de Toastify para las notificaciones -->
+  <!--  Link de Toastify para las notificaciones -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -108,6 +107,10 @@ if(!headers_sent()){
 <script src="vista/js/usuario.js"></script>
 <script src="vista/js/recursos.js"></script>
 <script src="vista/js/recursosVideos.js"></script>
+
+<!-- script tostify -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </body>
 <!-- Este evento es para parsear la informacion en la tabla y que pueda filtrarse -->
 <script>

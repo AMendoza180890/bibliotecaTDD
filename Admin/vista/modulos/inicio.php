@@ -49,8 +49,6 @@
           <?php
             $recursosPorCategorias = new dashboardHomeC();
             $recursosPorCategorias -> dashboardRecursosPorCategoriasC();
-
-            notificationC::showNotification("Bienvenido a la biblioteca virtual Tesoros de Dios", "success");
           ?>
           <!-- /.box -->
 
