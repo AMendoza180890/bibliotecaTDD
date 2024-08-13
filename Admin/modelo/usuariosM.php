@@ -60,19 +60,14 @@ class usuariosM extends conexionBD
         try {
             if ($datosEditarUsuario != null) {
                 $pdo = conexionBD::conexion()->prepare("SELECT usuarios.id, usuarios.usuario, usuarios.clave, usuarios.email, usuarios.organizacion, usuarios.cargo, usuarios.telefono, usuarios.foto, usuarios.rolid, catroles.catRolesDescripcion  FROM usuarios INNER JOIN catroles ON usuarios.rolid = catroles.rolid WHERE usuarios.id = :id");
-
                 $pdo->bindParam("id", $datosEditarUsuario, PDO::PARAM_INT);
-
                 $pdo->execute();
-
                 return $pdo->fetch();
+
             } else {
                 $pdo = conexionBD::conexion()->prepare("SELECT usuarios.id, usuarios.usuario, usuarios.clave, usuarios.email, usuarios.organizacion, usuarios.cargo, usuarios.telefono, usuarios.foto, usuarios.rolid, catroles.catRolesDescripcion  FROM usuarios INNER JOIN catroles ON usuarios.rolid = catroles.rolid WHERE usuarios.id = :id");
-
                 $pdo->bindParam("id", $datosEditarUsuario, PDO::PARAM_INT);
-
                 $pdo->execute();
-
                 return $pdo->fetchAll();
             }
         } catch (Throwable) {

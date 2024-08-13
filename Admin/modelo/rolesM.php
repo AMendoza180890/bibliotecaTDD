@@ -9,19 +9,8 @@ class rolesUsuarioM extends conexionBD{
             $pdo ->execute();
             return $pdo->fetchAll();
         } catch (Exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("No se puede mostrar los roles","error");
         }
     }
-
-    // public static function setRolesUsuarioM($idUsuario){
-    //     try {
-    //         $pdo = conexionBD::conexion()->prepare("SELECT rolid FROM usuarios WHERE id = :id");
-    //         $pdo -> bindParam("id", $idUsuario,PDO::PARAM_INT);
-    //         $pdo ->execute();
-    //         return $pdo->fetch();
-    //     } catch (Exception $ex) {
-    //         echo 'Error -'.$ex;
-    //     }
-    // }
 }
 ?>

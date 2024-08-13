@@ -40,9 +40,12 @@ class recursoC{
                 if ($registrarRecurso["id"] != "") {
                     /* Se debe enlazar la lista de las etiquetas para asignarlas y por ultimo se actualiza la página */
 
+                    notificationC::showNotification("Se registro el recurso con exito, la pagina actualizara", "success");
+                    sleep(2);
                     echo '<script>window.location="recurso"</script>';
+
                 }else {
-                    echo 'No se pudo registrar el recurso';
+                    notificationC::showNotification("Error no se pudo registrar el recurso", "error");
                 }
 
             }

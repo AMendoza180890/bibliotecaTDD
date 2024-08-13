@@ -17,7 +17,7 @@
                         <hr>';
 
             } catch (exception $ex) {
-                echo 'error:'.$ex->getMessage();
+                notificationC::showNotification("Error al mostrar la informacion de ayuda ". $ex, "error");
             }
         }
 
@@ -50,7 +50,7 @@
                 </div>';
 
             } catch (exception $ex) {
-                echo 'error:' . $ex->getMessage();
+                notificationC::showNotification("Error al editar la ayuda ". $ex, "error");
             }
         }
 
@@ -64,13 +64,15 @@
                     $actualizarInformacion = ayudaModel::actualizarAyudaM($infoAyuda);
 
                     if ($actualizarInformacion) {
+                        notificationC::showNotification("Se actualizo la informacion de la ayuda", "success");
+                        sleep(2);
                         echo '<script>window.location = "ayuda"</script>';
                     }else{
-                        echo 'Revisar informacion del formulario';
+                        notificationC::showNotification("Error al actualizar la informacion de la ayuda ", "error");
                     }
                 }
             } catch (exception $ex) {
-                echo 'error:' . $ex->getMessage();
+                notificationC::showNotification('Ocurrió un error con el modulo de ayuda, Puede notificar escribiendo al correo <a href="mailto:biblioteca@tesorosdedios.org">biblioteca@tesorosdedios.org</a> ', "error");
             }
         }
     }

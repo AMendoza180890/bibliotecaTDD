@@ -8,7 +8,7 @@ class etiquetasC{
                 echo '<option value="'.$value["id"].'">'.$value["etiquetaDescripcion"].'</option>';
             }
         } catch (exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("Error al listar las etiquetas ". $ex, "error");
         }
     }
 }

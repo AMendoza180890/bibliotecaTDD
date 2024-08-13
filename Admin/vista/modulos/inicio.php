@@ -2,7 +2,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Dashboard
+        <?php echo "Bienvenido ".$_SESSION["usuario"]?>
         <small>Panel de Control</small>
       </h1>
       <ol class="breadcrumb">

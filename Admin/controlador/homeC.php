@@ -39,7 +39,7 @@ class dashboardHomeC{
             }
             
         } catch (exception $ex) {
-            echo 'Error -'.$ex;
+            notificationC::showNotification("Error al cargar la cantidad recursos ". $ex, "error");
         }
     }
 
@@ -79,7 +79,7 @@ class dashboardHomeC{
             </div>';
             }
         } catch (exception $ex) {
-            echo 'Error -'.$ex;
+            notificationC::showNotification("Error al cargar la cantidad de usuarios registrados ". $ex, "error");
         }
     }
 
@@ -119,7 +119,7 @@ class dashboardHomeC{
               </div>';
             }
         } catch (exception $ex) {
-            echo 'Error -'.$ex;
+            notificationC::showNotification("Error al cargar la cantidad de usuarios invitados ". $ex, "error");
         }
     }
 
@@ -148,7 +148,7 @@ class dashboardHomeC{
             }
 
         } catch (exception $ex) {
-            echo 'Error -'.$ex;
+            notificationC::showNotification("Error al cargar la cantidad de usuarios Administradores ". $ex, "error");
         }
     }
 
@@ -197,7 +197,7 @@ class dashboardHomeC{
               </div>';
             }
         } catch (exception $ex) {
-            echo 'Error -'.$ex;
+            notificationC::showNotification("Error al cargar la cantidad de recursos por categorias ". $ex, "error");
         }
     }
 }

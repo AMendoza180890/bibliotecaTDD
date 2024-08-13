@@ -35,9 +35,11 @@ class recursoVideosC{
                 $registrarRecurso = recursoVideosM::registrarRecursoVideoM($datosRecurso);
 
                 if ($registrarRecurso == true) {
+                    notificationC::showNotification("Se registro el recurso con exito, la pagina actualizara", "success");
+                    sleep(2);
                     echo '<script>window.location="recursoVideo"</script>';
                 }else {
-                    echo 'No se pudo registrar el recurso';
+                    notificationC::showNotification("No se pudo registrar el recurso", "error");
                 }
 
             }
@@ -53,7 +55,7 @@ class recursoVideosC{
                 return $obtenerRecurso;
             }
         } catch (exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("No se pudo obtener el recurso solicitado ". $ex, "error");
         }
     }
 
@@ -64,7 +66,7 @@ class recursoVideosC{
                 return $recursoEtiqueta;
             }
         } catch (exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("No se pudo obtener el recurso solicitado ". $ex, "error");
         }
     }
 
@@ -78,13 +80,15 @@ class recursoVideosC{
                 $datosActualizados = recursoVideosM::actualizarRecursoVideoM($datosRecursoActualizado);
 
                 if ($datosActualizados == true) {
+                    notificationC::showNotification("Se logro actualizar la informacion del recurso, se actualizara la pagina", "success");
+                    sleep(2);
                     echo '<script>window.location="recursoVideo"</script>';
                 }else{
-                    echo 'Error al actualizar recurso';
+                    notificationC::showNotification("No se pudo actualizar la informacion del recurso ", "error");
                 }
             }
         } catch (exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("Error en actualizar ". $ex, "error");
         }
     }
 
@@ -148,7 +152,7 @@ class recursoVideosC{
                 }
             }
         } catch (exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("Error al asignar la etiqueta en el recurso ". $ex, "error");
         }
     }
 }

@@ -22,7 +22,7 @@ class tratamientoImagen {
                 return $rutaImagen;
             }
         } catch (Exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("Error con subir la imagen, intente nuevamente.", "error");
         }
     }
 }

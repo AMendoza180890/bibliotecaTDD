@@ -13,7 +13,7 @@ class tratamientoRecurso {
             }
             return $rutaRecurso;
         } catch (Exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("Error al subir el recurso", "error");
         }
     }
 }
