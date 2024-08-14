@@ -2,6 +2,7 @@
 require_once '../../vendor/autoload.php';
 require_once '../controlador/usuariosC.php';
 require_once '../modelo/usuariosM.php';
+require_once '../src/notification.php';
 
 use Dotenv\Dotenv;
 
@@ -10,12 +11,15 @@ $dotenv = Dotenv::createImmutable(__DIR__)->load();
 class usuariosAjax
 {
     public $id;
-
     public function usuarioEditA()
     {
-        $valor = $this->id;
-        $editarUsuario = usuariosC::editarRegistroUsuarioC($valor);
-        echo json_encode($editarUsuario);
+        try {
+            $valor = $this->id;
+            $editarUsuario = usuariosC::editarRegistroUsuarioC($valor);
+            echo json_encode($editarUsuario);
+        } catch (Exception $ex) {
+            notificationC::showNotification("Error al recuperar informacion del usuario$ex" ,'error');
+        }
     }
 
     // public static function setRolEditA($id){

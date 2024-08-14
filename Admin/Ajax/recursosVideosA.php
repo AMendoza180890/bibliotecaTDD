@@ -2,6 +2,7 @@
 require_once '../../vendor/autoload.php';
 require_once '../controlador/recursosVideosC.php';
 require_once '../modelo/recursosVideosM.php';
+require_once '../src/notification.php';
 
 use Dotenv\Dotenv;
 
@@ -17,7 +18,7 @@ class obtenerRecursoVideoA
             $datosRecurso = recursoVideosC::obtenerRecursoRegistradoVideoC($id);
             echo json_encode($datosRecurso);
         } catch (exception $ex) {
-            echo 'Error - ' . $ex;
+            notificationC::showNotification("Error en obtener recurso","error");
         }
     }
 }

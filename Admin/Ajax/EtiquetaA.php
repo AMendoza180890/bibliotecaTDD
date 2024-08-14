@@ -2,6 +2,7 @@
 require_once '../../vendor/autoload.php';
 require_once '../controlador/recursosC.php';
 require_once '../modelo/recursosM.php';
+require_once '../src/notification.php';
 
 use Dotenv\Dotenv;
 
@@ -17,7 +18,7 @@ class obtenerRecursoEtiquetaA
             $datosEtiquetaRecurso = recursoC::obtenerEtiquetaRecursoC($id);
             echo json_encode($datosEtiquetaRecurso);
         } catch (exception $ex) {
-            echo 'Error -' . $ex;
+            notificationC::showNotification('No pudo cargar informacion sobre las etiquetas','error');
         }
     }
 }

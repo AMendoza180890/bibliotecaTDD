@@ -2,6 +2,7 @@
 require_once '../../vendor/autoload.php';
 require_once '../controlador/recursosVideosC.php';
 require_once '../modelo/recursosVideosM.php';
+require_once '../src/notification.php';
 
 use Dotenv\Dotenv;
 
