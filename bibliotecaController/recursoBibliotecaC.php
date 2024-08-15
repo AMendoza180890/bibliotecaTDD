@@ -86,8 +86,7 @@ class recursoBibliotecaC{
                 return $obtenerVerRecursos;
             }
         } catch (Exception $ex) {
-            echo 'Error - '.$ex;
+            notificationC::showNotification("Se encontro un error al intentar obtener el recurso, ". $ex,"error");
         }
     }
 }
-?>

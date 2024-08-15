@@ -34,10 +34,11 @@ class usuariosM extends conexionBD
     {
         try {
             $pdo = conexionBD::conexion()->prepare("INSERT INTO usuarios (usuario, clave, email, organizacion, cargo, telefono, foto, rolid) VALUES (:usuario,:clave,:email,:organizacion,:cargo,:telefono,:foto,:rolid)");
+            
+            $clave = password_hash($datosNuevoUsuario["clave"], PASSWORD_DEFAULT);
 
             $pdo->bindParam("usuario", $datosNuevoUsuario["usuario"], PDO::PARAM_STR);
-            $pdo->bindParam("clave", password_hash($datosNuevoUsuario["clave"], PASSWORD_DEFAULT), PDO::PARAM_STR);
-            //$pdo->bindParam("clave", $datosNuevoUsuario["clave"], PDO::PARAM_STR);
+            $pdo->bindParam("clave", $clave, PDO::PARAM_STR);
             $pdo->bindParam("email", $datosNuevoUsuario["email"], PDO::PARAM_STR);
             $pdo->bindParam("organizacion", $datosNuevoUsuario["organizacion"], PDO::PARAM_STR);
             $pdo->bindParam("cargo", $datosNuevoUsuario["cargo"], PDO::PARAM_STR);
@@ -88,9 +89,10 @@ class usuariosM extends conexionBD
     {
         try {
             $pdo = conexionBD::conexion()->prepare("UPDATE usuarios SET usuario=:usuario, clave=:clave, email=:email, organizacion=:organizacion, cargo=:cargo, telefono=:telefono, foto=:foto, rolid=:rolid WHERE id=:id");
+            $clave = password_hash($datosActualizarUsuario["clave"], PASSWORD_DEFAULT);
             $pdo->bindParam("id", $datosActualizarUsuario["id"], PDO::PARAM_STR);
             $pdo->bindParam("usuario", $datosActualizarUsuario["usuario"], PDO::PARAM_STR);
-            $pdo->bindParam("clave", password_hash($datosActualizarUsuario["clave"], PASSWORD_DEFAULT), PDO::PARAM_STR);
+            $pdo->bindParam("clave", $clave, PDO::PARAM_STR);
             $pdo->bindParam("email", $datosActualizarUsuario["email"], PDO::PARAM_STR);
             $pdo->bindParam("organizacion", $datosActualizarUsuario["organizacion"], PDO::PARAM_STR);
             $pdo->bindParam("cargo", $datosActualizarUsuario["cargo"], PDO::PARAM_STR);
@@ -104,8 +106,7 @@ class usuariosM extends conexionBD
                 return false;
             }
         } catch (Throwable) {
-            notificationC::showNotification("Problemas con la conexion, contacte a biblioteca@tesorosdedios.org", "error");
+            notificationC::showNotification('Problemas con la conexion, contacte a <a href="mailto:biblioteca@tesorosdedios.org">biblioteca@tesorosdedios.org</a>', "error");
         }
     }
 }
-?>

@@ -33,17 +33,4 @@ class recursoVideoBibliotecaC
             echo 'Error -' . $ex;
         }
     }
-
-    // public static function verRecursoVideosC($codigo)
-    // {
-    //     try {
-    //         if ($codigo != null) {
-    //             $obtenerVerRecursos = recursoverBibliotecaM::verRecursoM($codigo);
-    //             return $obtenerVerRecursos;
-    //         }
-    //     } catch (Exception $ex) {
-    //         echo 'Error - ' . $ex;
-    //     }
-    // }
 }
-?>
