@@ -9,7 +9,8 @@ $(".TablaUsuario").on("click", ".EditRegistroUsuario", function() {
     xhr.onload = () => {
         if (xhr.status != 200) { // analiza el estado HTTP de la respuesta
             alert(`Error ${xhr.status}: ${xhr.statusText}`); // ej. 404: No encontrado
-        } else { // muestra el resultado
+        } else { 
+            // muestra el resultado
             const usuarioDatos = JSON.parse(xhr.response);
             //const usuarioDatos = xhr.response;
             $("#idEdit").val(usuarioDatos["id"]);

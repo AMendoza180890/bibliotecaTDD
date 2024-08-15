@@ -9,8 +9,7 @@ class usuarioBibliotecaC
                     $datosUsuario = array("usuario" => $_POST["usuarioBiblioteca"], "passw" => $_POST["passwBiblioteca"]);
                     $datosUsuarioLogin = usuarioBibliotecaM::iniciarSesionBibliotecaM($datosUsuario);
                     if ($datosUsuarioLogin) {
-                        if (password_verify($_POST["passwBiblioteca"], $datosUsuarioLogin["clave"]) && ($datosUsuarioLogin["rolid"] == 1 || $datosUsuarioLogin["rolid"] == 2)) {
-                            if ($datosUsuarioLogin["rolid"] == 1 || $datosUsuarioLogin["rolid"] == 2) {
+                        if (password_verify($_POST["passwBiblioteca"], $datosUsuarioLogin["clave"]) && ($datosUsuarioLogin["rolid"] !== 3)) {
                                 $_SESSION["ingreso"] = true;
                                 $_SESSION["id"] = $datosUsuarioLogin["id"];
                                 $_SESSION["usuario"] = $datosUsuarioLogin["usuario"];
@@ -18,16 +17,17 @@ class usuarioBibliotecaC
                                 $_SESSION["foto"] = $datosUsuarioLogin["foto"];
                                 $_SESSION["rol"] = $datosUsuarioLogin["catRolesDescripcion"];
 
+                                notificationC::showNotification("Bievenido a la biblioteca virtual de Tesoros de Dios.","success");
+                                sleep(2);
                                 echo '<script>window.location = "home"</script>';
-                            }
                         }
                     } else {
-                        echo 'Error con el usuario o clave';
+                        notificationC::showNotification("Error con el usuario o contraseña", "error");
                     }
                 }
             }
         } catch (Exception $ex) {
-            echo 'Error - ' . $ex;
+            notificationC::showNotification("Error al cargar la cantidad de usuarios registrados ". $ex, "error");
         }
     }
 }

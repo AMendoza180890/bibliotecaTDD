@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<section class="full-reset text-center" style="padding: 40px 0;">
+<section class="full-reset text-center" style="padding: 10px 0;">
     <a href="academico">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-book zmdi-hc-fw"></i></div>
@@ -35,7 +35,7 @@
     </a>
 </section>
 
-<section class="full-reset text-center" style="padding: 40px 0;">
+<section class="full-reset text-center" style="padding: 10px 0;">
     <a href="estimulacion">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-collection-plus"></i></div>
@@ -66,7 +66,7 @@
     </a>
 </section>
 
-<section class="full-reset text-center" style="padding: 40px 0;">
+<section class="full-reset text-center" style="padding: 10px 0;">
     <a href="logopedia">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-mood"></i></div>
@@ -97,7 +97,7 @@
     </a>
 </section>
 
-<section class="full-reset text-center" style="padding: 40px 0;">
+<section class="full-reset text-center" style="padding: 10px 0;">
     <a href="ingles">
         <article class="tile">
             <div class="tile-icon full-reset"><i class="zmdi zmdi-translate"></i></div>

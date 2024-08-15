@@ -2,10 +2,12 @@
 require_once '../vendor/autoload.php';
 require_once '../bibliotecaController/recursoBibliotecaC.php';
 require_once '../bibliotecaModel/recursosverBibliotecaM.php';
+require_once '../Admin/src/notification.php';
 
 use Dotenv\Dotenv;
 
-$dotenv = Dotenv::createImmutable(__DIR__)->load();
+//$dotenv = Dotenv::createImmutable(__DIR__)->load();
+$dotenv = Dotenv::createImmutable("./")->load();
 
 class recursosbiblitecaA
 {
@@ -13,10 +15,13 @@ class recursosbiblitecaA
 
     public function obtenerDatosRecurso()
     {
-        $id = $this->codigo;
-
-        $obtenerVerRecursos = recursoBibliotecaC::verRecursoC($id);
-        echo json_encode($obtenerVerRecursos);
+        try {
+            $id = $this->codigo;
+            $obtenerVerRecursos = recursoBibliotecaC::verRecursoC($id);
+            echo json_encode($obtenerVerRecursos);
+        } catch (Exception $ex) {
+            notificationC::showNotification("Error al obtener datos Recursos", "error");
+        }
     }
 }
 
