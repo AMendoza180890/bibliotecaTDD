@@ -28,5 +28,15 @@
 
 ¡Esperamos que disfrutes utilizando nuestra Biblioteca Virtual y que encuentres los recursos que necesitas para promover la inclusión de personas con discapacidad en tu comunidad! Si tienes alguna pregunta o necesitas asistencia, no dudes en contactarnos.
 
+Acciones para el funcionamiento del repositorio
+1. Para que pueda funcionar la conexion a la base de datos, se utilizan archivos .env en las siguientes partes:
+1.1 root
+1.2 root/Ajax - Para poder realizar peticiones al servidor de forma externa en una llamada a la API.
+1.3 root/Admin/ - Para poder realizar procesos con la base de datos en el lado del backend de la aplicacion.
+1.4 root/Admin/Ajax - Para poder realizar peticiones al servidor de forma externa en una llamada a la API.
+
+Se describe por si en algun momento se necesita cambiar estos parametros, se considere cambiar en cada una de las ubicaciones
+que se describe anteriormente.
+
 Atentamente,
 El Equipo de ONG Tesoros de Dios
