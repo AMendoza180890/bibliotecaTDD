@@ -8,7 +8,7 @@ require_once 'bibliotecaController/perfilUsuarioC.php';
 require_once 'bibliotecaController/tratamientoImagenPerfil.php';
 require_once 'bibliotecaController/rutaBibliotecaC.php';
 
-require_once  'Admin/src/notification.php';
+require_once  './Admin/src/notification.php';
 
 require_once 'bibliotecaModel/usuarioBibliotecaM.php';
 require_once 'bibliotecaModel/recursoBibliotecaM.php';
