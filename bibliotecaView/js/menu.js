@@ -3,6 +3,10 @@
 //   $(this).addClass("activo");
 // });
 
-document.getElementById("btn-search").addEventListener("click", function () {
-  window.location = "buscar";
-});
+let btnSearch = document.getElementById("btn-search");
+
+if (btnSearch){
+  btnSearch.addEventListener("click", function () {
+    window.location = "buscar";
+  });
+}
