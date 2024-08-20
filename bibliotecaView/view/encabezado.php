@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="bibliotecaView/css/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="bibliotecaView/css/style.css">
     <link rel="stylesheet" href="bibliotecaView/css/login.css" />
-    <!-- Link de Toastify para las notificaciones -->
+    <!-- Link y script de Toastify para las notificaciones -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <!-- version actual para las dataTables implementadas en el proyecto -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
     <!-- versiones de jquery -->

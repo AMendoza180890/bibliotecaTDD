@@ -30,7 +30,6 @@ if (!headers_sent()) {
 </body>
 <script src="bibliotecaView/js/menu.js"></script>
 <script src="bibliotecaView/js/recursos.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>
        $('#todosRecursos').DataTable({
               "lengthMenu": [
