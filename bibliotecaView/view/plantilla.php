@@ -43,5 +43,4 @@ if (!headers_sent()) {
               Response:true,
        });
 </script>
-
 </html>

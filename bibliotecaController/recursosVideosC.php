@@ -30,7 +30,7 @@ class recursoVideoBibliotecaC
             }
             echo '</tbody>';
         } catch (exception $ex) {
-            echo 'Error -' . $ex;
+            notificationC::showNotification("Se obtuvo un error al cargar los recursos de videos, ".$ex->getMessage(),"error");
         }
     }
 }
